@@ -13,6 +13,7 @@
         <spring.version>4.0.3.RELEASE</spring.version>
         <log4j.version>1.2.17</log4j.version>
         <mysql.version>5.1.35</mysql.version>
+        <jackson.version>2.4.0</jackson.version>
         <commons-beanutils.version>1.9.2</commons-beanutils.version>
     </properties>
 
@@ -71,6 +72,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
@@ -101,6 +107,12 @@
             <version>${commons-beanutils.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+
         <!--log-->
         <dependency>
             <groupId>log4j</groupId>
@@ -108,23 +120,21 @@
             <version>${log4j.version}</version>
         </dependency>
 
-        <!--使用spring ResponseBody需要的jar-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.7.3</version>
-        </dependency>
-
+        <!-- json -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.6.5</version>
+            <version>${jackson.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.6.5</version>
+            <version>${jackson.version}</version>
         </dependency>
 
     </dependencies>
