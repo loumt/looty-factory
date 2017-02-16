@@ -1,0 +1,9 @@
+DNS:127.0.0.1
+HTTP PORT:8080
+JMX PORT:1099
+
+
+Intellij idea
+  DataBase
+    username:looty
+    password:looty
