@@ -6,6 +6,7 @@ package com.looty.controller;
 import com.looty.base.BaseController;
 import com.looty.pojo.Admin;
 import com.looty.service.AdminService;
+import com.mooty.property.AdminUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,11 +37,17 @@ public class AdminController extends BaseController {
     public Map<String, Object> getAdmin() {
         final Admin admin = adminService.getOneAdmin();
 
+        final AdminUser bean = new AdminUser();
+
         Map<String, Object> returnMap = new HashMap<String, Object>() {
             {
                 put("admin", admin);
+                put("adminUser", bean);
             }
         };
+
+        System.out.println(bean.getUsername());
+        System.out.println(bean.getPassword());
 
         return returnMap;
     }

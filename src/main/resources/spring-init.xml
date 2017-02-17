@@ -20,16 +20,20 @@
 
     <!--启动MVC注解-->
     <mvc:annotation-driven/>
+
     <!--包扫描-->
-    <context:component-scan base-package="com.looty"/>
+    <context:component-scan base-package="com.looty,com.mooty"/>
 
     <!--JDBC properties-->
-    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-    <!--<property name="locations">-->
-    <!--<value>classpath:jdbc.properties</value>-->
-    <!--</property>-->
-    <!--</bean>-->
-    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+            </list>
+        </property>
+    </bean>
+    <!--多个文件用逗号分隔-->
+    <!--<context:property-placeholder location="classpath:jdbc.properties,classpath:system.properties"/>-->
 
     <!--数据源-->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
