@@ -5,10 +5,16 @@
 import com.looty.pojo.Admin;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.junit.Test;
 import org.springframework.util.Assert;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+import java.util.regex.Pattern;
 
 /**
  * USED TO:
@@ -22,7 +28,8 @@ import java.util.Date;
 public class LogTest {
     private static Logger logger = LogManager.getLogger(LogTest.class);
 
-    public static void main(String[] args) {
+    @Test
+    public void test1() {
         logger.debug("你好啊");
 
         try {
@@ -44,8 +51,40 @@ public class LogTest {
             e.printStackTrace();
         }
         Assert.hasLength("hasLength");
-        Assert.notEmpty(new ArrayList<Object>());
+//        Assert.notEmpty(new ArrayList<Object>());
 
-        System.out.println("11111");
+        System.out.println("======================");
+
+
+        List<String> list1 = new ArrayList<String>();
+        List<String> list2 = new ArrayList<String>();
+        list1.add("g");
+        list1.add("s");
+        list1.add("a");
+        list1.add("f");
+
+        list2.add("g");
+        list2.add("c");
+        list2.add("b");
+        list2.add("a");
+        list1.retainAll(list2);
+        System.out.print(list1);
+        System.out.println("======================");
+
+        System.out.println(UUID.randomUUID());
+
+    }
+
+
+    @Test
+    public void dateTest() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+        try {
+            Date date = format.parse("20170101 12:15:12");
+
+            System.out.println("Result：" + new Date().after(date));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

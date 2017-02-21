@@ -3,6 +3,7 @@
  */
 package com.looty.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,11 +15,16 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/12/012
  */
-public class Admin {
+public class Admin implements Serializable {
+    private static final long serialVersionUID = -5780867915778092835L;
     /**
      * 编号
      */
     private Long id;
+    /**
+     * 用户唯一识别码
+     */
+    private String userId;
     /**
      * 帐户名
      */
@@ -55,6 +61,14 @@ public class Admin {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {

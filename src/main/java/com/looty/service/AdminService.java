@@ -1,6 +1,9 @@
 package com.looty.service;
 
+import com.looty.exception.ServiceException;
 import com.looty.pojo.Admin;
+
+import java.util.List;
 
 /**
  * USED TO:
@@ -15,5 +18,9 @@ public interface AdminService {
     /**
      * @return
      */
-    Admin getOneAdmin();
+    List<Admin> getOneAdmin() throws ServiceException;
+
+    long insertOneAdmin(Admin admin) throws ServiceException;
+
+    int getAdminCount();
 }

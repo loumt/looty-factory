@@ -6,7 +6,6 @@ package com.looty.controller;
 import com.looty.base.BaseController;
 import com.looty.pojo.Admin;
 import com.looty.service.AdminService;
-import com.mooty.property.AdminUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,19 +35,14 @@ public class AdminController extends BaseController {
     @ResponseBody
     @RequestMapping(value = "/getAdmin", method = RequestMethod.GET)
     public Map<String, Object> getAdmin() {
-        final Admin admin = adminService.getOneAdmin();
+        final List<Admin> admins = adminService.getOneAdmin();
 
-        final AdminUser bean = new AdminUser();
 
         Map<String, Object> returnMap = new HashMap<String, Object>() {
             {
-                put("admin", admin);
-                put("adminUser", bean);
+                put("admin", admins);
             }
         };
-
-        System.out.println(bean.getUsername());
-        System.out.println(bean.getPassword());
 
         return returnMap;
     }

@@ -5,9 +5,12 @@ package com.looty.service;
 
 import com.looty.base.BaseService;
 import com.looty.dao.AdminDao;
+import com.looty.exception.ServiceException;
 import com.looty.pojo.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * USED TO:
@@ -24,7 +27,15 @@ public class AdminServiceImpl extends BaseService implements AdminService {
     @Autowired
     private AdminDao adminDao;
 
-    public Admin getOneAdmin() {
+    public List<Admin> getOneAdmin() throws ServiceException {
         return adminDao.getAdmin();
+    }
+
+    public long insertOneAdmin(Admin admin) throws ServiceException {
+        return adminDao.insertOneAdmin(admin);
+    }
+
+    public int getAdminCount() {
+        return adminDao.getAdminCount();
     }
 }

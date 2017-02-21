@@ -4,10 +4,11 @@
 package com.looty.dao;
 
 import com.looty.base.BaseDao;
+import com.looty.exception.DaoException;
 import com.looty.pojo.Admin;
 import org.springframework.stereotype.Repository;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * USED TO:
@@ -21,8 +22,22 @@ import java.util.Map;
 @Repository
 public class AdminDaoImpl extends BaseDao implements AdminDao {
 
-    public Admin getAdmin() {
-        Admin admin = super.queryForBean("SELECT * FROM admin", Admin.class);
-        return admin;
+    private static final String GET_ADMIN = "SELECT * FROM admin";
+
+    public List<Admin> getAdmin() throws DaoException {
+        return this.queryForBeanList(GET_ADMIN, Admin.class);
+    }
+
+    private static final String INSERT_ONE_ADMIN = "insert into admin(userId,role,username,password,realName,createTime,lastOperationTime,authTop)values(:userId,:role,:username,:password,:realName,:createTime,:lastOperationTime,:authTop)";
+
+    public long insertOneAdmin(Admin admin) throws DaoException {
+        return this.saveBean(INSERT_ONE_ADMIN, admin);
+    }
+
+
+    private static final String GET_ADMIN_COUNT = "select count(*) from admin";
+
+    public int getAdminCount() {
+        return this.queryForInteger(GET_ADMIN_COUNT);
     }
 }
