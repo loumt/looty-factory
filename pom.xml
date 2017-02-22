@@ -142,6 +142,13 @@
             <version>${jackson.version}</version>
         </dependency>
 
+        <!--HttpClient-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>

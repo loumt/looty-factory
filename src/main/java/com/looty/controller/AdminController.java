@@ -6,6 +6,8 @@ package com.looty.controller;
 import com.looty.base.BaseController;
 import com.looty.pojo.Admin;
 import com.looty.service.AdminService;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,11 +34,11 @@ public class AdminController extends BaseController {
     @Autowired
     private AdminService adminService;
 
+
     @ResponseBody
     @RequestMapping(value = "/getAdmin", method = RequestMethod.GET)
     public Map<String, Object> getAdmin() {
         final List<Admin> admins = adminService.getOneAdmin();
-
 
         Map<String, Object> returnMap = new HashMap<String, Object>() {
             {
@@ -46,4 +48,6 @@ public class AdminController extends BaseController {
 
         return returnMap;
     }
+
+
 }
