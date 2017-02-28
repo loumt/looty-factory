@@ -2,6 +2,7 @@ package com.looty.service;
 
 import com.looty.exception.ServiceException;
 import com.looty.pojo.Admin;
+import com.looty.pojo.ResultMsg;
 
 import java.util.List;
 
@@ -15,12 +16,18 @@ import java.util.List;
  * @date 2017/2/12/012
  */
 public interface AdminService {
-    /**
-     * @return
-     */
-    List<Admin> getOneAdmin() throws ServiceException;
+
+    Admin getAdminByName(String username) throws ServiceException;
 
     long insertOneAdmin(Admin admin) throws ServiceException;
 
     int getAdminCount();
+
+    Admin getAdminByUserId(String userId) throws ServiceException;
+
+    ResultMsg addAdmin(Admin admin);
+
+    List<Admin> getAllAdmins();
+
+    ResultMsg existAdmin(String username);
 }

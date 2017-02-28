@@ -47,7 +47,7 @@ public class AppLogSchedule {
             return;
         }
 
-        List<Admin> list = adminService.getOneAdmin();
+        List<Admin> list = adminService.getAllAdmins();
 
         Admin defauleAdmin = list.get(new Random().nextInt(list.size()));
         System.out.println("日志管理员是:" + defauleAdmin);

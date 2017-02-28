@@ -2,6 +2,7 @@
  * Copyright (c) www.bugull.com
  */
 
+import base.BaseJuit4Test;
 import com.looty.pojo.HttpResult;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -59,4 +60,6 @@ public class HttpClientTest extends BaseJuit4Test {
             }
         }
     }
+
+
 }

@@ -6,6 +6,7 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
 	http://www.springframework.org/schema/context
@@ -14,6 +15,8 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 	http://www.springframework.org/schema/aop
     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
@@ -22,7 +25,7 @@
     <mvc:annotation-driven/>
 
     <!--包扫描-->
-    <context:component-scan base-package="com.looty,com.mooty"/>
+    <context:component-scan base-package="com"/>
 
     <!--JDBC properties-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -45,6 +48,20 @@
         <!--<property name="loginTimeout" value="${jdbc.loginTimeout}"/>-->
     </bean>
 
+    <!--事务配置-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="dataSource"/>
+    <!--使用Aop提供事务增强-->
+    <aop:config proxy-target-class="true">
+        <aop:pointcut id="serviceMethod" expression="execution(* com.looty.service..*(..))"></aop:pointcut>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
+    </aop:config>
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+
     <!-- DAO层所用 jdbcTemplate -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
@@ -56,8 +73,13 @@
     </bean>
 
     <!--视图-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view/"
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view"
           p:suffix=".jsp"></bean>
+    <!--Redis-->
+    <!--<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">-->
+    <!--<property name="hostName" value="192.168.3.112"/>-->
+    <!--<property name="port" value="6379"/>-->
+    <!--</bean>-->
 
     <!--Aop config-->
     <aop:aspectj-autoproxy/>
@@ -65,14 +87,6 @@
     <task:annotation-driven/>
 
     <!--HttpClient:定义Httpclient对象 -->
-    <bean id="httpClient" class="org.apache.http.impl.client.CloseableHttpClient"
-          factory-bean="httpClientBuilder" factory-method="build" scope="prototype">
-    </bean>
-    <!-- httpclient对象构建器 -->
-    <bean id="httpClientBuilder" class="org.apache.http.impl.client.HttpClientBuilder">
-        <!-- 设置连接管理器 -->
-        <property name="connectionManager" ref="httpClientConnectionManager"/>
-    </bean>
     <bean id="httpClientConnectionManager"
           class="org.apache.http.impl.conn.PoolingHttpClientConnectionManager"
           destroy-method="close">
@@ -81,11 +95,16 @@
         <!-- 设置每个主机地址的并发数 -->
         <property name="defaultMaxPerRoute" value="${httpClient.defaultMaxPerRoute}"/>
     </bean>
+    <!-- httpclient对象构建器 -->
+    <bean id="httpClientBuilder" class="org.apache.http.impl.client.HttpClientBuilder">
+        <!-- 设置连接管理器 -->
+        <property name="connectionManager" ref="httpClientConnectionManager"/>
+    </bean>
+    <bean id="httpClient" class="org.apache.http.impl.client.CloseableHttpClient"
+          factory-bean="httpClientBuilder" factory-method="build" scope="prototype">
+    </bean>
 
     <!-- 定义请求参数 -->
-    <bean id="requestConfig" class="org.apache.http.client.config.RequestConfig" factory-bean="requestConfigBuilder"
-          factory-method="build">
-    </bean>
     <bean id="requestConfigBuilder" class="org.apache.http.client.config.RequestConfig.Builder">
         <!-- 创建连接的最长时间 -->
         <property name="connectTimeout" value="${httpClient.connectTimeout}"/>
@@ -96,8 +115,9 @@
         <!-- 提交请求前测试连接是否可用 -->
         <property name="staleConnectionCheckEnabled" value="${httpClient.staleConnectionCheckEnabled}"/>
     </bean>
-    <bean class="com.looty.pojo.HttpResult" id="httpResult">
-        <property name="requestConfig" ref="requestConfig"/>
+    <bean id="requestConfig" class="org.apache.http.client.config.RequestConfig" factory-bean="requestConfigBuilder"
+          factory-method="build">
     </bean>
+
 
 </beans>

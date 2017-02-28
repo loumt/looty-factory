@@ -3,8 +3,6 @@
  */
 package com.looty.pojo;
 
-import org.apache.http.client.config.RequestConfig;
-
 /**
  * USED TO:HttpClient封装类
  * Log File:
@@ -17,43 +15,43 @@ import org.apache.http.client.config.RequestConfig;
 public class HttpResult {
 
     /**
-     * Http请求返回Code
+     * 状态码
      */
-    private Integer responseCode;
-
+    private Integer status;
     /**
-     * Http请求返回结果
+     * 返回数据
      */
-    private String responseResult;
+    private String data;
 
-
-    public HttpResult(Integer responseCode, String responseResult) {
-        this.responseCode = responseCode;
-        this.responseResult = responseResult;
+    public HttpResult() {
     }
 
-    public Integer getResponseCode() {
-        return responseCode;
+    public HttpResult(Integer status, String data) {
+        this.status = status;
+        this.data = data;
     }
 
-    public void setResponseCode(Integer responseCode) {
-        this.responseCode = responseCode;
+    public Integer getStatus() {
+        return status;
     }
 
-    public String getResponseResult() {
-        return responseResult;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
-    public void setResponseResult(String responseResult) {
-        this.responseResult = responseResult;
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     @Override
     public String toString() {
         return "HttpResult{" +
-                "responseResult='" + responseResult + '\'' +
-                ", responseCode=" + responseCode +
+                "data='" + data + '\'' +
+                ", status=" + status +
                 '}';
     }
-
 }

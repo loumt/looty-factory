@@ -52,7 +52,7 @@ public class HttpClientCenter {
      * @throws IOException
      * @throws ClientProtocolException
      */
-    public String doGet(String url) throws ClientProtocolException, IOException {
+    public String doGet(String url) throws IOException {
         // 创建http GET请求
         HttpGet httpGet = new HttpGet(url);
         httpGet.setConfig(this.requestConfig);
@@ -84,7 +84,7 @@ public class HttpClientCenter {
      * @throws ClientProtocolException
      */
     public String doGet(String url, Map<String, String> params)
-            throws ClientProtocolException, IOException, URISyntaxException {
+            throws IOException, URISyntaxException {
         URIBuilder uriBuilder = new URIBuilder(url);
         for (String key : params.keySet()) {
             uriBuilder.addParameter(key, params.get(key));
@@ -149,7 +149,7 @@ public class HttpClientCenter {
      * @throws ClientProtocolException
      * @throws IOException
      */
-    public HttpResult doPostJson(String url, String json) throws ClientProtocolException, IOException {
+    public HttpResult doPostJson(String url, String json) throws IOException {
         // 创建http POST请求
         HttpPost httpPost = new HttpPost(url);
         httpPost.setConfig(this.requestConfig);

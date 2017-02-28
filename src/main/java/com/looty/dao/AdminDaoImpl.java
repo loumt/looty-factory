@@ -24,7 +24,7 @@ public class AdminDaoImpl extends BaseDao implements AdminDao {
 
     private static final String GET_ADMIN = "SELECT * FROM admin";
 
-    public List<Admin> getAdmin() throws DaoException {
+    public List<Admin> getAdmins() throws DaoException {
         return this.queryForBeanList(GET_ADMIN, Admin.class);
     }
 
@@ -40,4 +40,19 @@ public class AdminDaoImpl extends BaseDao implements AdminDao {
     public int getAdminCount() {
         return this.queryForInteger(GET_ADMIN_COUNT);
     }
+
+
+    private static final String GET_ADMIN_BY_USER_ID = "select * from admin where userId = ?";
+
+    public Admin getAdminByUserId(String userId) {
+        Object[] args = {userId};
+        return this.queryForObject(GET_ADMIN_BY_USER_ID, Admin.class, args);
+    }
+
+    private static final String GET_ADMIN_BY_NAME = "select * from admin where username = ?";
+
+    public Admin getAdminByName(String username) {
+        return this.queryForBean(GET_ADMIN_BY_NAME, Admin.class);
+    }
+
 }

@@ -15,9 +15,16 @@ import java.util.List;
  * @date 2017/2/12/012
  */
 public interface AdminDao {
-    List<Admin> getAdmin() throws DaoException;
+
+    List<Admin> getAdmins() throws DaoException;
 
     long insertOneAdmin(Admin admin) throws DaoException;
 
     int getAdminCount();
+
+    Admin getAdminByUserId(String userId);
+
+    Admin getAdminByName(String username);
+
+
 }

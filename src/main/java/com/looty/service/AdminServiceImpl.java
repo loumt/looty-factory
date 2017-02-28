@@ -5,8 +5,10 @@ package com.looty.service;
 
 import com.looty.base.BaseService;
 import com.looty.dao.AdminDao;
+import com.looty.enums.ResultMsgEnum;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.Admin;
+import com.looty.pojo.ResultMsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,8 +29,8 @@ public class AdminServiceImpl extends BaseService implements AdminService {
     @Autowired
     private AdminDao adminDao;
 
-    public List<Admin> getOneAdmin() throws ServiceException {
-        return adminDao.getAdmin();
+    public Admin getAdminByName(String username) throws ServiceException {
+        return adminDao.getAdminByName(username);
     }
 
     public long insertOneAdmin(Admin admin) throws ServiceException {
@@ -37,5 +39,27 @@ public class AdminServiceImpl extends BaseService implements AdminService {
 
     public int getAdminCount() {
         return adminDao.getAdminCount();
+    }
+
+    public Admin getAdminByUserId(String userId) throws ServiceException {
+        return adminDao.getAdminByUserId(userId);
+    }
+
+    public ResultMsg addAdmin(Admin admin) {
+        long returnId = adminDao.insertOneAdmin(admin);
+        return ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, returnId);
+    }
+
+    public List<Admin> getAllAdmins() {
+        return adminDao.getAdmins();
+    }
+
+    public ResultMsg existAdmin(String username) {
+        Admin admin = getAdminByName(username);
+        if (null == admin) {
+            return ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, admin);
+        } else {
+            return ResultMsg.isFail(ResultMsgEnum.ALREADY_EXIST);
+        }
     }
 }
