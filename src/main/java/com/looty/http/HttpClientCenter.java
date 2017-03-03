@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * USED TO:
  * Log File:
- *
+ * Setting:spring-http.xml
  * @author loumt(loumt@hadlinks.com)
  * @project looty-factory
  * @package com.looty.utils
