@@ -32,4 +32,8 @@ public class AppLogServiceImpl extends BaseService implements AppLogService {
     public void deleteOneAppLog(Long appLogId) {
 
     }
+
+    public long getAllCount() {
+        return appLogDao.getAllCount();
+    }
 }

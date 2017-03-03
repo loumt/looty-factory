@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.mooty.proxy;
+package com.looty.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.mooty.proxy;
+package com.looty.proxy;
 
 /**
  * USED TO:房东的租房与收租-Interface

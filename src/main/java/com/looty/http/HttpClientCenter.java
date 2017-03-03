@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.utils;
+package com.looty.http;
 
 import com.looty.pojo.HttpResult;
 import org.apache.http.NameValuePair;
@@ -36,14 +36,14 @@ import java.util.Map;
  * @package com.looty.utils
  * @date 2017/2/22/022
  */
-@Service
 public class HttpClientCenter {
-
-    @Autowired
     private CloseableHttpClient httpClient;
-    @Autowired
     private RequestConfig requestConfig;
 
+    public HttpClientCenter(CloseableHttpClient httpClient, RequestConfig requestConfig) {
+        this.httpClient = httpClient;
+        this.requestConfig = requestConfig;
+    }
     /**
      * 执行GET请求
      *

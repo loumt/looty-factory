@@ -17,4 +17,6 @@ public interface AppLogService {
     long insertOneAppLog(AppLog bean) throws ServiceException;
 
     void deleteOneAppLog(Long appLogId);
+
+    long getAllCount();
 }

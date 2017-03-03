@@ -26,4 +26,11 @@ public class AppLogDaoImpl extends BaseDao implements AppLogDao {
     public long insertOneAppLog(AppLog appLog) throws DaoException {
         return this.saveBean(APP_LOG_INSERT, appLog);
     }
+
+
+    private static final String GET_ALL_COUNT = "select count(*) from app_log";
+
+    public long getAllCount() {
+        return this.queryForInteger(GET_ALL_COUNT);
+    }
 }

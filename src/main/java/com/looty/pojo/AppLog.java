@@ -15,7 +15,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/17/017
  */
-public class AppLog implements Serializable {
+public class AppLog implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 2403059193845920236L;
 
@@ -26,7 +26,6 @@ public class AppLog implements Serializable {
      * 模块名
      */
     private String moduleName;
-
 
     /**
      * 操作类型
@@ -81,5 +80,21 @@ public class AppLog implements Serializable {
 
     public void setOperationTime(Date operationTime) {
         this.operationTime = operationTime;
+    }
+
+    /**
+     * 创建类对象的方式Clone
+     *
+     * @return
+     */
+    @Override
+    protected AppLog clone() {
+        AppLog appLog = null;
+        try {
+            appLog = (AppLog) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return appLog;
     }
 }

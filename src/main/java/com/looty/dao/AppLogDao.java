@@ -15,4 +15,6 @@ import com.looty.pojo.AppLog;
 public interface AppLogDao {
 
     long insertOneAppLog(AppLog appLog) throws DaoException;
+
+    long getAllCount();
 }

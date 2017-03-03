@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.mooty.proxy;
+package com.looty.proxy;
 
 /**
  * USED TO:房东的租房与收租

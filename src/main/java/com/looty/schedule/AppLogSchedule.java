@@ -38,7 +38,7 @@ public class AppLogSchedule {
     @Autowired
     private AdminService adminService;
 
-    @Scheduled(cron = "0 0/1 *  * * ?")
+    @Scheduled(cron = "0 0/10 *  * * ?")
     public void addAppLog() {
         int adminCount = adminService.getAdminCount();
         if (adminCount == 0) {

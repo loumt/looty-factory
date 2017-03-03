@@ -35,7 +35,7 @@ public class AdminSchedule {
     @Autowired
     private AdminService adminService;
 
-    @Scheduled(cron = "0 0/1 9-18 * * ?")
+    @Scheduled(cron = "0 0/10 9-18 * * ?")
     public void inserAdmin() {
         int adminCount = adminService.getAdminCount();
         if (adminCount >= ADMIN_MAX_AMOUNT) {
