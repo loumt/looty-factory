@@ -34,11 +34,13 @@ public class SystemInit implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent sc) {
         ServletContext servletContext = sc.getServletContext();
-        SystemStatusLogService systemStatusLogService = ApplicationUtil.getApplicationContext(servletContext).getBean(SystemStatusLogService.class);
-
         String serverInfo = servletContext.getServerInfo();
         String servletContextName = servletContext.getServletContextName();
 
+        ApplicationContext applicationContext = ApplicationUtil.getApplicationContext(servletContext);
+
+        //系统启动日志
+        SystemStatusLogService systemStatusLogService = applicationContext.getBean(SystemStatusLogService.class);
         SystemStatusLog systemStatusLog = createSystemStatusLog(SystemStatusEnum.START, serverInfo, servletContextName);
         systemStatusLogService.insertOneSystemStatusLog(systemStatusLog);
     }

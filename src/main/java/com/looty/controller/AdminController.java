@@ -4,6 +4,7 @@
 package com.looty.controller;
 
 import com.looty.base.BaseController;
+import com.looty.http.HttpClientCenter;
 import com.looty.pojo.Admin;
 import com.looty.pojo.ResultMsg;
 import com.looty.service.AdminService;
@@ -12,8 +13,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,9 +36,30 @@ public class AdminController extends BaseController {
     @Autowired
     private AdminService adminService;
 
-    @RequestMapping(value = "/toIndex")
-    public String toIndex() {
-        return "/admin/index";
+    @Autowired
+    private HttpClientCenter httpClientCenter;
+
+    /**
+     * 登录
+     *
+     * @return
+     */
+    @RequestMapping(value = "/index")
+    public String toIndex(HttpServletRequest request) {
+        return "/login/login";
+    }
+
+
+    @ResponseBody
+    @RequestMapping("/login")
+    public Map<String, Object> login(@RequestParam("username") String username, @RequestParam("password") String password) {
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+
+        resultMap.put("isSuccess", Boolean.FALSE);
+        resultMap.put("username", username);
+        resultMap.put("password", password);
+
+        return resultMap;
     }
 
     /**

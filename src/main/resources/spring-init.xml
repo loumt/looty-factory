@@ -20,15 +20,11 @@
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
-
-    <!--启动MVC注解-->
-    <mvc:annotation-driven/>
-
     <!--包扫描-->
-    <context:component-scan base-package="com"/>
-
-    <!--Css.Js资源-->
-    <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <context:component-scan base-package="
+        com.looty.dao
+        com.looty.service
+        com.looty.schedule"/>
 
     <!--JDBC properties-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -56,6 +52,7 @@
     <!--事务配置-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
           p:dataSource-ref="dataSource"/>
+
     <!--使用Aop提供事务增强-->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="serviceMethod" expression="execution(* com.looty.service..*(..))"></aop:pointcut>
@@ -77,14 +74,9 @@
         <constructor-arg ref="dataSource"/>
     </bean>
 
-    <!--视图-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view"
-          p:suffix=".jsp"></bean>
-
     <!--Aop config-->
     <aop:aspectj-autoproxy/>
     <!--定时器配置注解-->
     <task:annotation-driven/>
-
 
 </beans>

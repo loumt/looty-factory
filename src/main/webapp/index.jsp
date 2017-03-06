@@ -7,7 +7,7 @@
 <!-- Head -->
 <head>
     <meta charset="utf-8"/>
-    <meta http-equiv="refresh" content="0;url=<%=basePath%>/manage/admin/toIndex">
+    <meta http-equiv="refresh" content="0;url=<%=basePath%>/manage/admin/index">
     <title>My Story..</title>
 </head>
 <!-- Body -->
