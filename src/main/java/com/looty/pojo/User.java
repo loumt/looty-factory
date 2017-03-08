@@ -15,7 +15,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/12/012
  */
-public class Admin implements Serializable {
+public class User implements Serializable {
     private static final long serialVersionUID = -5780867915778092835L;
     /**
      * 编号
@@ -44,7 +44,7 @@ public class Admin implements Serializable {
     /**
      * 角色
      */
-    private String role;
+    private String roleCode;
     /**
      * 真实名字
      */
@@ -103,12 +103,12 @@ public class Admin implements Serializable {
         this.lastOperationTime = lastOperationTime;
     }
 
-    public String getRole() {
-        return role;
+    public String getRoleCode() {
+        return roleCode;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoleCode(String roleCode) {
+        this.roleCode = roleCode;
     }
 
     public String getRealName() {
@@ -135,7 +135,7 @@ public class Admin implements Serializable {
                 ", password='" + password + '\'' +
                 ", createTime=" + createTime +
                 ", lastOperationTime=" + lastOperationTime +
-                ", role='" + role + '\'' +
+                ", roleCode='" + roleCode + '\'' +
                 ", realName='" + realName + '\'' +
                 ", authTop=" + authTop +
                 '}';

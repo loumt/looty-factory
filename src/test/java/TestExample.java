@@ -2,7 +2,10 @@
  * Copyright (c) www.bugull.com
  */
 
+import com.looty.utils.DateUtil;
 import org.junit.Test;
+
+import java.util.Date;
 
 /**
  * USED TO:
@@ -17,6 +20,7 @@ import org.junit.Test;
 public class TestExample {
     @Test
     public void test1() {
-        System.out.println(1);
+        String date = DateUtil.date(new Date());
+        System.out.println(date);
     }
 }

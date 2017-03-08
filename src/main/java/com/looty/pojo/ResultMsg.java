@@ -36,11 +36,20 @@ public class ResultMsg {
      */
     private Object data;
 
+    /**
+     * 数据量
+     */
+    private Long count;
+
 
     public static ResultMsg isFail(ResultMsgEnum resultMsgEnum) {
         ResultMsg resultMsg = new ResultMsg(resultMsgEnum);
         resultMsg.setSuccess(Boolean.FALSE);
         return resultMsg;
+    }
+
+    public static ResultMsg isCommonSuccess() {
+        return isSuccess(ResultMsgEnum.SUCCESS);
     }
 
     public static ResultMsg isSuccess(ResultMsgEnum resultMsgEnum) {
@@ -91,6 +100,14 @@ public class ResultMsg {
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    public Long getCount() {
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
     }
 
     @Override

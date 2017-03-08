@@ -4,17 +4,17 @@ import com.looty.exception.DaoException;
 import com.looty.pojo.AppLog;
 
 /**
- * USED TO:
- * Log File:
+ * 
+ * Desc:
  *
- * @author loumt(loumt@hadlinks.com)
+ * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.dao
- * @date 2017/2/17/017
+ * @date 2017/3/8/008
  */
 public interface AppLogDao {
 
     long insertOneAppLog(AppLog appLog) throws DaoException;
 
-    long getAllCount();
+    long getAllCount() throws DaoException;
 }

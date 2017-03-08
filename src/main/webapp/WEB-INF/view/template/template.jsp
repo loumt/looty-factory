@@ -1,13 +1,10 @@
-<%--
-  User: loumt[loumt@sanlogic.com]
-  Date: 2017/2/24/024 11:06
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/view/common/commonPage.jsp" %>
 
 <html>
 
 <head>
+    <meta charset="utf-8"/>
     <title>${websiteName}</title>
 </head>
 
@@ -16,7 +13,7 @@
 
 <body>
 <%--body start--%>
-1<i class="icon-cloud-download"></i>
+
 <%--body end--%>
 </body>
 

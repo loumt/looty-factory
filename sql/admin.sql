@@ -12,6 +12,6 @@ CREATE TABLE admin (
   ENGINE = InnoDB
   DEFAULT CHARSET = utf8;
 /*超级管理员*/
-INSERT INTO admin VALUES (1, 'super', 'admin', 'admin', '超级管理员', now(), now());
+INSERT INTO USER VALUES (1, 'super', 'admin', 'admin', '超级管理员', now(), now());
 
-DROP TABLE IF EXISTS admin;
+DROP TABLE IF EXISTS USER;

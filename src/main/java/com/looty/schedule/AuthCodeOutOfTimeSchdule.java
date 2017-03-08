@@ -4,24 +4,23 @@
 package com.looty.schedule;
 
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.Scheduled;
 
 /**
- * USED TO:
- * Log File:
+ * 
+ * Desc:
  *
- * @author loumt(loumt@hadlinks.com)
+ * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.schedule
- * @date 2017/2/17/017
+ * @date 2017/3/8/008
  */
-@Component
-public class AppLogSchedule {
+public class AuthCodeOutOfTimeSchdule {
 
     private Logger logger = Logger.getLogger(AppLogSchedule.class);
 
 
-    //    @Scheduled(cron = "0 0/10 *  * * ?")
+    @Scheduled(cron = "0 0 0/1  * * ?")
     public void addAppLog() {
 
 

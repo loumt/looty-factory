@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <%@include file="/WEB-INF/view/common/header.jsp" %>
-    <link rel="stylesheet" href="${resourceUrl}/css/login.css"/>
+    <link rel="stylesheet" href="${resourceUrl}/css/login/login.css"/>
 </head>
 <!--Head Ends-->
 <!--Body-->
@@ -54,24 +54,16 @@
      * 登录
      */
     function login() {
-        var username = $("#inputUser").val();
-        var password = $("#inputPassword").val();
-        $.ajax({
-            url: "<%=basePath%>/manage/admin/login",
-            data: {
-                username: username,
-                password: password
-            },
-            type: 'post',
-            dataType: 'json',
-            success: function (data) {
-                alert(data.username);
-                alert(data.password);
-                if (data.isSuccess) {
-                    alert("yes");
-                } else {
-                    alert('no');
-                }
+        var param = {
+            username: $("#inputUser").val(),
+            password: $("#inputPassword").val()
+        };
+        ajaxPost("<%=basePath%>/manage/login/toLogin", param, function (data) {
+            if (data.isSuccess) {
+                //进入
+                window.location.href = "<%=basePath%>/manage/login/toHomePage"
+            } else {
+                alert(data.msg);
             }
         });
     }
