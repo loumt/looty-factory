@@ -1,6 +1,6 @@
 package com.looty.service;
 
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.User;
 
 /**

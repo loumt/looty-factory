@@ -5,7 +5,7 @@ package com.looty.service;
 
 import com.looty.dao.UserDao;
 import com.looty.enums.ResultMsgEnum;
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.User;
 import com.looty.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;

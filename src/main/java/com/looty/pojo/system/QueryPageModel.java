@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.pojo;
+package com.looty.pojo.system;
 
 /**
  * 

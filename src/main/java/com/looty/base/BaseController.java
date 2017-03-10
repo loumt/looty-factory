@@ -13,11 +13,10 @@ package com.looty.base;
  * @date 2017/2/12/012
  */
 
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import org.apache.log4j.Logger;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.View;
 
 import java.util.HashMap;
 import java.util.Map;

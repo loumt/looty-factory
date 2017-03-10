@@ -23,6 +23,16 @@ public final class StringUtil {
     }
 
     /**
+     * 判断是否不是空字符串 null和"" 都返回 true
+     *
+     * @param str 判断的字符串
+     * @return 是否有效
+     */
+    public static boolean isNotEmpty(String str) {
+        return str != null && !str.equals("");
+    }
+
+    /**
      * 把string array or list用给定的符号symbol连接成一个字符串
      *
      * @param list   需要处理的列表

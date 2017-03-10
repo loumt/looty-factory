@@ -5,7 +5,7 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.enums.ResultMsgEnum;
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.service.UserAuthCodeService;
 import com.looty.service.UserService;
 import com.looty.utils.CookieUtil;
@@ -56,6 +56,16 @@ public class LoginController extends BaseController {
     @RequestMapping(value = "/toIndex")
     public ModelAndView toIndex(HttpServletRequest request) {
         String ip = IpUtil.getIpAddress(request);
+        String authCode = CookieUtil.getValue(request, "code");
+
+        boolean isAccess = Boolean.FALSE;
+        if (StringUtil.isNotEmpty(authCode)) {
+            isAccess = userAuthCodeService.checkAuthCode(authCode);
+        }
+        //立即登录
+        if (isAccess) {
+            return backViewMV("/login/homePage");
+        }
         log.debug(">>" + DateUtil.dateTime(new Date()) + "--" + ip + ":Ready to Login.....");
         return backViewMV("/login/login");
     }

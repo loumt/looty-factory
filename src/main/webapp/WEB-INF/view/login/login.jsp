@@ -8,8 +8,8 @@
     <meta name="description" content="login page"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <%@include file="/WEB-INF/view/common/header.jsp" %>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <%@include file="/WEB-INF/view/common/commonCss.jsp" %>
     <link rel="stylesheet" href="${resourceUrl}/css/login/login.css"/>
 </head>
 <!--Head Ends-->
@@ -43,8 +43,9 @@
         </div>
     </div>
 </div>
-</body>
-<%@include file="/WEB-INF/view/common/footer.jsp" %>
+
+<%--<%@include file="/WEB-INF/view/common/footerPart.jsp" %>--%>
+<%@include file="/WEB-INF/view/common/commonJs.jsp" %>
 <script>
     $(function () {
 
@@ -68,4 +69,5 @@
         });
     }
 </script>
+</body>
 </html>

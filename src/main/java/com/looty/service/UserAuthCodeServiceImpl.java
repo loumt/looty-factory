@@ -4,12 +4,12 @@
 package com.looty.service;
 
 
+import com.looty.config.SystemConfig;
 import com.looty.dao.UserAuthCodeDao;
 import com.looty.dao.UserDao;
 import com.looty.enums.ResultMsgEnum;
-import com.looty.init.SystemConfig;
 import com.looty.pojo.User;
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.UserAuthCode;
 import com.looty.utils.DateUtil;
 import com.looty.utils.UUIDGenerator;

@@ -3,7 +3,7 @@
  */
 package com.looty.filter;
 
-import com.looty.pojo.QueryPageModel;
+import com.looty.pojo.system.QueryPageModel;
 import com.looty.utils.StringUtil;
 
 import javax.servlet.*;

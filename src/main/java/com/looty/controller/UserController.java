@@ -4,7 +4,7 @@
 package com.looty.controller;
 
 import com.looty.base.BaseController;
-import com.looty.pojo.ResultMsg;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.User;
 import com.looty.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
