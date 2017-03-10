@@ -45,8 +45,7 @@ public class UserAuthCodeServiceImpl implements UserAuthCodeService {
         UserAuthCode authCode = userAuthCodeDao.getAuthCodeByUsername(userId);
         //创建一个授权码
         if (authCode == null) {
-            authCode = createNewAuthCode(ip, userId);
-            userAuthCodeDao.saveAuthCode(authCode);
+            userAuthCodeDao.saveAuthCode(createNewAuthCode(ip, userId));
         }
         return ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, authCode.getAuthCode());
     }
