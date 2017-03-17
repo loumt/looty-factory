@@ -34,6 +34,19 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         return this.saveBean(SAVE_USER, user);
     }
 
+    private static final String COUNT = "select count(*) from user";
+
+    public int count() {
+        return this.queryForInteger(COUNT);
+    }
+
+
+    private static final String GET_USER_LIST = "select * from user";
+
+    public List<User> getList() {
+        return super.queryForBeanList(GET_USER_LIST, User.class);
+    }
+
     private static final String GET_USER_BY_USER_ID = "select * from user where userId = ?";
 
     public User getUserById(String userId) {

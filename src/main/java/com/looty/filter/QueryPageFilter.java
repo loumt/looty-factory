@@ -19,7 +19,7 @@ import java.io.IOException;
  * @package com.looty.filter
  * @date 2017/3/8/008
  */
-@WebFilter(description = "Page Filter", filterName = "QueryPageFilter", urlPatterns = {"/*"}, dispatcherTypes = DispatcherType.REQUEST)
+@WebFilter(description = "Page Filter", filterName = "QueryPageFilter", urlPatterns = {"/manage/*"}, dispatcherTypes = DispatcherType.REQUEST)
 public class QueryPageFilter implements Filter {
     private static Integer DEFAULT_PAGE_NO = 1;
     private static Integer DEFAULT_PAGE_SIZE = 10;

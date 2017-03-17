@@ -5,15 +5,14 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.pojo.User;
 import com.looty.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -32,19 +31,17 @@ public class UserController extends BaseController {
     @Autowired
     private UserService userService;
 
-    /**
-     * 注册
-     *
-     * @param user
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public Map<String, Object> register(User user) {
-        Map<String, Object> resultMap = new HashMap<String, Object>();
-        ResultMsg result = userService.register(user);
-        resultMap.put("result", result);
-        return resultMap;
+    @RequestMapping("/toIndex")
+    public ModelAndView toIndex() {
+        return super.backViewMV("/user/userList");
     }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> list() {
+        ResultMsg resultMsg = userService.getUserList();
+        return super.backDataMap(resultMsg);
+    }
+
 
 }

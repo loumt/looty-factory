@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -25,32 +26,42 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="header">HEADER</li>
-            <!-- Optionally, you can add icons to the links -->
+            <%--用户模块--%>
             <li class="active">
-                <a href="#">
-                    <i class="icon-link"></i>
-                    <span>Link</span>
+                <a href="${basePath}/manage/user/toIndex">
+                    <i class="icon-user"></i>
+                    <span>用户模块</span>
                 </a>
             </li>
+            <%--角色模块--%>
             <li>
                 <a href="#">
-                    <i class="icon-link"></i>
-                    <span>Another Link</span>
+                    <i class="icon-user-md"></i>
+                    <span>角色模块</span>
                 </a>
             </li>
+            <%--权限模块--%>
+            <li>
+                <a href="#">
+                    <i class="icon-key"></i>
+                    <span>权限模块</span>
+                </a>
+            </li>
+            <%--系统管理--%>
             <li class="treeview">
                 <a href="#">
-                    <i class="icon-link"></i>
-                    <span>Multilevel</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
+                    <i class="icon-cogs"></i>
+                    <span>系统管理</span>
+                    <span class="pull-right-container">
+                        <i class="icon-plus"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="#">Link in level 2</a></li>
                     <li><a href="#">Link in level 2</a></li>
                 </ul>
             </li>
+
         </ul>
         <!-- /.sidebar-menu -->
     </section>

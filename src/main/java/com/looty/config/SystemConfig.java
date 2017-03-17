@@ -4,6 +4,7 @@
 package com.looty.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 /**
  *  系统配置参数
@@ -15,7 +16,6 @@ import org.springframework.beans.factory.annotation.Value;
  * @date 2017/3/10/010
  */
 public class SystemConfig {
-
     /**
      * AuthCode有效天数
      */
@@ -23,7 +23,6 @@ public class SystemConfig {
     /**
      * AuthCode有效位数
      */
-    @Value("${max_auth_code_invalid_digit}")
     public static Integer MAX_AUTH_CODE_INVALID_DIGIT = 20;
 
 }

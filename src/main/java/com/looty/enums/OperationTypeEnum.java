@@ -10,8 +10,11 @@ package com.looty.enums;
  * @date 2017/2/17/017
  */
 public enum OperationTypeEnum {
-    DEFAULT(500, "系统操作"),
-    ADD(501, "增加"), DELETE(502, "删除"), UPDATE(503, "更新"), SEARCH(504, "查找");
+    DEFAULT(500, "DEFAULT"),
+    ADD(501, "ADD"),
+    DELETE(502, "DELETE"),
+    UPDATE(503, "UPDATE"),
+    SEARCH(504, "SEARCH");
 
 
     private int operationTypeCode;

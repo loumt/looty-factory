@@ -1,15 +1,18 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.service;
+package com.looty.service.impl;
 
 import com.looty.dao.UserDao;
 import com.looty.enums.ResultMsgEnum;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.User;
+import com.looty.service.UserService;
 import com.looty.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 
@@ -42,9 +45,18 @@ public class UserServiceImpl implements UserService {
             resultMsg = ResultMsg.isFail(ResultMsgEnum.ALREADY_EXIST);
         } else {
             //注册
-            long id = userDao.saveUser(user);
+            resultMsg = ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, userDao.saveUser(user));
         }
-        return null;
+        return resultMsg;
+    }
+
+    public int count() {
+        return userDao.count();
+    }
+
+    public ResultMsg getUserList() {
+        List<User> users = userDao.getList();
+        return ResultMsg.isSuccess(users);
     }
 
     private boolean checkUserExist(User user) {

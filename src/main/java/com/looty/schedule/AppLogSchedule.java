@@ -4,6 +4,7 @@
 package com.looty.schedule;
 
 import org.apache.log4j.Logger;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,11 +21,9 @@ public class AppLogSchedule {
 
     private Logger logger = Logger.getLogger(AppLogSchedule.class);
 
-
     //    @Scheduled(cron = "0 0/10 *  * * ?")
     public void addAppLog() {
-
-
+        System.out.println(111);
     }
 
 }

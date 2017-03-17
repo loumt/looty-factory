@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.service;
+package com.looty.service.impl;
 
 
 import com.looty.config.SystemConfig;
@@ -11,6 +11,7 @@ import com.looty.enums.ResultMsgEnum;
 import com.looty.pojo.User;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.UserAuthCode;
+import com.looty.service.UserAuthCodeService;
 import com.looty.utils.DateUtil;
 import com.looty.utils.UUIDGenerator;
 import org.springframework.beans.factory.annotation.Autowired;

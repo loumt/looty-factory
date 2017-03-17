@@ -15,6 +15,7 @@ package com.looty.base;
 
 import com.looty.pojo.system.ResultMsg;
 import org.apache.log4j.Logger;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -22,11 +23,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 返回对象的封装类
+ * 返回对象的封装类,给Controller提供事务
  * Map,ModelAndView和ModelMap
  *
  * @author lenovo
  */
+@Transactional
 public class BaseController {
 
     protected Logger logger = Logger.getLogger(this.getClass());
@@ -36,28 +38,6 @@ public class BaseController {
     private static final String DATA = "data";
     private static final String MSG = "msg";
     private static final String COUNT = "count";
-
-
-    /**
-     * 返回 Map
-     *
-     * @param resultMsg
-     * @return
-     */
-    protected Map<String, Object> backDataMap(ResultMsg resultMsg) {
-        return buildMap(resultMsg);
-    }
-
-    /**
-     * 返回 ModelMap
-     *
-     * @param resultMsg
-     * @return
-     */
-    protected ModelMap backDataMM(ResultMsg resultMsg) {
-        ModelMap modelMap = new ModelMap(buildMap(resultMsg));
-        return modelMap;
-    }
 
     /**
      * 返回 ModelAndView
@@ -82,7 +62,7 @@ public class BaseController {
     }
 
 
-    private Map<String, Object> buildMap(ResultMsg resultMsg) {
+    protected Map<String, Object> backDataMap(ResultMsg resultMsg) {
         Map<String, Object> m = new HashMap<String, Object>();
         if (isNotNull(resultMsg.getSuccess())) m.put(IS_SUCCESS, resultMsg.getSuccess());
         if (isNotNull(resultMsg.getCode())) m.put(CODE, resultMsg.getCode());

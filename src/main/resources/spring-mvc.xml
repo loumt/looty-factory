@@ -24,11 +24,15 @@
     <!--启动MVC注解-->
     <mvc:annotation-driven/>
 
-    <!--包扫描-->
-    <context:component-scan base-package="com.looty.controller"/>
-
     <!--Css.Js.Image资源-->
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <!--RestFull风格的Url.屏蔽静态资源时给出的解决方案.将静态资源交回给Web服务器容器处理-->
+
+    <!--事务配置(必须在MVC中配置,扫描Controller时)-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--包扫描-->
+    <context:component-scan base-package="com.looty.controller"/>
 
     <!--视图-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view"

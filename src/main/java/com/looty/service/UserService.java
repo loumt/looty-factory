@@ -3,6 +3,8 @@ package com.looty.service;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.User;
 
+import java.util.List;
+
 /**
  * 
  * Desc:
@@ -16,4 +18,8 @@ public interface UserService {
     boolean checkLoginInfo(String username, String password);
 
     ResultMsg register(User user);
+
+    int count();
+
+    ResultMsg getUserList();
 }

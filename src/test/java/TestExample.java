@@ -23,4 +23,8 @@ public class TestExample {
         String date = DateUtil.date(new Date());
         System.out.println(date);
     }
+
+    @Test
+    public void test2() {
+    }
 }

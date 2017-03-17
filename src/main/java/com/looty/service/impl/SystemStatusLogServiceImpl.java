@@ -1,11 +1,12 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.service;
+package com.looty.service.impl;
 
 import com.looty.dao.SystemStatusLogDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.SystemStatusLog;
+import com.looty.service.SystemStatusLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

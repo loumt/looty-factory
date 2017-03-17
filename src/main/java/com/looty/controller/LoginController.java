@@ -5,16 +5,18 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.enums.ResultMsgEnum;
+import com.looty.exception.ServiceException;
+import com.looty.pojo.Role;
+import com.looty.pojo.User;
 import com.looty.pojo.system.ResultMsg;
+import com.looty.service.RoleService;
 import com.looty.service.UserAuthCodeService;
 import com.looty.service.UserService;
-import com.looty.utils.CookieUtil;
-import com.looty.utils.DateUtil;
-import com.looty.utils.IpUtil;
-import com.looty.utils.StringUtil;
+import com.looty.utils.*;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -47,6 +49,7 @@ public class LoginController extends BaseController {
 
     @Autowired
     private UserAuthCodeService userAuthCodeService;
+
 
     /**
      * 登录页面

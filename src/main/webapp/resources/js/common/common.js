@@ -33,3 +33,23 @@ function ajaxPost(url, options, callback) {
         success: callback
     });
 }
+
+
+/**
+ * 时间格式转换
+ * @param value
+ * @param length
+ * @returns {string}
+ */
+var zeroize = function (value, length) {
+    if (!length) length = 2;
+    value = String(value);
+    for (var i = 0, zeros = ''; i < (length - value.length); i++) {
+        zeros += '0';
+    }
+    return zeros + value;
+};
+var format_date = function (strTime) {
+    var date = new Date(strTime);
+    return date.getFullYear() + "-" + zeroize(date.getMonth() + 1) + "-" + zeroize(date.getDate()) + " " + zeroize(date.getHours()) + ":" + zeroize(date.getMinutes()) + ":" + zeroize(date.getSeconds());
+};

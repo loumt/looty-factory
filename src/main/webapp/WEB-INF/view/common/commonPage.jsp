@@ -9,7 +9,9 @@
     String websiteName = "Looty-Factory";
     int port = request.getServerPort();
     String resourcesRootPath = "/resources";
+    String resourcesToolsPath = "/tools";
     String resourceUrl = basePath + contentPath + resourcesRootPath;
+    String resourceToolsUrl = basePath + contentPath + resourcesRootPath + resourcesToolsPath;
 %>
 
 <c:set var="version" value="<%=Math.random()%>"/>
@@ -24,3 +26,5 @@
 <c:set var="websiteName" value="<%=websiteName%>"/>
 
 <c:set var="resourceUrl" value="<%=resourceUrl%>"/>
+
+<c:set var="resourceToolsUrl" value="<%=resourceToolsUrl%>"/>

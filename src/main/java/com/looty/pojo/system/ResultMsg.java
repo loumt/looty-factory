@@ -4,6 +4,10 @@
 package com.looty.pojo.system;
 
 import com.looty.enums.ResultMsgEnum;
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+import org.apache.commons.collections.CollectionUtils;
+
+import java.util.ArrayList;
 
 /**
  * USED TO:结果集对象
@@ -55,6 +59,16 @@ public class ResultMsg {
     public static ResultMsg isSuccess(ResultMsgEnum resultMsgEnum) {
         ResultMsg resultMsg = new ResultMsg(resultMsgEnum);
         resultMsg.setSuccess(Boolean.TRUE);
+        return resultMsg;
+    }
+
+    public static ResultMsg isSuccess(Object obj) {
+        ResultMsg resultMsg = new ResultMsg(ResultMsgEnum.SUCCESS);
+        resultMsg.setSuccess(Boolean.TRUE);
+        resultMsg.setData(obj);
+        if (obj instanceof java.util.List) {
+            resultMsg.setCount((long) ((java.util.List) obj).size());
+        }
         return resultMsg;
     }
 

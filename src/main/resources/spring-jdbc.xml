@@ -20,30 +20,29 @@
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
-    <!--包扫描-->
-    <context:component-scan base-package="
-        com.looty.dao
-        com.looty.service
-        com.looty.schedule"/>
 
-    <!--properties-->
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>classpath:jdbc.properties</value>
-                <value>classpath:httpclient.properties</value>
-                <value>classpath:redis.properties</value>
-                <value>classpath:system.properties</value>
-            </list>
-        </property>
+    <!--数据源-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--<property name="loginTimeout" value="${jdbc.loginTimeout}"/>-->
     </bean>
-    <!--多个文件用逗号分隔-->
-    <!--<context:property-placeholder location="classpath:jdbc.properties,classpath:system.properties"/>-->
 
 
-    <!--Aop config-->
-    <aop:aspectj-autoproxy/>
-    <!--定时器配置注解-->
-    <task:annotation-driven/>
+    <!-- DAO层所用 jdbcTemplate -->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!-- DAO层所用 namedParameterJdbcTemplate -->
+    <bean id="namedParameterJdbcTemplate"
+          class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <!--事务配置-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="dataSource"/>
 
 </beans>

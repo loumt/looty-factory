@@ -1,9 +1,9 @@
 if (typeof jQuery === "undefined") {
-    throw new Error("AdminLTE requires jQuery");
+    throw new Error("Looty requires jQuery");
 }
-$.AdminLTE = {};
+$.Looty = {};
 
-$.AdminLTE.options = {
+$.Looty.options = {
     navbarMenuSlimscroll: true,
     navbarMenuSlimscrollWidth: "3px", //The width of the scroll bar
     navbarMenuHeight: "200px", //The height of the inner menu
@@ -29,7 +29,7 @@ $.AdminLTE.options = {
     //Enable Fast Click. Fastclick.js creates a more
     //native touch experience with touch devices. If you
     //choose to enable the plugin, make sure you load the script
-    //before AdminLTE's app.js
+    //before Looty's app.js
     enableFastclick: false,
     //Control Sidebar Tree views
     enableControlTreeView: true,
@@ -95,7 +95,7 @@ $.AdminLTE.options = {
 /* ------------------
  * - Implementation -
  * ------------------
- * The next block of code implements AdminLTE's
+ * The next block of code implements Looty's
  * functions and plugins as specified by the
  * options above.
  */
@@ -106,24 +106,24 @@ $(function () {
     $("body").removeClass("hold-transition");
 
     //Extend options if external options exist
-    if (typeof AdminLTEOptions !== "undefined") {
+    if (typeof LootyOptions !== "undefined") {
         $.extend(true,
-            $.AdminLTE.options,
-            AdminLTEOptions);
+            $.Looty.options,
+            LootyOptions);
     }
 
     //Easy access to options
-    var o = $.AdminLTE.options;
+    var o = $.Looty.options;
 
     //Set up the object
     _init();
 
     //Activate the layout maker
-    $.AdminLTE.layout.activate();
+    $.Looty.layout.activate();
 
     //Enable sidebar tree view controls
     if (o.enableControlTreeView) {
-        $.AdminLTE.tree('.sidebar');
+        $.Looty.tree('.sidebar');
     }
     //Add slimscroll to navbar dropdown
     if (o.navbarMenuSlimscroll && typeof $.fn.slimscroll != 'undefined') {
@@ -136,7 +136,7 @@ $(function () {
 
     //Activate sidebar push menu
     if (o.sidebarPushMenu) {
-        $.AdminLTE.pushMenu.activate(o.sidebarToggleSelector);
+        $.Looty.pushMenu.activate(o.sidebarToggleSelector);
     }
 
     //Activate Bootstrap tooltip
@@ -149,7 +149,7 @@ $(function () {
 
     //Activate box widget
     if (o.enableBoxWidget) {
-        $.AdminLTE.boxWidget.activate();
+        $.Looty.boxWidget.activate();
     }
 
     //Activate fast click
@@ -181,9 +181,9 @@ $(function () {
 });
 
 /* ----------------------------------
- * - Initialize the AdminLTE Object -
+ * - Initialize the Looty Object -
  * ----------------------------------
- * All AdminLTE functions are implemented below.
+ * All Looty functions are implemented below.
  */
 function _init() {
     'use strict';
@@ -192,11 +192,11 @@ function _init() {
      * Fixes the layout height in case min-height fails.
      *
      * @type Object
-     * @usage $.AdminLTE.layout.activate()
-     *        $.AdminLTE.layout.fix()
-     *        $.AdminLTE.layout.fixSidebar()
+     * @usage $.Looty.layout.activate()
+     *        $.Looty.layout.fix()
+     *        $.Looty.layout.fixSidebar()
      */
-    $.AdminLTE.layout = {
+    $.Looty.layout = {
         activate: function () {
             var _this = this;
             _this.fix();
@@ -241,7 +241,7 @@ function _init() {
                 window.console.error("Error: the fixed layout requires the slimscroll plugin!");
             }
             //Enable slimscroll for fixed layout
-            if ($.AdminLTE.options.sidebarSlimScroll) {
+            if ($.Looty.options.sidebarSlimScroll) {
                 if (typeof $.fn.slimScroll != 'undefined') {
                     //Destroy if it exists
                     $(".sidebar").slimScroll({destroy: true}).height("auto");
@@ -261,12 +261,12 @@ function _init() {
      * Adds the push menu functionality to the sidebar.
      *
      * @type Function
-     * @usage: $.AdminLTE.pushMenu("[data-toggle='offcanvas']")
+     * @usage: $.Looty.pushMenu("[data-toggle='offcanvas']")
      */
-    $.AdminLTE.pushMenu = {
+    $.Looty.pushMenu = {
         activate: function (toggleBtn) {
             //Get the screen sizes
-            var screenSizes = $.AdminLTE.options.screenSizes;
+            var screenSizes = $.Looty.options.screenSizes;
 
             //Enable sidebar toggle
             $(document).on('click', toggleBtn, function (e) {
@@ -298,7 +298,7 @@ function _init() {
             });
 
             //Enable expand on hover for sidebar mini
-            if ($.AdminLTE.options.sidebarExpandOnHover
+            if ($.Looty.options.sidebarExpandOnHover
                 || ($('body').hasClass('fixed')
                 && $('body').hasClass('sidebar-mini'))) {
                 this.expandOnHover();
@@ -306,7 +306,7 @@ function _init() {
         },
         expandOnHover: function () {
             var _this = this;
-            var screenWidth = $.AdminLTE.options.screenSizes.sm - 1;
+            var screenWidth = $.Looty.options.screenSizes.sm - 1;
             //Expand sidebar on hover
             $('.main-sidebar').hover(function () {
                 if ($('body').hasClass('sidebar-mini')
@@ -338,17 +338,19 @@ function _init() {
      * tree view menu.
      *
      * @type Function
-     * @Usage: $.AdminLTE.tree('.sidebar')
+     * @Usage: $.Looty.tree('.sidebar')
      */
-    $.AdminLTE.tree = function (menu) {
+    $.Looty.tree = function (menu) {
         var _this = this;
-        var animationSpeed = $.AdminLTE.options.animationSpeed;
+        var animationSpeed = $.Looty.options.animationSpeed;
         $(document).off('click', menu + ' li a')
             .on('click', menu + ' li a', function (e) {
                 //Get the clicked link and the next element
                 var $this = $(this);
-                var checkElement = $this.next();
+                //select ele i
+                var i_ele = $this.children("span.pull-right-container").children("i");
 
+                var checkElement = $this.next();
                 //Check if the next element is a menu and is visible
                 if ((checkElement.is('.treeview-menu')) && (checkElement.is(':visible')) && (!$('body').hasClass('sidebar-collapse'))) {
                     //Close the menu
@@ -357,7 +359,10 @@ function _init() {
                         //Fix the layout in case the sidebar stretches over the height of the window
                         //_this.layout.fix();
                     });
-                    checkElement.parent("li").removeClass("active");
+                    if (i_ele.hasClass("icon-minus")) {
+                        i_ele.removeClass("icon-minus");
+                        i_ele.addClass("icon-plus");
+                    }
                 }
                 //If the menu is not visible
                 else if ((checkElement.is('.treeview-menu')) && (!checkElement.is(':visible'))) {
@@ -378,7 +383,13 @@ function _init() {
                         parent_li.addClass('active');
                         //Fix the layout in case the sidebar stretches over the height of the window
                         _this.layout.fix();
+
                     });
+                    if (i_ele.hasClass("icon-plus")) {
+                        i_ele.addClass("icon-minus");
+                        i_ele.removeClass("icon-plus");
+                    }
+
                 }
                 //if this isn't a link, prevent the page from being redirected
                 if (checkElement.is('.treeview-menu')) {
@@ -393,13 +404,13 @@ function _init() {
      * removing boxes from the screen.
      *
      * @type Object
-     * @usage $.AdminLTE.boxWidget.activate()
-     *        Set all your options in the main $.AdminLTE.options object
+     * @usage $.Looty.boxWidget.activate()
+     *        Set all your options in the main $.Looty.options object
      */
-    $.AdminLTE.boxWidget = {
-        selectors: $.AdminLTE.options.boxWidgetOptions.boxWidgetSelectors,
-        icons: $.AdminLTE.options.boxWidgetOptions.boxWidgetIcons,
-        animationSpeed: $.AdminLTE.options.animationSpeed,
+    $.Looty.boxWidget = {
+        selectors: $.Looty.options.boxWidgetOptions.boxWidgetSelectors,
+        icons: $.Looty.options.boxWidgetOptions.boxWidgetIcons,
+        animationSpeed: $.Looty.options.animationSpeed,
         activate: function (_box) {
             var _this = this;
             if (!_box) {
@@ -551,17 +562,17 @@ function _init() {
     'use strict';
 
     $.fn.activateBox = function () {
-        $.AdminLTE.boxWidget.activate(this);
+        $.Looty.boxWidget.activate(this);
     };
 
     $.fn.toggleBox = function () {
-        var button = $($.AdminLTE.boxWidget.selectors.collapse, this);
-        $.AdminLTE.boxWidget.collapse(button);
+        var button = $($.Looty.boxWidget.selectors.collapse, this);
+        $.Looty.boxWidget.collapse(button);
     };
 
     $.fn.removeBox = function () {
-        var button = $($.AdminLTE.boxWidget.selectors.remove, this);
-        $.AdminLTE.boxWidget.remove(button);
+        var button = $($.Looty.boxWidget.selectors.remove, this);
+        $.Looty.boxWidget.remove(button);
     };
 
 })(jQuery);
