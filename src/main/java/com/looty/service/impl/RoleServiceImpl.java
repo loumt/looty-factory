@@ -5,6 +5,7 @@ package com.looty.service.impl;
 
 import com.looty.dao.RoleDao;
 import com.looty.pojo.Role;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -34,5 +35,9 @@ public class RoleServiceImpl implements RoleService {
 
     public int count() {
         return roleDao.count();
+    }
+
+    public ResultMsg getRoleList() {
+        return ResultMsg.isSuccess(roleDao.getRoleList());
     }
 }

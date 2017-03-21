@@ -3,6 +3,7 @@
  */
 package com.looty.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/3/003
  */
-public class SystemStatusLog {
+public class SystemStatusLog implements Serializable {
 
     private long id;
     /**

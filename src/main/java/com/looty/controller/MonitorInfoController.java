@@ -5,7 +5,7 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.RoleService;
+import com.looty.service.MonitorInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,37 +16,41 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 /**
- * 
- * Desc:
+ * USED TO:
+ * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.controller
- * @date 2017/3/8/008
+ * @date 2017/3/17/017
  */
 @Controller
-@RequestMapping("/manage/role")
-public class RoleController extends BaseController {
+@RequestMapping("/manage/system/monitorInfo")
+public class MonitorInfoController extends BaseController {
 
     @Autowired
-    private RoleService roleService;
-
-    @RequestMapping("/toIndex")
-    public ModelAndView toIndex() {
-        return super.backViewMV("/role/role_list");
-    }
+    private MonitorInfoService monitorInfoService;
 
     /**
-     * ROole列表
+     * 主页
      *
      * @return
      */
-    @RequestMapping(value = "/getRoleList", method = RequestMethod.GET)
-    @ResponseBody
-    public Map<String, Object> getRoleList() {
-        ResultMsg resultMsg = roleService.getRoleList();
-        return super.backDataMap(resultMsg);
+    @RequestMapping("/toIndex")
+    public ModelAndView toIndex() {
+        return super.backViewMV("/system/system_status");
     }
 
+    /**
+     * Info列表
+     *
+     * @return
+     */
+    @RequestMapping(value = "/getInfoList", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> getInfoList() {
+        ResultMsg resultMsg = monitorInfoService.getInfoList();
+        return super.backDataMap(resultMsg);
+    }
 
 }

@@ -32,7 +32,7 @@
         </section>
         <!-- Main content -->
         <section class="content">
-            <table id="userList"></table>
+            <table id="infoList"></table>
         </section>
         <!-- content -->
     </div>
@@ -46,8 +46,8 @@
     });
 
     function initTable() {
-        $("#userList").bootstrapTable({
-            url: "${basePath}/manage/user/list",
+        $("#infoList").bootstrapTable({
+            url: "${basePath}/manage/system/monitorInfo/getInfoList",
             method: "get", //请求参数
             striped: true,  //表格显示条纹
             pagination: true, //启动分页
@@ -62,16 +62,15 @@
                 return {rows: res.data, total: res.count};
             },
             queryParamsType: "limit", //设置成为limit会发送符合RESTFull类型的参数
-            queryParams: function queryParams() {   //设置查询参数
+            queryParams: function queryParams(params) {   //设置查询参数
                 var param = {
                     //这里是在ajax发送请求的时候设置一些参数 params有什么东西，自己看看源码就知道了
-                    pageNo: 1,
-                    pageSize: 10
+                    pageNo: params.pageNumber,
+                    pageSize: params.limit,
                 };
                 return param;
             },
             onLoadSuccess: function (data) {  //加载成功时执行
-//                alert("加载成功"+data.rows);
             },
             onLoadError: function () {  //加载失败时执行
                 alert("加载数据失败");
@@ -84,28 +83,58 @@
                     valign: 'middle'
                 },
                 {
-                    title: '用户名',
-                    field: 'username',
+                    title: 'JVM总内存',
+                    field: 'totalMemory',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '超级管理',
-                    field: 'authTop',
+                    title: 'JVM剩余内存',
+                    field: 'freeMemory',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '创建时间',
-                    field: 'createTime',
+                    title: '操作系统',
+                    field: 'osName',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '最后操作时间',
-                    field: 'lastOperationTime',
+                    title: '线程总数',
+                    field: 'totalThread',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '真实姓名',
-                    field: 'realName',
+                    title: 'JVM可以使用处理器个数',
+                    field: 'availableProcessors',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: 'IP',
+                    field: 'hostAddress',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: '计算机域名',
+                    field: 'userDomain',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: 'Java的运行环境版本',
+                    field: 'javaVersion',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: 'Java安装路径',
+                    field: 'javaHome',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: 'Java虚拟机实现名字',
+                    field: 'javaVmName',
+                    align: 'center',
+                    valign: 'middle'
+                }, {
+                    title: '时间',
+                    field: 'createDate',
                     align: 'center',
                     valign: 'middle'
                 },

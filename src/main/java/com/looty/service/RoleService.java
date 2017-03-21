@@ -1,6 +1,7 @@
 package com.looty.service;
 
 import com.looty.pojo.Role;
+import com.looty.pojo.system.ResultMsg;
 
 /**
  * 
@@ -18,4 +19,6 @@ public interface RoleService {
     void deleteRole(long id);
 
     int count();
+
+    ResultMsg getRoleList();
 }

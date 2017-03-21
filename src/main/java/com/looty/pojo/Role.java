@@ -3,6 +3,7 @@
  */
 package com.looty.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/8/008
  */
-public class Role {
+public class Role implements Serializable {
     private Long id;
     private String roleName;
     private String roleCode;

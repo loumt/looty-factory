@@ -7,6 +7,7 @@ import com.looty.enums.ResultMsgEnum;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 import org.apache.commons.collections.CollectionUtils;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -18,8 +19,9 @@ import java.util.ArrayList;
  * @package com.looty.pojo
  * @date 2017/2/23/023
  */
-public class ResultMsg {
+public class ResultMsg implements Serializable {
 
+    private static final long serialVersionUID = 4282376782413938930L;
     /**
      * 返回结果码
      */
@@ -67,7 +69,7 @@ public class ResultMsg {
         resultMsg.setSuccess(Boolean.TRUE);
         resultMsg.setData(obj);
         if (obj instanceof java.util.List) {
-            resultMsg.setCount((long) ((java.util.List) obj).size());
+            resultMsg.setCount(30L);
         }
         return resultMsg;
     }

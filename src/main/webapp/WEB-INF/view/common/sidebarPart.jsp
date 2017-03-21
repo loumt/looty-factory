@@ -30,38 +30,51 @@
             <li class="active">
                 <a href="${basePath}/manage/user/toIndex">
                     <i class="icon-user"></i>
-                    <span>用户模块</span>
+                    <span>-User-</span>
                 </a>
             </li>
             <%--角色模块--%>
             <li>
-                <a href="#">
+                <a href="${basePath}/manage/role/toIndex">
                     <i class="icon-user-md"></i>
-                    <span>角色模块</span>
+                    <span>-Role-</span>
                 </a>
             </li>
             <%--权限模块--%>
             <li>
                 <a href="#">
                     <i class="icon-key"></i>
-                    <span>权限模块</span>
+                    <span>-Auth-</span>
                 </a>
             </li>
             <%--系统管理--%>
-            <li class="treeview">
+            <li>
                 <a href="#">
                     <i class="icon-cogs"></i>
-                    <span>系统管理</span>
+                    <span>-System-</span>
                     <span class="pull-right-container">
                         <i class="icon-plus"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="${basePath}/manage/system/monitorInfo/toIndex">-Status-</a></li>
+                    <li><a href="#">-Config-</a></li>
                 </ul>
             </li>
-
+            <%--日志管理--%>
+            <li>
+                <a href="#">
+                    <i class="icon-pinterest"></i>
+                    <span>-Log-</span>
+                    <span class="pull-right-container">
+                        <i class="icon-plus"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#">-System-</a></li>
+                    <li><a href="#">-Manage-</a></li>
+                </ul>
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>

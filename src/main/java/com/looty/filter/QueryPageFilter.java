@@ -40,6 +40,8 @@ public class QueryPageFilter implements Filter {
         String order = request.getParameter("order");
         String sort = request.getParameter("sort");
 
+        System.out.println("QueryPageFilter[_pageNo:" + _pageNo + ",_pageSize:" + _pageSize + ",order:" + order + ",sort:" + sort + "]");
+
         if (!StringUtil.isEmpty(_pageNo)) {
             pageNo = Integer.valueOf(_pageNo);
         }

@@ -5,7 +5,10 @@ package com.looty.dao;
 
 import com.looty.base.BaseDao;
 import com.looty.pojo.Role;
+import com.looty.vo.RoleVo;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * 
@@ -29,5 +32,11 @@ public class RoleDaoImpl extends BaseDao implements RoleDao {
 
     public int count() {
         return this.queryForInteger(COUNT);
+    }
+
+    private static final String GET_ROLE_LIST = "select re.id,re.roleCode,re.roleName,re.remark,re.createDate,u.realName from role as re left join user as u on u.userId = re.createUserId";
+
+    public List<RoleVo> getRoleList() {
+        return super.queryForBeanList(GET_ROLE_LIST, RoleVo.class);
     }
 }
