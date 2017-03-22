@@ -32,7 +32,7 @@
         </section>
         <!-- Main content -->
         <section class="content">
-            <table id="userList"></table>
+            <table id="authList"></table>
         </section>
         <!-- content -->
     </div>
@@ -46,8 +46,8 @@
     });
 
     function initTable() {
-        $("#userList").bootstrapTable({
-            url: "${basePath}/manage/user/list",
+        $("#authList").bootstrapTable({
+            url: "${basePath}/manage/permission/authCode/getAuthList",
             method: "get", //请求参数
             striped: true,  //表格显示条纹
             pagination: true, //启动分页
@@ -71,7 +71,6 @@
                 return param;
             },
             onLoadSuccess: function (data) {  //加载成功时执行
-//                alert("加载成功"+data.rows);
             },
             onLoadError: function () {  //加载失败时执行
                 alert("加载数据失败");
@@ -84,32 +83,21 @@
                     valign: 'middle'
                 },
                 {
-                    title: '用户名',
-                    field: 'username',
-                    align: 'center',
-                    valign: 'middle'
-                }, {
-                    title: '超级管理',
-                    field: 'authTop',
+                    title: '最后登录IP',
+                    field: 'lastOperationIp',
                     align: 'center',
                     valign: 'middle'
                 }, {
                     title: '创建时间',
-                    field: 'createTime',
+                    field: 'createDate',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '最后操作时间',
-                    field: 'lastOperationTime',
+                    title: '失效时间',
+                    field: 'inValidDate',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '真实姓名',
-                    field: 'realName',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
                     title: '操作',
                     field: 'id',
                     align: 'center',

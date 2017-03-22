@@ -5,7 +5,7 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.IUserService;
+import com.looty.service.IUserAuthCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,30 +16,35 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 /**
- * 
- * Desc:
+ * USED TO:
+ * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.controller
- * @date 2017/3/8/008
+ * @date 2017/3/21/021
  */
 @Controller
-@RequestMapping("/manage/user")
-public class UserController extends BaseController {
+@RequestMapping("/manage/permission/authCode")
+public class AuthController extends BaseController {
 
     @Autowired
-    private IUserService userService;
+    private IUserAuthCodeService userAuthCodeService;
 
     @RequestMapping("/toIndex")
     public ModelAndView toIndex() {
-        return super.backViewMV("/user/userList");
+        return super.backViewMV("/auth/auth_list");
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    /**
+     * AuthCode列表
+     *
+     * @return
+     */
+    @RequestMapping(value = "/getAuthList", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> list() {
-        ResultMsg resultMsg = userService.getUserList();
+    public Map<String, Object> getAuthList() {
+        ResultMsg resultMsg = userAuthCodeService.getAuthList();
         return super.backDataMap(resultMsg);
     }
 

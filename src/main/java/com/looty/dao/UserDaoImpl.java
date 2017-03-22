@@ -4,6 +4,7 @@
 package com.looty.dao;
 
 import com.looty.base.BaseDao;
+import com.looty.exception.DaoException;
 import com.looty.pojo.User;
 import org.springframework.stereotype.Repository;
 
@@ -23,47 +24,45 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
     private static final String GET_USER_BY_NAME = "select * from user where username = ?";
 
-    public User getUserByName(String username) {
+    public User getUserByName(String username) throws DaoException {
         Object[] args = {username};
         return this.queryForBean(GET_USER_BY_NAME, User.class, args);
     }
 
     private static final String SAVE_USER = "insert into user(userId,username,password,createTime,lastOperationTime,roleCode,realName,authTop)values(:userId,:username,:password,:createTime,:lastOperationTime,:roleCode,:realName,:authTop)";
 
-    public long saveUser(User user) {
+    public long insertUser(User user) throws DaoException {
         return this.saveBean(SAVE_USER, user);
     }
 
     private static final String COUNT = "select count(*) from user";
 
-    public int count() {
-        return this.queryForInteger(COUNT);
+    public Long getCount() throws DaoException {
+        return this.totalCount(COUNT);
     }
-
 
     private static final String GET_USER_LIST = "select * from user";
 
-    public List<User> getList() {
+    public List<User> getUserList() throws DaoException {
         return super.queryForBeanList(GET_USER_LIST, User.class);
+    }
+
+    private static final String GET_USER_PAGE_LIST = "select * from user order by createTime desc";
+
+    public List<User> getUserPageList() throws DaoException {
+        return super.queryForPageBeanList(GET_USER_PAGE_LIST, User.class);
     }
 
     private static final String GET_USER_BY_USER_ID = "select * from user where userId = ?";
 
-    public User getUserById(String userId) {
+    public User getUserByUid(String userId) {
         Object[] args = {userId};
         return this.queryForBean(GET_USER_BY_USER_ID, User.class, args);
     }
 
     private static final String GET_USERS_BY_ROLE_CODE = "select * from user where roleCode = ?";
-
     public User getUserByRoleCode(String roleCode) {
         Object[] args = {roleCode};
         return this.queryForBean(GET_USERS_BY_ROLE_CODE, User.class, args);
-    }
-
-    private static final String GET_USERS_IN_LIST = "select * from user order by createTime asc";
-
-    public List<User> getUsers() {
-        return this.queryForBeanList(GET_USERS_IN_LIST, User.class);
     }
 }

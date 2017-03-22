@@ -32,7 +32,7 @@
         </section>
         <!-- Main content -->
         <section class="content">
-            <table id="userList"></table>
+            <table id="sysLogList"></table>
         </section>
         <!-- content -->
     </div>
@@ -46,8 +46,8 @@
     });
 
     function initTable() {
-        $("#userList").bootstrapTable({
-            url: "${basePath}/manage/user/list",
+        $("#sysLogList").bootstrapTable({
+            url: "${basePath}/manage/log/system/getSysLogList",
             method: "get", //请求参数
             striped: true,  //表格显示条纹
             pagination: true, //启动分页
@@ -71,7 +71,6 @@
                 return param;
             },
             onLoadSuccess: function (data) {  //加载成功时执行
-//                alert("加载成功"+data.rows);
             },
             onLoadError: function () {  //加载失败时执行
                 alert("加载数据失败");
@@ -84,32 +83,21 @@
                     valign: 'middle'
                 },
                 {
-                    title: '用户名',
-                    field: 'username',
+                    title: '容器名字',
+                    field: 'contextName',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '超级管理',
-                    field: 'authTop',
+                    title: '服务器信息',
+                    field: 'serverInfo',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '创建时间',
-                    field: 'createTime',
+                    title: '开启/关闭时间',
+                    field: 'operationTime',
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: '最后操作时间',
-                    field: 'lastOperationTime',
-                    align: 'center',
-                    valign: 'middle'
-                }, {
-                    title: '真实姓名',
-                    field: 'realName',
-                    align: 'center',
-                    valign: 'middle'
-                },
-                {
                     title: '操作',
                     field: 'id',
                     align: 'center',

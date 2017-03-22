@@ -2,11 +2,9 @@
  * Copyright (c) www.bugull.com
  */
 
-import com.looty.schedule.AppLogSchedule;
-import com.looty.service.AppLogService;
+import com.looty.service.IAppLogService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.jdbc.JdbcTestUtils;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -25,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DbTest extends AbstractTest {
 
     @Autowired
-    private AppLogService appLogService;
+    private IAppLogService appLogService;
 
     @Test
     public void mapList() {

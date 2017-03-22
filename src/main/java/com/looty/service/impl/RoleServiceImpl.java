@@ -6,9 +6,8 @@ package com.looty.service.impl;
 import com.looty.dao.RoleDao;
 import com.looty.pojo.Role;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.RoleService;
+import com.looty.service.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,7 +20,7 @@ import org.springframework.stereotype.Service;
  * @date 2017/3/8/008
  */
 @Service
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl implements IRoleService {
     @Autowired
     private RoleDao roleDao;
 
@@ -33,11 +32,11 @@ public class RoleServiceImpl implements RoleService {
 
     }
 
-    public int count() {
-        return roleDao.count();
+    public Long getRoleCount() {
+        return roleDao.getCount();
     }
 
     public ResultMsg getRoleList() {
-        return ResultMsg.isSuccess(roleDao.getRoleList());
+        return ResultMsg.isSuccess(roleDao.getRolePageList(), roleDao.getCount());
     }
 }

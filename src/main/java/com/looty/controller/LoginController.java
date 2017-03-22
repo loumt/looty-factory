@@ -5,18 +5,16 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.enums.ResultMsgEnum;
-import com.looty.exception.ServiceException;
-import com.looty.pojo.Role;
-import com.looty.pojo.User;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.RoleService;
-import com.looty.service.UserAuthCodeService;
-import com.looty.service.UserService;
-import com.looty.utils.*;
+import com.looty.service.IUserAuthCodeService;
+import com.looty.service.IUserService;
+import com.looty.utils.CookieUtil;
+import com.looty.utils.DateUtil;
+import com.looty.utils.IpUtil;
+import com.looty.utils.StringUtil;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -45,10 +43,10 @@ public class LoginController extends BaseController {
 
 
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
     @Autowired
-    private UserAuthCodeService userAuthCodeService;
+    private IUserAuthCodeService userAuthCodeService;
 
 
     /**
@@ -67,6 +65,7 @@ public class LoginController extends BaseController {
         }
         //立即登录
         if (isAccess) {
+            log.debug(">>" + DateUtil.dateTime(new Date()) + "--" + ip + ":Access Login.....");
             return backViewMV("/login/homePage");
         }
         log.debug(">>" + DateUtil.dateTime(new Date()) + "--" + ip + ":Ready to Login.....");

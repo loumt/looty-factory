@@ -12,13 +12,13 @@ import com.looty.pojo.system.ResultMsg;
  * @package com.looty.service
  * @date 2017/3/8/008
  */
-public interface RoleService {
+public interface IRoleService {
 
     long insertRole(Role role);
 
     void deleteRole(long id);
 
-    int count();
+    Long getRoleCount();
 
     ResultMsg getRoleList();
 }

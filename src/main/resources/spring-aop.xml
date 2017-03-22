@@ -16,7 +16,7 @@
     <!--<aop:config>-->
     <!--<aop:aspect id="loginAspect" ref="loginAspect">-->
     <!--<aop:pointcut id="afterLoginAop"-->
-    <!--expression="execution(* com.looty.service.impl.UserAuthCodeServiceImpl.checkAuthCode(..))"/>-->
+    <!--expression="execution(* IUserAuthCodeServiceeckAuthCode(..))"/>-->
     <!--<aop:after-returning method="afterLogin" pointcut-ref="afterLoginAop" arg-names="returnArgs"-->
     <!--returning="returnArgs"/>-->
     <!--</aop:aspect>-->

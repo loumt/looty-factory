@@ -62,11 +62,11 @@
                 return {rows: res.data, total: res.count};
             },
             queryParamsType: "limit", //设置成为limit会发送符合RESTFull类型的参数
-            queryParams: function queryParams() {   //设置查询参数
+            queryParams: function queryParams(params) {   //设置查询参数
                 var param = {
                     //这里是在ajax发送请求的时候设置一些参数 params有什么东西，自己看看源码就知道了
-                    pageNo: 1,
-                    pageSize: 10
+                    pageNo: params.offset,
+                    pageSize: params.limit
                 };
                 return param;
             },

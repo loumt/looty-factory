@@ -5,7 +5,7 @@ package com.looty.schedule;
 
 import com.looty.exception.ScheduleException;
 import com.looty.pojo.MonitorInfo;
-import com.looty.service.MonitorInfoService;
+import com.looty.service.IMonitorInfoService;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class MonitorInfoSchedule {
     private Logger logger = LogManager.getLogger(MonitorInfoSchedule.class);
 
     @Autowired
-    MonitorInfoService monitorInfoService;
+    IMonitorInfoService monitorInfoService;
 
     @Scheduled(cron = "0 0/5 *  * * ?")
     public void getMoinitorInfo() {

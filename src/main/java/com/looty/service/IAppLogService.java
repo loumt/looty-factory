@@ -12,7 +12,7 @@ import com.looty.pojo.AppLog;
  * @package com.looty.service
  * @date 2017/2/17/017
  */
-public interface AppLogService {
+public interface IAppLogService {
 
     long insertOneAppLog(AppLog bean) throws ServiceException;
 

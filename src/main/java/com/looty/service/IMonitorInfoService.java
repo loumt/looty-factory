@@ -15,7 +15,7 @@ import java.net.UnknownHostException;
  * @package com.looty.service
  * @date 2017/3/17/017
  */
-public interface MonitorInfoService {
+public interface IMonitorInfoService {
 
     /**
      * 获取系统参数

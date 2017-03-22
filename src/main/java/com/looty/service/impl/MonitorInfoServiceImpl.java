@@ -8,7 +8,7 @@ import com.looty.dao.MonitorInfoDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.MonitorInfo;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.MonitorInfoService;
+import com.looty.service.IMonitorInfoService;
 import org.hyperic.sigar.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ import java.util.Properties;
  * @date 2017/3/17/017
  */
 @Service
-public class MonitorInfoServiceImpl extends BaseService implements MonitorInfoService {
+public class MonitorInfoServiceImpl extends BaseService implements IMonitorInfoService {
 
 
     @Autowired
@@ -75,7 +75,7 @@ public class MonitorInfoServiceImpl extends BaseService implements MonitorInfoSe
     }
 
     public ResultMsg getInfoList() throws ServiceException {
-        return ResultMsg.isSuccess(monitorDao.getList());
+        return ResultMsg.isSuccess(monitorDao.getInfoPageList(), monitorDao.getCount());
     }
 
 

@@ -2,6 +2,8 @@ package com.looty.dao;
 
 import com.looty.pojo.UserAuthCode;
 
+import java.util.List;
+
 /**
  * 
  * Desc:
@@ -17,4 +19,8 @@ public interface UserAuthCodeDao {
     UserAuthCode getUserAuthCode(String authCode);
 
     UserAuthCode getAuthCodeByUsername(String userId);
+
+    List<UserAuthCode> getAuthPageList();
+
+    Long getCount();
 }

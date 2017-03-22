@@ -1,5 +1,6 @@
 package com.looty.dao;
 
+import com.looty.exception.DaoException;
 import com.looty.pojo.MonitorInfo;
 import com.looty.pojo.system.ResultMsg;
 
@@ -16,7 +17,11 @@ import java.util.List;
  */
 public interface MonitorInfoDao {
 
-    long saveInfo(MonitorInfo monitorInfo);
+    long saveInfo(MonitorInfo monitorInfo) throws DaoException;
 
-    List<MonitorInfo> getList();
+    List<MonitorInfo> getList() throws DaoException;
+
+    Long getCount() throws DaoException;
+
+    List<MonitorInfo> getInfoPageList() throws DaoException;
 }

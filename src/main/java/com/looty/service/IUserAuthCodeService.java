@@ -11,9 +11,11 @@ import com.looty.pojo.system.ResultMsg;
  * @package com.looty.service
  * @date 2017/3/7/007
  */
-public interface UserAuthCodeService {
+public interface IUserAuthCodeService {
 
     ResultMsg getAuthCode(String ip, String username);
 
     boolean checkAuthCode(String authCode);
+
+    ResultMsg getAuthList();
 }

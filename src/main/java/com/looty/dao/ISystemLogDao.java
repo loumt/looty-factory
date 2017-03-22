@@ -1,24 +1,22 @@
 package com.looty.dao;
 
 import com.looty.exception.DaoException;
-import com.looty.pojo.Role;
-import com.looty.vo.RoleVo;
+import com.looty.pojo.SystemStatusLog;
 
 import java.util.List;
 
 /**
- * 
- * Desc:
+ * USED TO:
+ * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.dao
- * @date 2017/3/8/008
+ * @date 2017/3/21/021
  */
-public interface RoleDao {
-    long insertRole(Role role) throws DaoException;
+public interface ISystemLogDao {
 
     Long getCount() throws DaoException;
 
-    List<RoleVo> getRolePageList() throws DaoException;
+    List<SystemStatusLog> getSysLogPageList() throws DaoException;
 }

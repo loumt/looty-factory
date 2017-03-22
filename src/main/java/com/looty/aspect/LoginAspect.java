@@ -22,17 +22,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginAspect {
 
-    //    @Before(value = "execution(* com.looty.service.impl.UserAuthCodeServiceImpl.checkAuthCode(String))",argNames = "arg")
+    //    @Before(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(String))",argNames = "arg")
     public void before(String returnValue) {
         System.out.println("LoginAspect before： reqValue=" + returnValue);
     }
 
-    //    @After(value = "execution(* com.looty.service.impl.UserAuthCodeServiceImpl.checkAuthCode(..))")
+    //    @After(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(..))")
     public void after(String returnValue) {
         System.out.println("LoginAspect after： returnValue=" + returnValue);
     }
 
-    //    @AfterReturning(value = "execution(* com.looty.service.impl.UserAuthCodeServiceImpl.checkAuthCode(..))",argNames = "reqValue",returning = "returnValue",pointcut = )
+    //    @AfterReturning(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(..))",argNames = "reqValue",returning = "returnValue",pointcut = )
     public void afterRunning() {
         System.out.println("afterRunning.....");
     }

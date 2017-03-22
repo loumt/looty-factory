@@ -4,6 +4,7 @@
 package com.looty.base;
 
 import com.looty.exception.DaoException;
+import com.looty.pojo.system.QueryPageModel;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.log4j.Logger;
 
@@ -45,43 +46,86 @@ public class BaseDao {
     @Autowired
     protected NamedParameterJdbcTemplate npjt;
 
+    /******************************************Insert**************************************/
     /**
-     * 执行单条sql语句，如create table或者drop table
+     * 执行单条insert 语句 返回主键id
      *
-     * @param sql 要执行sql语句
+     * @param sql    要执行的sql语句
+     * @param object 语句中的参数
+     * @return 执行语句影响数据的条数
      */
-    protected void executeSQL(String sql) throws DaoException {
+    protected long saveBean(String sql, Object object) {
         try {
-            this.jdbcTemplate.execute(sql);
+            SqlParameterSource ps = new BeanPropertySqlParameterSource(object);
+            KeyHolder keyHolder = new GeneratedKeyHolder();
+            this.npjt.update(sql, ps, keyHolder);
+            long id = keyHolder.getKey().longValue();
+            return id;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /******************************************Delete**************************************/
+
+
+    /******************************************Update**************************************/
+
+
+    /******************************************Search**************************************/
+
+    /**
+     * 执行select语句，获取一个整形数字
+     *
+     * @param sql 要执行的语句
+     * @return 数字
+     */
+    protected int queryForInteger(String sql) throws DaoException {
+        try {
+            return this.jdbcTemplate.queryForObject(sql, Integer.class);
         } catch (DataAccessException e) {
             throw new DaoException(e.getMessage(), e);
         }
     }
 
     /**
-     * 执行单条insert、update或者delete语句
+     * 执行select语句，获取一个整形数字
      *
-     * @param sql 要执行的sql语句
-     * @return 执行语句影响数据的条数
+     * @param sql 要执行的语句
+     * @return 数字
      */
-    protected int update(String sql) throws DaoException {
+    protected int queryForInteger(String sql, Object... args) throws DaoException {
         try {
-            return this.jdbcTemplate.update(sql);
+            return this.jdbcTemplate.queryForObject(sql, Integer.class, args);
         } catch (DataAccessException e) {
             throw new DaoException(e.getMessage(), e);
         }
     }
 
     /**
-     * 执行单条insert、update或者delete语句
-     *
-     * @param sql  要执行的sql语句
-     * @param args 语句中的参数
-     * @return 执行语句影响数据的条数
+     * 获取数据总数
+     * @param sql
+     * @return
+     * @throws DaoException
      */
-    protected int update(String sql, Object... args) throws DaoException {
+    protected Long totalCount(String sql) throws DaoException {
         try {
-            return this.jdbcTemplate.update(sql, args);
+            return this.jdbcTemplate.queryForObject(sql, Long.class);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * 获取数据总数
+     * @param sql
+     * @param args
+     * @return
+     * @throws DaoException
+     */
+    protected Long totalCount(String sql, Object... args) throws DaoException {
+        try {
+            return this.jdbcTemplate.queryForObject(sql, Long.class, args);
         } catch (DataAccessException e) {
             throw new DaoException(e.getMessage(), e);
         }
@@ -116,20 +160,6 @@ public class BaseDao {
                                    Object... args) throws DaoException {
         try {
             return this.jdbcTemplate.queryForObject(sql, requiredType, args);
-        } catch (DataAccessException e) {
-            throw new DaoException(e.getMessage(), e);
-        }
-    }
-
-    /**
-     * 执行select语句，获取一个整形数字
-     *
-     * @param sql 要执行的语句
-     * @return 数字
-     */
-    protected int queryForInteger(String sql) throws DaoException {
-        try {
-            return this.jdbcTemplate.queryForObject(sql, Integer.class);
         } catch (DataAccessException e) {
             throw new DaoException(e.getMessage(), e);
         }
@@ -186,42 +216,6 @@ public class BaseDao {
             throw new DaoException(e.getMessage(), e);
         }
     }
-
-    /**
-     * 执行单条insert 语句 返回主键id
-     *
-     * @param sql    要执行的sql语句
-     * @param object 语句中的参数
-     * @return 执行语句影响数据的条数
-     */
-    protected long saveBean(String sql, Object object) {
-        try {
-            SqlParameterSource ps = new BeanPropertySqlParameterSource(object);
-            KeyHolder keyHolder = new GeneratedKeyHolder();
-            this.npjt.update(sql, ps, keyHolder);
-            long id = keyHolder.getKey().longValue();
-            return id;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * 执行单条insert 语句
-     *
-     * @param sql    要执行的sql语句
-     * @param object 语句中的参数
-     */
-    protected void addBean(String sql, Object object) {
-        try {
-            SqlParameterSource ps = new BeanPropertySqlParameterSource(object);
-            KeyHolder keyHolder = new GeneratedKeyHolder();
-            this.npjt.update(sql, ps, keyHolder);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     /**
      * 执行select语句，获取列表数据,并指定列表中Bean的类型
      *
@@ -247,4 +241,74 @@ public class BaseDao {
             throw new DaoException(e.getMessage(), e);
         }
     }
+
+    /**
+     * 执行select语句，获取列表数据
+     *
+     * @param sql 要执行的语句
+     * @param requireType 对象类型
+     * @param args 语句中的参数
+     * @return 数据列表
+     */
+    @SuppressWarnings("unchecked")
+    protected <T> List<T> queryForBeanList(String sql, Class<T> requireType, Object... args) throws DaoException {
+        try {
+            List<T> resultList = new ArrayList<T>();
+            Class<?> cls = Class.forName(requireType.getName());
+
+            List<Map<String, Object>> list = this.jdbcTemplate.queryForList(sql, args);
+
+            for (Map<String, Object> m : list) {
+                T t = (T) cls.newInstance();
+                BeanUtils.copyProperties(t, m);
+                resultList.add(t);
+            }
+            return resultList;
+        } catch (Exception e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+
+    /**
+     * 执行select语句，获取列表数据,并指定列表中Bean的类型
+     *
+     * @param sql          要执行的语句
+     * @param requiredType 对象类型
+     * @return List<Bean>数据列表
+     */
+    @SuppressWarnings("unchecked")
+    protected <T> List<T> queryForPageBeanList(String sql, Class<T> requiredType)
+            throws DaoException {
+        try {
+            List<T> resultList = new ArrayList<T>();
+            Class<?> cls = Class.forName(requiredType.getName());// 取得Class对象
+            StringBuffer sb = new StringBuffer(sql);
+            Integer pageNo = QueryPageModel.getPageNo() == null ? 0 : QueryPageModel.getPageNo();
+            Integer pageSize = QueryPageModel.getPageSize() == null ? 10 : QueryPageModel.getPageSize();
+            sb.append(getPageSql(pageNo, pageSize));
+            System.out.println("SQL:" + sb.toString());
+            List<Map<String, Object>> list = this.jdbcTemplate.queryForList(sb.toString());
+            for (Map<String, Object> m : list) {
+                T t = (T) cls.newInstance();
+                BeanUtils.copyProperties(t, m);
+                resultList.add(t);
+            }
+            return resultList;
+        } catch (Exception e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * 拼凑Page sql
+     *
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    private String getPageSql(Integer pageNo, Integer pageSize) {
+        return " limit " + pageNo + "," + pageSize;
+    }
+
 }

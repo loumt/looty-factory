@@ -5,7 +5,7 @@ package com.looty.init;
 
 import com.looty.enums.SystemStatusEnum;
 import com.looty.pojo.SystemStatusLog;
-import com.looty.service.SystemStatusLogService;
+import com.looty.service.ISystemStatusLogService;
 import com.looty.utils.ApplicationUtil;
 import org.springframework.context.ApplicationContext;
 
@@ -14,7 +14,8 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import java.util.Date;
-import java.util.Enumeration;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * USED TO:
@@ -28,6 +29,8 @@ import java.util.Enumeration;
 @WebListener
 public class SystemInit implements ServletContextListener {
 
+
+    public static ExecutorService executor;
     /**
      * 容器启动
      *
@@ -41,9 +44,12 @@ public class SystemInit implements ServletContextListener {
         ApplicationContext applicationContext = ApplicationUtil.getApplicationContext(servletContext);
 
         //系统启动日志
-        SystemStatusLogService systemStatusLogService = applicationContext.getBean(SystemStatusLogService.class);
+        ISystemStatusLogService systemStatusLogService = applicationContext.getBean(ISystemStatusLogService.class);
         SystemStatusLog systemStatusLog = createSystemStatusLog(SystemStatusEnum.START, serverInfo, servletContextName);
         systemStatusLogService.insertOneSystemStatusLog(systemStatusLog);
+
+        //初始化线程池,Size为Cpu核心数的两倍
+        executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
     }
 
     /**
@@ -52,7 +58,7 @@ public class SystemInit implements ServletContextListener {
      * @param sc
      */
     public void contextDestroyed(ServletContextEvent sc) {
-        SystemStatusLogService systemStatusLogService = getApplicationContext(sc).getBean(SystemStatusLogService.class);
+        ISystemStatusLogService systemStatusLogService = getApplicationContext(sc).getBean(ISystemStatusLogService.class);
         systemStatusLogService.insertOneSystemStatusLog(createSystemStatusLog(SystemStatusEnum.CLOSE));
     }
 

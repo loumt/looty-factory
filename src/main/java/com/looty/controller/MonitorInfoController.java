@@ -5,7 +5,7 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.MonitorInfoService;
+import com.looty.service.IMonitorInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +29,7 @@ import java.util.Map;
 public class MonitorInfoController extends BaseController {
 
     @Autowired
-    private MonitorInfoService monitorInfoService;
+    private IMonitorInfoService monitorInfoService;
 
     /**
      * 主页

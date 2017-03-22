@@ -2,11 +2,13 @@
  * Copyright (c) www.bugull.com
  */
 
-import com.looty.utils.DateUtil;
+import com.looty.utils.EncryptUtils;
+import org.apache.http.util.EncodingUtils;
+import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
+import java.util.Base64;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,5 +43,18 @@ public class TestExample {
 
             System.out.println("Map PUT " + i + " COUNT,TIME:" + (e - s));
         }
+    }
+
+    @Test
+    public void test3() {
+        String s = EncryptUtils.bytesToHexString("你好".getBytes());
+        System.out.println(s);
+    }
+
+
+    @Test
+    public void test4() {
+        Integer[][] operate = {{0, 2}, {1, 3}};
+        System.out.println(operate[0][0]);
     }
 }

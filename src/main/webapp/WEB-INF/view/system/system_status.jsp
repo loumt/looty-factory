@@ -65,7 +65,7 @@
             queryParams: function queryParams(params) {   //设置查询参数
                 var param = {
                     //这里是在ajax发送请求的时候设置一些参数 params有什么东西，自己看看源码就知道了
-                    pageNo: params.pageNumber,
+                    pageNo: params.offset,
                     pageSize: params.limit,
                 };
                 return param;
@@ -108,7 +108,7 @@
                     align: 'center',
                     valign: 'middle'
                 }, {
-                    title: 'IP',
+                    title: 'IP Address',
                     field: 'hostAddress',
                     align: 'center',
                     valign: 'middle'

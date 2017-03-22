@@ -7,6 +7,8 @@ import com.looty.base.BaseDao;
 import com.looty.pojo.UserAuthCode;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * 
  * Desc:
@@ -37,5 +39,17 @@ public class UserAuthCodeDaoImpl extends BaseDao implements UserAuthCodeDao {
     public UserAuthCode getAuthCodeByUsername(String userId) {
         Object[] arg = {userId};
         return this.queryForBean(GET_AUTH_CODE_BY_USERNAME, UserAuthCode.class, arg);
+    }
+
+    private static final String GET_AUTH_PAGE_LIST = "select * from user_auth_code order by inValidDate asc";
+
+    public List<UserAuthCode> getAuthPageList() {
+        return this.queryForPageBeanList(GET_AUTH_PAGE_LIST, UserAuthCode.class);
+    }
+
+    private static final String GET_COUNT = "select count(*) from user_auth_code";
+
+    public Long getCount() {
+        return this.totalCount(GET_COUNT);
     }
 }

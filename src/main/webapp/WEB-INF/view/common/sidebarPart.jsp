@@ -42,7 +42,7 @@
             </li>
             <%--权限模块--%>
             <li>
-                <a href="#">
+                <a href="${basePath}/manage/permission/authCode/toIndex">
                     <i class="icon-key"></i>
                     <span>-Auth-</span>
                 </a>
@@ -71,7 +71,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">-System-</a></li>
+                    <li><a href="${basePath}/manage/log/system/toIndex">-System-</a></li>
                     <li><a href="#">-Manage-</a></li>
                 </ul>
             </li>

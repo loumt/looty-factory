@@ -5,7 +5,7 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.IUserService;
+import com.looty.service.ISystemLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,32 +16,36 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 /**
- * 
- * Desc:
+ * USED TO:
+ * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.controller
- * @date 2017/3/8/008
+ * @date 2017/3/21/021
  */
 @Controller
-@RequestMapping("/manage/user")
-public class UserController extends BaseController {
+@RequestMapping("/manage/log/system")
+public class LogSystemController extends BaseController {
 
     @Autowired
-    private IUserService userService;
+    private ISystemLogService systemLogService;
 
     @RequestMapping("/toIndex")
     public ModelAndView toIndex() {
-        return super.backViewMV("/user/userList");
+        return super.backViewMV("/log/system_log_list");
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    /**
+     * AuthCode列表
+     *
+     * @return
+     */
+    @RequestMapping(value = "/getSysLogList", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> list() {
-        ResultMsg resultMsg = userService.getUserList();
+    public Map<String, Object> getAuthList() {
+        ResultMsg resultMsg = systemLogService.getSysLogList();
         return super.backDataMap(resultMsg);
     }
-
 
 }

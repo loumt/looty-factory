@@ -6,7 +6,7 @@ package com.looty.service.impl;
 import com.looty.dao.SystemStatusLogDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.SystemStatusLog;
-import com.looty.service.SystemStatusLogService;
+import com.looty.service.ISystemStatusLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
  * @date 2017/3/3/003
  */
 @Service
-public class SystemStatusLogServiceImpl implements SystemStatusLogService {
+public class SystemStatusLogServiceImpl implements ISystemStatusLogService {
 
     @Autowired
     private SystemStatusLogDao systemStatusLogDao;

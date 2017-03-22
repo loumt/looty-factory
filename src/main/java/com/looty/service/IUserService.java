@@ -14,12 +14,12 @@ import java.util.List;
  * @package com.looty.service
  * @date 2017/3/8/008
  */
-public interface UserService {
+public interface IUserService {
     boolean checkLoginInfo(String username, String password);
 
     ResultMsg register(User user);
 
-    int count();
+    Long getUserCount();
 
     ResultMsg getUserList();
 }

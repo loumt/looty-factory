@@ -1,7 +1,7 @@
 package com.looty.service;
 
 import com.looty.exception.ServiceException;
-import com.looty.pojo.SystemStatusLog;
+import com.looty.pojo.system.ResultMsg;
 
 /**
  * USED TO:
@@ -10,10 +10,9 @@ import com.looty.pojo.SystemStatusLog;
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.service
- * @date 2017/3/3/003
+ * @date 2017/3/21/021
  */
-public interface SystemStatusLogService {
+public interface ISystemLogService {
 
-    long insertOneSystemStatusLog(SystemStatusLog systemStatusLog) throws ServiceException;
-
+    ResultMsg getSysLogList() throws ServiceException;
 }

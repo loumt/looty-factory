@@ -1,7 +1,9 @@
 package com.looty.dao;
 
+import com.looty.exception.DaoException;
 import com.looty.pojo.User;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,11 +16,18 @@ import java.util.List;
  * @date 2017/3/8/008
  */
 public interface UserDao {
-    User getUserByName(String username);
 
-    long saveUser(User user);
+    User getUserByName(String username) throws DaoException;
 
-    int count();
+    long insertUser(User user) throws DaoException;
 
-    List<User> getList();
+    Long getCount() throws DaoException;
+
+    List<User> getUserList() throws DaoException;
+
+    List<User> getUserPageList() throws DaoException;
+
+    User getUserByUid(String userId) throws DaoException;
+
+    User getUserByRoleCode(String roleCode) throws DaoException;
 }

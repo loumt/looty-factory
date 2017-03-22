@@ -4,11 +4,9 @@
 package com.looty.pojo.system;
 
 import com.looty.enums.ResultMsgEnum;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-import org.apache.commons.collections.CollectionUtils;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * USED TO:结果集对象
@@ -64,13 +62,11 @@ public class ResultMsg implements Serializable {
         return resultMsg;
     }
 
-    public static ResultMsg isSuccess(Object obj) {
+    public static ResultMsg isSuccess(List list, Long count) {
         ResultMsg resultMsg = new ResultMsg(ResultMsgEnum.SUCCESS);
         resultMsg.setSuccess(Boolean.TRUE);
-        resultMsg.setData(obj);
-        if (obj instanceof java.util.List) {
-            resultMsg.setCount(30L);
-        }
+        resultMsg.setData(list);
+        resultMsg.setCount(count);
         return resultMsg;
     }
 

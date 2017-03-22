@@ -40,7 +40,7 @@ public class UserAuthCode implements Serializable {
     /**
      * 失效时间
      */
-    private Date inValidData;
+    private Date inValidDate;
 
     /**
      * 唯一识别码
@@ -80,12 +80,12 @@ public class UserAuthCode implements Serializable {
         this.createDate = createDate;
     }
 
-    public Date getInValidData() {
-        return inValidData;
+    public Date getInValidDate() {
+        return inValidDate;
     }
 
-    public void setInValidData(Date inValidData) {
-        this.inValidData = inValidData;
+    public void setInValidDate(Date inValidDate) {
+        this.inValidDate = inValidDate;
     }
 
     public String getAuthCode() {

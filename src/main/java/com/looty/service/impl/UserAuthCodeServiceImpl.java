@@ -9,15 +9,16 @@ import com.looty.dao.UserAuthCodeDao;
 import com.looty.dao.UserDao;
 import com.looty.enums.ResultMsgEnum;
 import com.looty.pojo.User;
-import com.looty.pojo.system.ResultMsg;
 import com.looty.pojo.UserAuthCode;
-import com.looty.service.UserAuthCodeService;
+import com.looty.pojo.system.ResultMsg;
+import com.looty.service.IUserAuthCodeService;
 import com.looty.utils.DateUtil;
 import com.looty.utils.UUIDGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -29,7 +30,7 @@ import java.util.Date;
  * @date 2017/3/7/007
  */
 @Service
-public class UserAuthCodeServiceImpl implements UserAuthCodeService {
+public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
 
 
     @Autowired
@@ -58,7 +59,7 @@ public class UserAuthCodeServiceImpl implements UserAuthCodeService {
         userAuthCode.setLastOperationIp(ip);
         userAuthCode.setCreateDate(now);
         userAuthCode.setUserId(userId);
-        userAuthCode.setInValidData(DateUtil.dateTime(now, SystemConfig.MAX_AUTH_CODE_INVALID_DAYS));
+        userAuthCode.setInValidDate(DateUtil.dateTime(now, SystemConfig.MAX_AUTH_CODE_INVALID_DAYS));
         userAuthCode.setAuthCode(code);
         return userAuthCode;
     }
@@ -66,5 +67,11 @@ public class UserAuthCodeServiceImpl implements UserAuthCodeService {
     public boolean checkAuthCode(String authCode) {
         UserAuthCode userAuthCode = userAuthCodeDao.getUserAuthCode(authCode);
         return userAuthCode != null;
+    }
+
+    public ResultMsg getAuthList() {
+        List<UserAuthCode> users = userAuthCodeDao.getAuthPageList();
+        Long count = userAuthCodeDao.getCount();
+        return ResultMsg.isSuccess(users, count);
     }
 }

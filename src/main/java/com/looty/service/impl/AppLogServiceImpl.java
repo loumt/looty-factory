@@ -7,7 +7,7 @@ import com.looty.base.BaseService;
 import com.looty.dao.AppLogDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.AppLog;
-import com.looty.service.AppLogService;
+import com.looty.service.IAppLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
  * @date 2017/2/17/017
  */
 @Service
-public class AppLogServiceImpl extends BaseService implements AppLogService {
+public class AppLogServiceImpl extends BaseService implements IAppLogService {
 
     @Autowired
     private AppLogDao appLogDao;
