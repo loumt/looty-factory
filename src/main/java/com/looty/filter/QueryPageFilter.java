@@ -30,7 +30,7 @@ public class QueryPageFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        System.out.println("Through QueryPageFilter.....");
+//        System.out.println("Through QueryPageFilter.....");
 
         Integer pageNo = DEFAULT_PAGE_NO;
         Integer pageSize = DEFAULT_PAGE_SIZE;
@@ -40,7 +40,7 @@ public class QueryPageFilter implements Filter {
         String order = request.getParameter("order");
         String sort = request.getParameter("sort");
 
-        System.out.println("QueryPageFilter[_pageNo:" + _pageNo + ",_pageSize:" + _pageSize + ",order:" + order + ",sort:" + sort + "]");
+//        System.out.println("QueryPageFilter[_pageNo:" + _pageNo + ",_pageSize:" + _pageSize + ",order:" + order + ",sort:" + sort + "]");
 
         if (!StringUtil.isEmpty(_pageNo)) {
             pageNo = Integer.valueOf(_pageNo);

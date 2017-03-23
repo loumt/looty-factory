@@ -33,10 +33,7 @@ public class UserServiceImpl implements IUserService {
             return false;
         }
         User user = userDao.getUserByName(username);
-        if (null == user || !user.getPassword().equals(password)) {
-            return false;
-        }
-        return true;
+        return !(null == user || !user.getPassword().equals(password));
     }
 
     public synchronized ResultMsg register(User user) {

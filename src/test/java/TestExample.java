@@ -7,10 +7,7 @@ import org.apache.http.util.EncodingUtils;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
-import java.util.Base64;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * USED TO:
@@ -56,5 +53,33 @@ public class TestExample {
     public void test4() {
         Integer[][] operate = {{0, 2}, {1, 3}};
         System.out.println(operate[0][0]);
+    }
+
+    @Test
+    public void test5() {
+        List<Long> ids = new ArrayList<Long>() {{
+            add(5L);
+            add(12L);
+            add(52L);
+            add(51L);
+            add(15L);
+            add(35L);
+            add(45L);
+            add(32L);
+            add(52L);
+            add(85L);
+        }};
+        Iterator<Long> iterator = ids.iterator();
+
+        StringBuffer sb = new StringBuffer();
+        while (iterator.hasNext()) {
+            sb.append(iterator.next());
+            if (iterator.hasNext()) {
+                sb.append(",");
+            }
+        }
+
+        System.out.println(sb.toString());
+
     }
 }

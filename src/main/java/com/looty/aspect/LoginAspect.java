@@ -3,10 +3,7 @@
  */
 package com.looty.aspect;
 
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,30 +15,38 @@ import org.springframework.stereotype.Component;
  * @package com.looty.aspect
  * @date 2017/3/10/010
  */
-@Aspect("arg")
+@Aspect
 @Component
 public class LoginAspect {
 
-    //    @Before(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(String))",argNames = "arg")
-    public void before(String returnValue) {
-        System.out.println("LoginAspect before： reqValue=" + returnValue);
+    @Pointcut("execution(* com.looty.service.impl.AopServiceImpl.*(..))")
+    private void anyMethod() {
     }
 
-    //    @After(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(..))")
-    public void after(String returnValue) {
-        System.out.println("LoginAspect after： returnValue=" + returnValue);
+    @Before("anyMethod()")
+    public void before() {
+        System.out.println("before.....");
     }
 
-    //    @AfterReturning(value = "execution(* com.looty.service.impl.IUserAuthCodeService.checkAuthCode(..))",argNames = "reqValue",returning = "returnValue",pointcut = )
+
+    @After("anyMethod()")
+    public void after() {
+        System.out.println("after.....");
+    }
+
+    @AfterReturning("anyMethod()")
     public void afterRunning() {
         System.out.println("afterRunning.....");
     }
 
+    @AfterThrowing("anyMethod()")
     public void afterThrowing() {
         System.out.println("afterThrowing.....");
     }
 
+    @Around("anyMethod()")
     public void around() {
         System.out.println("around.....");
     }
+
 }

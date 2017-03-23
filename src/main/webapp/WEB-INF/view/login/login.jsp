@@ -37,7 +37,7 @@
                         <label for="checkbox1"></label>
                     </div>
                     <span class="text">Remember me</span>
-                    <button type="button" class="btn btn-default" onclick="javascript:login();">登录</button>
+                    <button type="button" class="btn btn-default" onclick="login();">登录</button>
                 </div>
             </form>
         </div>
