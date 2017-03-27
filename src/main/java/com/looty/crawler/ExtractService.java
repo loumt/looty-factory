@@ -8,9 +8,11 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,93 +20,79 @@ import java.util.List;
  * @author zhy
  */
 public class ExtractService {
-    /**
-     * @param rule
-     * @return
-     */
-    public static Elements extract(Rule rule) {
 
+    private Rule rule;
+
+    public ExtractService(Rule rule) {
         // 进行对rule的必要校验
         validateRule(rule);
+        this.rule = rule;
+    }
 
 
-        Elements results = new Elements();
-//        List<LinkTypeData> datas = new ArrayList<LinkTypeData>();
-//        LinkTypeData data = null;
+    /**
+     * 获取对应地址的Doc为文档
+     *
+     * @return
+     */
+    public Document getDocument() {
         try {
-            /**
-             * 解析rule
-             */
             String url = rule.getUrl();
             String[] params = rule.getParams();
             String[] values = rule.getValues();
-            String resultTagName = rule.getResultTagName();
-            int type = rule.getType();
             int requestType = rule.getRequestMoethod();
 
             Connection conn = Jsoup.connect(url);
             // 设置查询参数
-
             if (params != null) {
                 for (int i = 0; i < params.length; i++) {
                     conn.data(params[i], values[i]);
                 }
             }
-
             // 设置请求类型
             Document doc = null;
             switch (requestType) {
                 case Rule.GET:
-                    doc = conn.timeout(100000).ignoreContentType(true).get();
+                    doc = conn.timeout(100000).ignoreContentType(true).parser(Parser.htmlParser()).get();
                     break;
                 case Rule.POST:
                     doc = conn.timeout(100000).ignoreContentType(true).post();
                     break;
             }
-//            System.out.println("-----------------");
-//            System.out.println(doc);
-//            System.out.println("-----------------");
-
-            //处理返回数据
-
-            switch (type) {
-                case Rule.CLASS:
-                    results = doc.getElementsByClass(resultTagName);
-                    break;
-                case Rule.ID:
-                    Element result = doc.getElementById(resultTagName);
-                    results.add(result);
-                    break;
-                case Rule.SELECTION:
-                    results = doc.select(resultTagName);
-                    break;
-                default:
-                    //当resultTagName为空时默认去body标签
-                    if (StringUtil.isEmpty(resultTagName)) {
-                        results = doc.getElementsByTag("body");
-                    }
-            }
-
-//            for (Element result : results) {
-//                Elements links = result.getElementsByTag("a");
-//
-//                for (Element link : links) {
-//                    //必要的筛选
-//                    String linkHref = link.attr("href");
-//                    String linkText = link.text();
-//
-//                    data = new LinkTypeData();
-//                    data.setLinkHref(linkHref);
-//                    data.setLinkText(linkText);
-//
-//                    datas.add(data);
-//                }
-//            }
-
+            return doc;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
+    }
 
+    /**
+     * 获取对应Rule中的节点（ID,CLass,Tag）
+     *
+     * @param doc
+     * @return
+     */
+    public Elements getElements(Document doc) {
+        Elements results = new Elements();
+        int type = rule.getType();
+        String resultTagName = rule.getResultTagName();
+
+        switch (type) {
+            case Rule.CLASS:
+                results = doc.getElementsByClass(resultTagName);
+                break;
+            case Rule.ID:
+                Element result = doc.getElementById(resultTagName);
+                results.add(result);
+                break;
+            case Rule.SELECTION:
+                results = doc.select(resultTagName);
+                break;
+            default:
+                if (StringUtil.isEmpty(resultTagName)) {
+                    results = doc.getElementsByTag("body");
+                }
+        }
         return results;
     }
 
@@ -127,6 +115,5 @@ public class ExtractService {
         }
 
     }
-
 
 }

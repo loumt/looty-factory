@@ -21,7 +21,7 @@ public class AppLogSchedule {
 
     private Logger logger = Logger.getLogger(AppLogSchedule.class);
 
-    //    @Scheduled(cron = "0 0/10 *  * * ?")
+    //    @Scheduled(cron = "0 0/10 * * * ?")
     public void addAppLog() {
         System.out.println(111);
     }

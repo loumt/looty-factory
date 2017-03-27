@@ -1,6 +1,7 @@
 package com.looty.utils;
 
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -896,4 +897,13 @@ public final class DateUtil {
     public static boolean between(Date startTime, Date endTime, Date date) {
         return date.after(startTime) && date.before(endTime);
     }
+
+    public static String getStart(Date now) {
+        return DateInstance().format(now) + " 00:00:00";
+    }
+
+    public static String getEnd(Date now) {
+        return DateInstance().format(now) + " 23:59:59";
+    }
+
 }

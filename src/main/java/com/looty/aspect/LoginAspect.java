@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginAspect {
 
-    @Pointcut("execution(* com.looty.service.impl.AopServiceImpl.*(..))")
+    @Pointcut("execution(* com.looty.service.impl.AppLogServiceImpl.*(..))")
     private void anyMethod() {
     }
 

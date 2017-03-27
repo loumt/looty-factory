@@ -3,6 +3,8 @@
  */
 package com.looty.crawler;
 
+import java.util.Date;
+
 public class LinkTypeData {
 
     private int id;
@@ -22,6 +24,36 @@ public class LinkTypeData {
      * 内容
      */
     private String content;
+
+    /**
+     * 排名
+     */
+    private Integer ranking;
+    /**
+     * 搜索指数
+     */
+    private String exponent;
+
+    /**
+     * 创建时间
+     */
+    private Date createDate;
+
+    public Integer getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(Integer ranking) {
+        this.ranking = ranking;
+    }
+
+    public String getExponent() {
+        return exponent;
+    }
+
+    public void setExponent(String exponent) {
+        this.exponent = exponent;
+    }
 
     public int getId() {
         return id;
@@ -61,5 +93,27 @@ public class LinkTypeData {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    @Override
+    public String toString() {
+        return "LinkTypeData{" +
+                "createDate=" + createDate +
+                ", exponent='" + exponent + '\'' +
+                ", ranking=" + ranking +
+                ", content='" + content + '\'' +
+                ", summary='" + summary + '\'' +
+                ", linkText='" + linkText + '\'' +
+                ", linkHref='" + linkHref + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

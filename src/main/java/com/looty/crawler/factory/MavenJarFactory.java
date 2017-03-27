@@ -1,8 +1,9 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler;
+package com.looty.crawler.factory;
 
+import com.looty.crawler.LinkTypeData;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -10,23 +11,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * USED TO:
+ * USED TO: Maven Jar
  * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
- * @package com.looty.crawler
- * @date 2017/3/13/013
+ * @package com.looty.crawler.factory
+ * @date 2017/3/24/024
  */
-public class ElementsUtil {
+public class MavenJarFactory extends AbsFactory {
+    private MavenJarFactory() {
+    }
 
-    /**
-     * 格式<ele>Content<ele/>
-     *
-     * @param results
-     * @return
-     */
-    public static List<LinkTypeData> getContents(Elements results) {
+    public static MavenJarFactory getInstance() {
+        return new MavenJarFactory();
+    }
+
+
+    public List<LinkTypeData> getContents(Elements results) {
         List<LinkTypeData> datas = new ArrayList<LinkTypeData>();
         LinkTypeData data = null;
         for (Element result : results) {
@@ -52,6 +54,4 @@ public class ElementsUtil {
         }
         return datas;
     }
-
-
 }
