@@ -59,7 +59,7 @@ public class WeiBoResouSchedule {
         return datas;
     }
 
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0 0/30 * * * ?")
     public void getResou() {
         Date now = new Date();
         Long count = linkDataTypeService.getCountByDate(now);

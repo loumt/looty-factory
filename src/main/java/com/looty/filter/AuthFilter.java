@@ -3,6 +3,8 @@
  */
 package com.looty.filter;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -20,21 +22,24 @@ import java.io.IOException;
  */
 @WebFilter(filterName = "authFilter", urlPatterns = {"/manage/*"}, dispatcherTypes = DispatcherType.REQUEST)
 public class AuthFilter implements Filter {
+
+    Logger logger = Logger.getLogger(AuthFilter.class);
+
     private HttpServletRequest request;
     private HttpServletResponse response;
 
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("AuthFilter Init()");
+        logger.info("AuthFilter Init()");
     }
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
         this.request = (HttpServletRequest) servletRequest;
         this.response = (HttpServletResponse) servletResponse;
-        System.out.println("AuthFilter doFilter():{Uri:" + request.getRequestURI() + "}");
+        logger.info("AuthFilter doFilter():{Uri:" + request.getRequestURI() + "}");
         chain.doFilter(request, response);
     }
 
     public void destroy() {
-        System.out.println("AuthFilter destroy()");
+        logger.info("AuthFilter destroy()");
     }
 }

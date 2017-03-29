@@ -4,6 +4,7 @@
 package com.looty.http.evictor;
 
 import org.apache.http.conn.HttpClientConnectionManager;
+import org.apache.log4j.Logger;
 
 /**
  * USED TO:
@@ -16,6 +17,8 @@ import org.apache.http.conn.HttpClientConnectionManager;
  */
 public class IdleConnectionEvictor extends Thread {
 
+    Logger logger = Logger.getLogger(IdleConnectionEvictor.class);
+
     private final HttpClientConnectionManager connMgr;
 
     private volatile boolean shutdown;
@@ -26,7 +29,7 @@ public class IdleConnectionEvictor extends Thread {
     }
 
     public void run() {
-        System.out.println("HttpClient Close Thread Start......");
+        logger.info("HttpClient Close Thread Start......");
         try {
             while (!shutdown) {
                 synchronized (this) {
@@ -40,7 +43,7 @@ public class IdleConnectionEvictor extends Thread {
     }
 
     public void shutdown() {
-        System.out.println("HttpClient Close Thread End......");
+        logger.info("HttpClient Close Thread End......");
         shutdown = true;
         synchronized (this) {
             notifyAll();
