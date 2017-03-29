@@ -3,7 +3,7 @@
  */
 package com.looty.service.impl;
 
-import com.looty.dao.UserDao;
+import com.looty.dao.IUserDao;
 import com.looty.enums.ResultMsgEnum;
 import com.looty.pojo.User;
 import com.looty.pojo.system.ResultMsg;
@@ -26,7 +26,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements IUserService {
     @Autowired
-    private UserDao userDao;
+    private IUserDao userDao;
 
     public boolean checkLoginInfo(String username, String password) {
         if (StringUtil.isEmpty(username) || StringUtil.isEmpty(password)) {

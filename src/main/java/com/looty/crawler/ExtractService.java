@@ -3,6 +3,8 @@
  */
 package com.looty.crawler;
 
+import com.looty.exception.WeiBoRuleException;
+import com.looty.pojo.WeiBoRule;
 import com.looty.utils.StringUtil;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -12,21 +14,18 @@ import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author zhy
  */
 public class ExtractService {
 
-    private Rule rule;
+    private WeiBoRule weiBoRule;
 
-    public ExtractService(Rule rule) {
+    public ExtractService(WeiBoRule weiBoRule) {
         // 进行对rule的必要校验
-        validateRule(rule);
-        this.rule = rule;
+        validateRule(weiBoRule);
+        this.weiBoRule = weiBoRule;
     }
 
 
@@ -37,10 +36,10 @@ public class ExtractService {
      */
     public Document getDocument() {
         try {
-            String url = rule.getUrl();
-            String[] params = rule.getParams();
-            String[] values = rule.getValues();
-            int requestType = rule.getRequestMoethod();
+            String url = weiBoRule.getUrl();
+            String[] params = weiBoRule.getParams();
+            String[] values = weiBoRule.getValues();
+            int requestType = weiBoRule.getRequestMoethod();
 
             Connection conn = Jsoup.connect(url);
             // 设置查询参数
@@ -52,10 +51,10 @@ public class ExtractService {
             // 设置请求类型
             Document doc = null;
             switch (requestType) {
-                case Rule.GET:
+                case WeiBoRule.GET:
                     doc = conn.timeout(100000).ignoreContentType(true).parser(Parser.htmlParser()).get();
                     break;
-                case Rule.POST:
+                case WeiBoRule.POST:
                     doc = conn.timeout(100000).ignoreContentType(true).post();
                     break;
             }
@@ -74,18 +73,18 @@ public class ExtractService {
      */
     public Elements getElements(Document doc) {
         Elements results = new Elements();
-        int type = rule.getType();
-        String resultTagName = rule.getResultTagName();
+        int type = weiBoRule.getType();
+        String resultTagName = weiBoRule.getResultTagName();
 
         switch (type) {
-            case Rule.CLASS:
+            case WeiBoRule.CLASS:
                 results = doc.getElementsByClass(resultTagName);
                 break;
-            case Rule.ID:
+            case WeiBoRule.ID:
                 Element result = doc.getElementById(resultTagName);
                 results.add(result);
                 break;
-            case Rule.SELECTION:
+            case WeiBoRule.SELECTION:
                 results = doc.select(resultTagName);
                 break;
             default:
@@ -99,18 +98,18 @@ public class ExtractService {
     /**
      * 对传入的参数进行必要的校验
      */
-    private static void validateRule(Rule rule) {
-        String url = rule.getUrl();
+    private static void validateRule(WeiBoRule weiBoRule) {
+        String url = weiBoRule.getUrl();
         if (StringUtil.isEmpty(url)) {
-            throw new RuleException("url不能为空！");
+            throw new WeiBoRuleException("url不能为空！");
         }
         if (!url.startsWith("http://")) {
-            throw new RuleException("url的格式不正确！");
+            throw new WeiBoRuleException("url的格式不正确！");
         }
 
-        if (rule.getParams() != null && rule.getValues() != null) {
-            if (rule.getParams().length != rule.getValues().length) {
-                throw new RuleException("参数的键值对个数不匹配！");
+        if (weiBoRule.getParams() != null && weiBoRule.getValues() != null) {
+            if (weiBoRule.getParams().length != weiBoRule.getValues().length) {
+                throw new WeiBoRuleException("参数的键值对个数不匹配！");
             }
         }
 

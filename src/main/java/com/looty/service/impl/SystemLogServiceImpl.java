@@ -28,8 +28,8 @@ public class SystemLogServiceImpl implements ISystemLogService {
     private ISystemLogDao systemLogDao;
 
     public ResultMsg getSysLogList() throws ServiceException {
-        List<SystemStatusLog> systemStatusLogs = systemLogDao.getSysLogPageList();
+        List<SystemStatusLog> systemStatuseLogs = systemLogDao.getSysLogPageList();
         Long count = systemLogDao.getCount();
-        return ResultMsg.isSuccess(systemStatusLogs, count);
+        return ResultMsg.isSuccess(systemStatuseLogs, count);
     }
 }

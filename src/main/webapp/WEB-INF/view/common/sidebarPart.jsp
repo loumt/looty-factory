@@ -72,8 +72,15 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${basePath}/manage/log/system/toIndex">-System-</a></li>
-                    <li><a href="#">-Manage-</a></li>
+                    <li><a href="${basePath}/manage/log/manage/toIndex">-Manage-</a></li>
                 </ul>
+            </li>
+            <%--微博热搜--%>
+            <li>
+                <a href="${basePath}/manage/weibo/hot/toIndex">
+                    <i class="icon-user-md"></i>
+                    <span>微博热搜</span>
+                </a>
             </li>
         </ul>
         <!-- /.sidebar-menu -->

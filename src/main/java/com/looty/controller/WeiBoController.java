@@ -3,11 +3,10 @@
  */
 package com.looty.controller;
 
-import com.looty.annotation.AuthCheck;
 import com.looty.base.BaseController;
-import com.looty.enums.ModuleEnum;
+import com.looty.enums.ResourceEnum;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.IMonitorInfoService;
+import com.looty.service.ILinkDataTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,43 +17,40 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 /**
- * USED TO:
+ * USED TO:微博数据扒取
  * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.controller
- * @date 2017/3/17/017
+ * @date 2017/3/29/029
  */
 @Controller
-@RequestMapping("/manage/system/monitorInfo")
-public class MonitorInfoController extends BaseController {
+@RequestMapping("/manage/weibo")
+public class WeiBoController extends BaseController {
 
     @Autowired
-    private IMonitorInfoService monitorInfoService;
+    private ILinkDataTypeService linkDataTypeService;
 
     /**
-     * 主页
+     * 微博实时热搜首页
      *
      * @return
      */
-    @AuthCheck(modules = ModuleEnum.MONITOR_INFO_MODULE)
-    @RequestMapping("/toIndex")
+    @RequestMapping("/hot/toIndex")
     public ModelAndView toIndex() {
-        return super.backViewMV("/system/system_status");
+        return backViewMV("/weibo/real_hot_index");
     }
 
     /**
-     * Info列表
+     * 获取微博实时热搜列表
      *
      * @return
      */
-    @AuthCheck(modules = ModuleEnum.MONITOR_INFO_MODULE)
-    @RequestMapping(value = "/getInfoList", method = RequestMethod.GET)
+    @RequestMapping(value = "/hot/getRealHotList", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, Object> getInfoList() {
-        ResultMsg resultMsg = monitorInfoService.getInfoList();
-        return super.backDataMap(resultMsg);
+    public Map<String, Object> getRealHotList() {
+        ResultMsg resultMsg = linkDataTypeService.getDataList(ResourceEnum.S_WEI_BO_HOT);
+        return backDataMap(resultMsg);
     }
-
 }

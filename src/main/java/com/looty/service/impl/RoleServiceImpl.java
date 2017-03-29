@@ -3,7 +3,7 @@
  */
 package com.looty.service.impl;
 
-import com.looty.dao.RoleDao;
+import com.looty.dao.IRoleDao;
 import com.looty.pojo.Role;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.service.IRoleService;
@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class RoleServiceImpl implements IRoleService {
     @Autowired
-    private RoleDao roleDao;
+    private IRoleDao roleDao;
 
     public long insertRole(Role role) {
         return roleDao.insertRole(role);

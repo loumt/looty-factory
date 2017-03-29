@@ -4,9 +4,11 @@
 package com.looty.service.impl;
 
 import com.looty.base.BaseService;
-import com.looty.crawler.LinkTypeData;
+import com.looty.enums.ResourceEnum;
+import com.looty.exception.ServiceException;
+import com.looty.pojo.LinkTypeData;
 import com.looty.dao.ILinkDataTypeDao;
-import com.looty.dao.LinkDataTypeDaoImpl;
+import com.looty.pojo.system.ResultMsg;
 import com.looty.service.ILinkDataTypeService;
 import com.looty.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +48,16 @@ public class LinkDataTypeServiceImpl extends BaseService implements ILinkDataTyp
         String start = DateUtil.getStart(now);
         String end = DateUtil.getEnd(now);
         return linkDataTypeDao.count(start, end);
+    }
+
+    public ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException {
+        List<LinkTypeData> datas = linkDataTypeDao.list(resourceEnum.getType());
+        long count = linkDataTypeDao.count();
+        return ResultMsg.isSuccess(datas, count);
+    }
+
+
+    public int updateType(Long dataId, ResourceEnum resourceEnum) throws ServiceException {
+        return linkDataTypeDao.updateType(dataId, resourceEnum.getType());
     }
 }

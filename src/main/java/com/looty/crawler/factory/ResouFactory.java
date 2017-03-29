@@ -3,8 +3,8 @@
  */
 package com.looty.crawler.factory;
 
-import com.looty.config.SystemConfig;
-import com.looty.crawler.LinkTypeData;
+import com.looty.enums.ResourceEnum;
+import com.looty.pojo.LinkTypeData;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -75,7 +75,7 @@ public class ResouFactory extends AbsFactory {
             data.setRanking(Integer.valueOf(sort));
             data.setExponent(exponent);
             data.setCreateDate(nowDate);
-
+            data.setType(ResourceEnum.S_WEI_BO_HOT.getType());
             datas.add(data);
         }
 

@@ -4,8 +4,8 @@
 package com.looty.schedule;
 
 import com.looty.crawler.ExtractService;
-import com.looty.crawler.LinkTypeData;
-import com.looty.crawler.Rule;
+import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoRule;
 import com.looty.crawler.factory.ResouFactory;
 import com.looty.service.ILinkDataTypeService;
 import org.apache.commons.collections.CollectionUtils;
@@ -41,8 +41,8 @@ public class WeiBoResouSchedule {
     private final String[] params = new String[]{"cate"};
     private final String[] values = new String[]{"realtimehot"};
     private final String resultTagName = "script";
-    private final int type = Rule.SELECTION;
-    private final int requestMoethod = Rule.GET;
+    private final int type = WeiBoRule.SELECTION;
+    private final int requestMoethod = WeiBoRule.GET;
 
 
     /**
@@ -51,8 +51,8 @@ public class WeiBoResouSchedule {
      * @return
      */
     private List<LinkTypeData> getDatas() {
-        Rule rule = new Rule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
-        ExtractService service = new ExtractService(rule);
+        WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
+        ExtractService service = new ExtractService(weiBoRule);
         Document mavenDoc = service.getDocument();
         Elements elements = service.getElements(mavenDoc);
         List<LinkTypeData> datas = ResouFactory.getInstance().getContents(elements);

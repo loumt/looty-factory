@@ -5,9 +5,10 @@ package com.looty.service.impl;
 
 
 import com.looty.config.SystemConfig;
-import com.looty.dao.UserAuthCodeDao;
-import com.looty.dao.UserDao;
+import com.looty.dao.IUserAuthCodeDao;
+import com.looty.dao.IUserDao;
 import com.looty.enums.ResultMsgEnum;
+import com.looty.exception.ServiceException;
 import com.looty.pojo.User;
 import com.looty.pojo.UserAuthCode;
 import com.looty.pojo.system.ResultMsg;
@@ -34,10 +35,10 @@ public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
 
 
     @Autowired
-    private UserDao userDao;
+    private IUserDao userDao;
 
     @Autowired
-    private UserAuthCodeDao userAuthCodeDao;
+    private IUserAuthCodeDao userAuthCodeDao;
 
 
     public ResultMsg getAuthCode(String ip, String username) {
@@ -47,7 +48,8 @@ public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
         UserAuthCode authCode = userAuthCodeDao.getAuthCodeByUsername(userId);
         //创建一个授权码
         if (authCode == null) {
-            userAuthCodeDao.saveAuthCode(createNewAuthCode(ip, userId));
+            authCode = createNewAuthCode(ip, userId);
+            userAuthCodeDao.saveAuthCode(authCode);
         }
         return ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, authCode.getAuthCode());
     }
@@ -59,7 +61,7 @@ public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
         userAuthCode.setLastOperationIp(ip);
         userAuthCode.setCreateDate(now);
         userAuthCode.setUserId(userId);
-        userAuthCode.setInValidDate(DateUtil.dateTime(now, SystemConfig.MAX_AUTH_CODE_INVALID_DAYS));
+        userAuthCode.setInValidDate(DateUtil.minute(now, SystemConfig.MAX_AUTH_CODE_INVALID_DAYS));
         userAuthCode.setAuthCode(code);
         return userAuthCode;
     }
@@ -73,5 +75,15 @@ public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
         List<UserAuthCode> users = userAuthCodeDao.getAuthPageList();
         Long count = userAuthCodeDao.getCount();
         return ResultMsg.isSuccess(users, count);
+    }
+
+    public ResultMsg removeCode(String code) throws ServiceException {
+        userAuthCodeDao.remove(code);
+        return ResultMsg.isCommonSuccess();
+    }
+
+    public ResultMsg getCodeInValid(Date date) {
+        List<UserAuthCode> codes = userAuthCodeDao.inValidCode(date);
+        return ResultMsg.isSuccess(codes, (long) codes.size());
     }
 }

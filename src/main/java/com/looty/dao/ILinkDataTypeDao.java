@@ -1,8 +1,8 @@
 package com.looty.dao;
 
-import com.looty.crawler.LinkTypeData;
+import com.looty.exception.DaoException;
+import com.looty.pojo.LinkTypeData;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,4 +20,13 @@ public interface ILinkDataTypeDao {
 
 
     Long count(String begin, String end);
+
+    long count() throws DaoException;
+
+
+    List<LinkTypeData> list() throws DaoException;
+
+    List<LinkTypeData> list(int type) throws DaoException;
+
+    int updateType(Long id, int type) throws DaoException;
 }

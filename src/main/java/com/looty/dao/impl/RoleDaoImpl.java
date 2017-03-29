@@ -1,9 +1,10 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.dao;
+package com.looty.dao.impl;
 
 import com.looty.base.BaseDao;
+import com.looty.dao.IRoleDao;
 import com.looty.pojo.Role;
 import com.looty.vo.RoleVo;
 import org.springframework.stereotype.Repository;
@@ -20,7 +21,7 @@ import java.util.List;
  * @date 2017/3/8/008
  */
 @Repository
-public class RoleDaoImpl extends BaseDao implements RoleDao {
+public class RoleDaoImpl extends BaseDao implements IRoleDao {
 
     private static final String INSERT_ROLE = "insert into role(roleName,roleCode,createUserId,createDate,remark)values(:roleName,:roleCode,:createUserId,:createDate,:remark)";
     public long insertRole(Role role) {

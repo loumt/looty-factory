@@ -1,9 +1,10 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.dao;
+package com.looty.dao.impl;
 
 import com.looty.base.BaseDao;
+import com.looty.dao.ISystemLogDao;
 import com.looty.exception.DaoException;
 import com.looty.pojo.SystemStatusLog;
 import org.springframework.stereotype.Repository;

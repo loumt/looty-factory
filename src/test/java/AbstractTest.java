@@ -3,6 +3,8 @@
  */
 
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
@@ -11,6 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * USED TO:Spring测试抽象类
  * Log File:
+ * 测试基类,
+ *
+ * @Transactional 添加事务，所有改变数据库的改变均在方法结束后撤销
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
@@ -27,4 +32,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public abstract class AbstractTest {
 
+    @Autowired
+    protected JdbcTemplate jdbcTemplate;
 }

@@ -1,6 +1,9 @@
 package com.looty.service;
 
+import com.looty.exception.ServiceException;
 import com.looty.pojo.system.ResultMsg;
+
+import java.util.Date;
 
 /**
  * 
@@ -13,9 +16,13 @@ import com.looty.pojo.system.ResultMsg;
  */
 public interface IUserAuthCodeService {
 
-    ResultMsg getAuthCode(String ip, String username);
+    ResultMsg getAuthCode(String ip, String username) throws ServiceException;
 
-    boolean checkAuthCode(String authCode);
+    boolean checkAuthCode(String authCode) throws ServiceException;
 
-    ResultMsg getAuthList();
+    ResultMsg getAuthList() throws ServiceException;
+
+    ResultMsg removeCode(String code) throws ServiceException;
+
+    ResultMsg getCodeInValid(Date date) throws ServiceException;
 }

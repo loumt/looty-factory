@@ -15,7 +15,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/17/017
  */
-public class AppLog implements Serializable, Cloneable {
+public class ManageLog implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 2403059193845920236L;
 
@@ -88,13 +88,13 @@ public class AppLog implements Serializable, Cloneable {
      * @return
      */
     @Override
-    protected AppLog clone() {
-        AppLog appLog = null;
+    protected ManageLog clone() {
+        ManageLog manageLog = null;
         try {
-            appLog = (AppLog) super.clone();
+            manageLog = (ManageLog) super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        return appLog;
+        return manageLog;
     }
 }

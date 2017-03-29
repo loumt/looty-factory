@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
  */
 public class SystemConfig {
     /**
-     * AuthCode有效天数
+     * AuthCode有效分钟
      */
-    public static Integer MAX_AUTH_CODE_INVALID_DAYS = 3;
+    public static Integer MAX_AUTH_CODE_INVALID_DAYS = 30;
     /**
      * AuthCode有效位数
      */

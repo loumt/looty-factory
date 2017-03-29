@@ -38,4 +38,13 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/view"
           p:suffix=".jsp"></bean>
 
+
+    <!--权限拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/manage/*"/>
+            <bean class="com.looty.interceptor.PermissionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>

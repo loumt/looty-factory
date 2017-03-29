@@ -3,7 +3,7 @@
  */
 package com.looty.service.impl;
 
-import com.looty.dao.SystemStatusLogDao;
+import com.looty.dao.ISystemStatusLogDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.SystemStatusLog;
 import com.looty.service.ISystemStatusLogService;
@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 public class SystemStatusLogServiceImpl implements ISystemStatusLogService {
 
     @Autowired
-    private SystemStatusLogDao systemStatusLogDao;
+    private ISystemStatusLogDao systemStatusLogDao;
 
     public long insertOneSystemStatusLog(SystemStatusLog systemStatusLog) throws ServiceException {
         return systemStatusLogDao.saveOneSystemStatusLog(systemStatusLog);

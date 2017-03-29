@@ -50,6 +50,7 @@ public class SystemInit implements ServletContextListener {
 
         //初始化线程池,Size为Cpu核心数的两倍
         executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+
     }
 
     /**

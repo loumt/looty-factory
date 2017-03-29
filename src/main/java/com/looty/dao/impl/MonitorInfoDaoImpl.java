@@ -1,9 +1,10 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.dao;
+package com.looty.dao.impl;
 
 import com.looty.base.BaseDao;
+import com.looty.dao.IMonitorInfoDao;
 import com.looty.exception.DaoException;
 import com.looty.pojo.MonitorInfo;
 import com.looty.pojo.system.QueryPageModel;
@@ -21,7 +22,7 @@ import java.util.List;
  * @date 2017/3/17/017
  */
 @Repository
-public class MonitorInfoDaoImpl extends BaseDao implements MonitorInfoDao {
+public class MonitorInfoDaoImpl extends BaseDao implements IMonitorInfoDao {
 
 
     private static final String SAVE_INFO = "insert into monitor_info(totalMemory,freeMemory,totalThread,availableProcessors,osName,hostAddress,userDomain,javaVersion,javaHome,javaVmName,createDate)values(:totalMemory,:freeMemory,:totalThread,:availableProcessors,:osName,:hostAddress,:userDomain,:javaVersion,:javaHome,:javaVmName,:createDate)";

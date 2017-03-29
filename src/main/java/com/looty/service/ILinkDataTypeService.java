@@ -1,6 +1,10 @@
 package com.looty.service;
 
-import com.looty.crawler.LinkTypeData;
+import com.looty.enums.ResourceEnum;
+import com.looty.exception.ServiceException;
+import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.system.ResultMsg;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -21,4 +25,8 @@ public interface ILinkDataTypeService {
     void saveList(List<LinkTypeData> datas);
 
     Long getCountByDate(Date now);
+
+    ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException;
+
+    int updateType(Long id, ResourceEnum resourceEnum) throws ServiceException;
 }

@@ -15,7 +15,7 @@ import java.util.List;
  * @package com.looty.dao
  * @date 2017/3/17/017
  */
-public interface MonitorInfoDao {
+public interface IMonitorInfoDao {
 
     long saveInfo(MonitorInfo monitorInfo) throws DaoException;
 

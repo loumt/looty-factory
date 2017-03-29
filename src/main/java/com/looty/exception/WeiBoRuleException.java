@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler;
+package com.looty.exception;
 
 /**
  * USED TO:
@@ -12,24 +12,24 @@ package com.looty.crawler;
  * @package com.looty.crawler
  * @date 2017/3/13/013
  */
-public class RuleException extends RuntimeException {
+public class WeiBoRuleException extends RuntimeException {
 
-    public RuleException() {
+    public WeiBoRuleException() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-    public RuleException(String message, Throwable cause) {
+    public WeiBoRuleException(String message, Throwable cause) {
         super(message, cause);
         // TODO Auto-generated constructor stub
     }
 
-    public RuleException(String message) {
+    public WeiBoRuleException(String message) {
         super(message);
         // TODO Auto-generated constructor stub
     }
 
-    public RuleException(Throwable cause) {
+    public WeiBoRuleException(Throwable cause) {
         super(cause);
         // TODO Auto-generated constructor stub
     }

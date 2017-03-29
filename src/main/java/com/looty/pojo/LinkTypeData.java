@@ -1,13 +1,17 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler;
+package com.looty.pojo;
 
 import java.util.Date;
 
 public class LinkTypeData {
 
-    private int id;
+    private Long id;
+    /**
+     * 资源类型
+     */
+    private int type;
     /**
      * 链接的地址
      */
@@ -39,6 +43,14 @@ public class LinkTypeData {
      */
     private Date createDate;
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     public Integer getRanking() {
         return ranking;
     }
@@ -55,11 +67,11 @@ public class LinkTypeData {
         this.exponent = exponent;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -106,14 +118,15 @@ public class LinkTypeData {
     @Override
     public String toString() {
         return "LinkTypeData{" +
-                "createDate=" + createDate +
-                ", exponent='" + exponent + '\'' +
-                ", ranking=" + ranking +
-                ", content='" + content + '\'' +
-                ", summary='" + summary + '\'' +
-                ", linkText='" + linkText + '\'' +
+                "id=" + id +
+                ", type=" + type +
                 ", linkHref='" + linkHref + '\'' +
-                ", id=" + id +
+                ", linkText='" + linkText + '\'' +
+                ", summary='" + summary + '\'' +
+                ", content='" + content + '\'' +
+                ", ranking=" + ranking +
+                ", exponent='" + exponent + '\'' +
+                ", createDate=" + createDate +
                 '}';
     }
 }

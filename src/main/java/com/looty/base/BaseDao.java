@@ -67,9 +67,44 @@ public class BaseDao {
     }
 
     /******************************************Delete**************************************/
-
-
+    protected void delete(String sql) throws DaoException {
+        try {
+            this.jdbcTemplate.execute(sql);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
     /******************************************Update**************************************/
+
+    /**
+     * 执行更新操作
+     *
+     * @param sql
+     * @throws DaoException
+     */
+    protected int update(String sql) throws DaoException {
+        try {
+            return this.jdbcTemplate.update(sql);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * 执行更新操作
+     *
+     * @param sql
+     * @param args 参数s
+     * @return
+     * @throws DaoException
+     */
+    protected int update(String sql, Object... args) throws DaoException {
+        try {
+            return this.jdbcTemplate.update(sql, args);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
 
 
     /******************************************Search**************************************/
@@ -271,6 +306,38 @@ public class BaseDao {
 
 
     /**
+     * 执行Select语句,返回map结果集
+     *
+     * @param sql
+     * @return
+     * @throws DaoException
+     */
+    protected Map<String, Object> queryForMap(String sql) throws DaoException {
+        try {
+            return this.jdbcTemplate.queryForMap(sql);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+    /**
+     * 执行Select语句,返回map结果集
+     *
+     * @param sql
+     * @param args
+     * @return
+     * @throws DaoException
+     */
+    protected Map<String, Object> queryForMap(String sql, Object... args) throws DaoException {
+        try {
+            return this.jdbcTemplate.queryForMap(sql, args);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+
+    /**
      * 执行select语句，获取列表数据,并指定列表中Bean的类型
      *
      * @param sql          要执行的语句
@@ -287,7 +354,6 @@ public class BaseDao {
             Integer pageNo = QueryPageModel.getPageNo() == null ? 0 : QueryPageModel.getPageNo();
             Integer pageSize = QueryPageModel.getPageSize() == null ? 10 : QueryPageModel.getPageSize();
             sb.append(getPageSql(pageNo, pageSize));
-            System.out.println("SQL:" + sb.toString());
             List<Map<String, Object>> list = this.jdbcTemplate.queryForList(sb.toString());
             for (Map<String, Object> m : list) {
                 T t = (T) cls.newInstance();
@@ -297,6 +363,37 @@ public class BaseDao {
             return resultList;
         } catch (Exception e) {
             throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+
+    /**
+     * 执行select语句，获取列表数据,并指定列表中Bean的类型
+     *
+     * @param sql
+     * @param requiredType
+     * @param args
+     * @param <T>
+     * @return
+     * @throws DaoException
+     */
+    protected <T> List<T> queryForPageBeanList(String sql, Class<T> requiredType, Object... args) throws DaoException {
+        try {
+            List<T> list = new ArrayList<T>();
+            Class<?> cls = Class.forName(requiredType.getName());// 取得Class对象
+            StringBuffer sb = new StringBuffer(sql);
+            Integer pageNo = QueryPageModel.getPageNo() == null ? 0 : QueryPageModel.getPageNo();
+            Integer pageSize = QueryPageModel.getPageSize() == null ? 10 : QueryPageModel.getPageSize();
+            sb.append(getPageSql(pageNo, pageSize));
+            List<Map<String, Object>> maps = this.jdbcTemplate.queryForList(sb.toString(), args);
+            for (Map<String, Object> m : maps) {
+                T t = (T) cls.newInstance();
+                BeanUtils.copyProperties(t, m);
+                list.add(t);
+            }
+            return list;
+        } catch (Exception e) {
+            throw new DaoException(e.getMessage(),e);
         }
     }
 

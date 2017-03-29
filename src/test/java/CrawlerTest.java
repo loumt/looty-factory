@@ -3,10 +3,9 @@
  */
 
 import com.looty.crawler.ExtractService;
-import com.looty.crawler.LinkTypeData;
-import com.looty.crawler.Rule;
-import com.looty.crawler.factory.MavenJarFactory;
 import com.looty.crawler.factory.ResouFactory;
+import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoRule;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.junit.Test;
@@ -56,14 +55,14 @@ public class CrawlerTest {
     private String[] params = new String[]{"cate"};
     private String[] values = new String[]{"realtimehot"};
     private String resultTagName = "script";
-    private int type = Rule.SELECTION;
-    private int requestMoethod = Rule.GET;
+    private int type = WeiBoRule.SELECTION;
+    private int requestMoethod = WeiBoRule.GET;
 
     @Test
     public void getResou() {
-        Rule rule = new Rule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
+        WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
 
-        ExtractService service = new ExtractService(rule);
+        ExtractService service = new ExtractService(weiBoRule);
         Document mavenDoc = service.getDocument();
         Elements elements = service.getElements(mavenDoc);
 

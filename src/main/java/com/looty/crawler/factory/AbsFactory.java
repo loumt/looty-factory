@@ -3,7 +3,7 @@
  */
 package com.looty.crawler.factory;
 
-import com.looty.crawler.LinkTypeData;
+import com.looty.pojo.LinkTypeData;
 import org.jsoup.select.Elements;
 
 import java.util.List;

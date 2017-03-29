@@ -1,14 +1,14 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler;
+package com.looty.pojo;
 
 /**
- * 规则类
+ * Soup筛选规则类
  *
  * @author zhy
  */
-public class Rule {
+public class WeiBoRule {
     /**
      * 链接
      */
@@ -48,12 +48,12 @@ public class Rule {
     public final static int ID = 1;
     public final static int SELECTION = 2;
 
-    public Rule() {
+    public WeiBoRule() {
     }
 
 
-    public Rule(String url, String[] params, String[] values,
-                String resultTagName, int type, int requestMoethod) {
+    public WeiBoRule(String url, String[] params, String[] values,
+                     String resultTagName, int type, int requestMoethod) {
         super();
         this.url = url;
         this.params = params;

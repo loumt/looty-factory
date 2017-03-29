@@ -4,7 +4,7 @@
 package com.looty.service.impl;
 
 import com.looty.base.BaseService;
-import com.looty.dao.MonitorInfoDao;
+import com.looty.dao.IMonitorInfoDao;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.MonitorInfo;
 import com.looty.pojo.system.ResultMsg;
@@ -33,7 +33,7 @@ public class MonitorInfoServiceImpl extends BaseService implements IMonitorInfoS
 
 
     @Autowired
-    private MonitorInfoDao monitorDao;
+    private IMonitorInfoDao monitorDao;
 
     /**
      * 获得当前的System Info

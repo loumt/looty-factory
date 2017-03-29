@@ -1,9 +1,10 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.dao;
+package com.looty.dao.impl;
 
 import com.looty.base.BaseDao;
+import com.looty.dao.IUserDao;
 import com.looty.exception.DaoException;
 import com.looty.pojo.User;
 import org.springframework.stereotype.Repository;
@@ -20,7 +21,7 @@ import java.util.List;
  * @date 2017/3/8/008
  */
 @Repository
-public class UserDaoImpl extends BaseDao implements UserDao {
+public class UserDaoImpl extends BaseDao implements IUserDao {
 
     private static final String GET_USER_BY_NAME = "select * from user where username = ?";
 

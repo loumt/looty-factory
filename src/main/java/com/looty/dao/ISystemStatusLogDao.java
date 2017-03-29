@@ -16,7 +16,7 @@ import java.util.List;
  * @package com.looty.dao
  * @date 2017/3/3/003
  */
-public interface SystemStatusLogDao {
+public interface ISystemStatusLogDao {
 
     long saveOneSystemStatusLog(SystemStatusLog systemStatusLog) throws DaoException;
 

@@ -14,7 +14,8 @@ public enum ModuleEnum {
     ADMIN_MODULE(100, "管理模块"),
     LOG_MODULE(101, "日志模块"),
     SYSTEM_MODULE(102, "系统模块"),
-    ARTICLE_MODULE(103, "文章模块");
+    MONITOR_INFO_MODULE(103, "系统状态模块"),
+    ARTICLE_MODULE(104, "文章模块");
 
 
     private int moduleCode;

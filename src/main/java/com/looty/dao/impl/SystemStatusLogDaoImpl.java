@@ -1,9 +1,10 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.dao;
+package com.looty.dao.impl;
 
 import com.looty.base.BaseDao;
+import com.looty.dao.ISystemStatusLogDao;
 import com.looty.enums.SystemStatusEnum;
 import com.looty.exception.DaoException;
 import com.looty.pojo.SystemStatusLog;
@@ -22,7 +23,7 @@ import java.util.List;
  * @date 2017/3/3/003
  */
 @Repository
-public class SystemStatusLogDaoImpl extends BaseDao implements SystemStatusLogDao {
+public class SystemStatusLogDaoImpl extends BaseDao implements ISystemStatusLogDao {
 
 
     private static final String SAVE_ONE_SYSTEM_STATUS_LOG = "insert into system_status_log(statusAction,operationTime,serverInfo,contextName) values(:statusAction,:operationTime,:serverInfo,:contextName)";

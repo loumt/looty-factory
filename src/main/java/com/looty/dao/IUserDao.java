@@ -15,7 +15,7 @@ import java.util.List;
  * @package com.looty.dao
  * @date 2017/3/8/008
  */
-public interface UserDao {
+public interface IUserDao {
 
     User getUserByName(String username) throws DaoException;
 
