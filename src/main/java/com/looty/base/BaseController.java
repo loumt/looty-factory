@@ -15,10 +15,18 @@ package com.looty.base;
 
 import com.looty.pojo.system.ResultMsg;
 import org.apache.log4j.Logger;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +46,7 @@ public class BaseController {
     private static final String DATA = "data";
     private static final String MSG = "msg";
     private static final String COUNT = "count";
+
 
     /**
      * 返回 ModelAndView
@@ -71,6 +80,7 @@ public class BaseController {
         if (isNotNull(resultMsg.getCount())) m.put(COUNT, resultMsg.getCount());
         return m;
     }
+
 
     private Boolean isNotNull(Object o) {
         return o != null;

@@ -51,9 +51,7 @@ public class DbTest extends AbstractTest {
 
     @Test
     public void mapTest() {
-        Map<String, String> map = new HashMap<String, String>();
-        Map<String, String> cMap = new ConcurrentHashMap<String, String>();
-        System.out.println(3 << 2);
+        Arrays.asList("a", "b", "d").forEach(e -> System.out.println(e));
     }
 
 

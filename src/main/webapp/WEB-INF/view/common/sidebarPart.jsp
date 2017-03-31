@@ -58,7 +58,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${basePath}/manage/system/monitorInfo/toIndex">-Status-</a></li>
-                    <li><a href="#">-Config-</a></li>
+                    <li><a href="${basePath}/manage/system/config/toIndex">-Config-</a></li>
                 </ul>
             </li>
             <%--日志管理--%>
@@ -81,6 +81,20 @@
                     <i class="icon-user-md"></i>
                     <span>微博热搜</span>
                 </a>
+            </li>
+            <%--笔记记录--%>
+            <li>
+                <a href="#">
+                    <i class="icon-pinterest"></i>
+                    <span>资源</span>
+                    <span class="pull-right-container">
+                        <i class="icon-plus"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${basePath}/manage/note/resource/toAdd">添加资源</a></li>
+                    <li><a href="${basePath}/manage/note/resource/toIndex">资源列表</a></li>
+                </ul>
             </li>
         </ul>
         <!-- /.sidebar-menu -->
