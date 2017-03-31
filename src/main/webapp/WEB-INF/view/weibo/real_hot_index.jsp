@@ -21,9 +21,14 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
+            <h5 class="row-title">
+                <i class="icon-flag"> 用户列表</i>
+            </h5>
             <h1>
-                实时热搜
-                <small><span>http://s.weibo.com/top/summary?cate=realtimehot</span></small>
+                <span class="label label-blueberry">
+                    Remark:
+                    <small>用户列表...</small>
+                </span>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>

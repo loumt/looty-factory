@@ -21,9 +21,14 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
+            <h5 class="row-title">
+                <i class="icon-flag"> 资源搜集</i>
+            </h5>
             <h1>
-                Page Header
-                <small>Optional description</small>
+                <span class="label label-blueberry">
+                    Remark:
+                    <small>博客,笔记,文章日常整理...</small>
+                </span>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -32,23 +37,53 @@
         </section>
         <!-- Main content -->
         <section class="content">
-            <div>
-                <span>标题</span><input type="text" id="title" placeholder="<!--标题-->"/>
-            </div>
-            <div>
-                <span>简述</span><input type="text" id="des" placeholder="<!--简述-->"/>
-            </div>
-            <div>
-                <span>地址</span><input type="url" id="url" placeholder="<!--地址-->"/>
-            </div>
-            <div>
-                <select id="category"></select>
-            </div>
-            <div>
-                <button onclick="toSave();">保存</button>
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="widget">
+                    <div class="widget-header bordered-bottom bordered-palegreen">
+                        <span class="widget-caption">录入</span>
+                    </div>
+                    <div class="widget-body">
+                        <div>
+                            <form class="form-horizontal form-bordered">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">标题</label>
+
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="title" placeholder="请输入标题" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">简述</label>
+
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="des" placeholder="请输入简述" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">地址</label>
+
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="url" placeholder="请输入地址" type="url">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label no-padding-right">类型</label>
+
+                                    <div class="col-sm-10">
+                                        <select class="form-control" id="category"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <a class="btn btn-blue" onclick="toSave()">保存此资源</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- content -->
     </div>
     <!-- content-wrapper -->
     <%@include file="/WEB-INF/view/common/footerPart.jsp" %>

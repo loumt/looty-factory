@@ -6,5 +6,7 @@
 <%--bootstrap--%>
 <link rel="stylesheet" href="${resourceToolsUrl}/bootstrap/css/bootstrap-3.3.7.css"/>
 <link rel="stylesheet" href="${resourceToolsUrl}/bootstrap-table/bootstrap-table.css"/>
+<%--beyond--%>
+<link rel="stylesheet" href="${resourceToolsUrl}/beyond/css/beyond.css"/>
 <%--font-awesome--%>
 <link rel="stylesheet" href="${resourceToolsUrl}/awesome/font-awesome.css"/>

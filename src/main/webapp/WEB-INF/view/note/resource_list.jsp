@@ -21,9 +21,14 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
+            <h5 class="row-title">
+                <i class="icon-flag"> 资源列表</i>
+            </h5>
             <h1>
-                Page Header
-                <small>Optional description</small>
+                <span class="label label-blueberry">
+                    Remark:
+                    <small>博客,笔记,文章日常整理...</small>
+                </span>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -113,12 +118,16 @@
                     align: 'center',
                     formatter: function (value, row, index) {
                         var e = '<a onclick="alert(\'' + row.id + '\')">编辑</a> ';
-                        var d = '<a onclick="alert(\'' + row.id + '\')">删除</a> ';
+                        var d = '<a onclick="toDelete(\'' + row.id + '\')">删除</a> ';
                         return e + d;
                     }
                 }
             ]
         });
+    }
+
+    function toDelete(id) {
+
     }
 </script>
 </body>

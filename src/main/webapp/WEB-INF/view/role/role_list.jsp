@@ -21,9 +21,14 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
+            <h5 class="row-title">
+                <i class="icon-flag"> 角色列表</i>
+            </h5>
             <h1>
-                Page Header
-                <small>Optional description</small>
+                <span class="label label-blueberry">
+                    Remark:
+                    <small>角色列表...</small>
+                </span>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>

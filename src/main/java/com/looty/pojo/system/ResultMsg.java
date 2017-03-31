@@ -123,13 +123,5 @@ public class ResultMsg extends BaseObject {
         this.count = count;
     }
 
-    @Override
-    public String toString() {
-        return "ResultMsg{" +
-                "data=" + data +
-                ", success=" + success +
-                ", msg='" + msg + '\'' +
-                ", code='" + code + '\'' +
-                '}';
-    }
+
 }
