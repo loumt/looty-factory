@@ -3,6 +3,8 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,8 +17,9 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/3/003
  */
-public class SystemStatusLog implements Serializable {
+public class SystemStatusLog extends BaseObject {
 
+    private static final long serialVersionUID = 1581658439193644470L;
     private long id;
     /**
      * 行为:开启关闭

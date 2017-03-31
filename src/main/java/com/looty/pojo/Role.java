@@ -3,6 +3,9 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +18,10 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/8/008
  */
-public class Role implements Serializable {
+public class Role extends BaseObject {
+
+    private static final long serialVersionUID = -3555347422663778569L;
+
     private Long id;
     private String roleName;
     private String roleCode;
@@ -70,4 +76,5 @@ public class Role implements Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 }

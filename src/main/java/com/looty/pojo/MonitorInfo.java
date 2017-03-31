@@ -3,6 +3,8 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +17,10 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/17/017
  */
-public class MonitorInfo implements Serializable {
+public class MonitorInfo extends BaseObject {
+    private static final long serialVersionUID = -2693480668858936864L;
+
+
     private Long id;
     /**
      * JVM可以使用可使用内存.

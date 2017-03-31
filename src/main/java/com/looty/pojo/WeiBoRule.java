@@ -3,12 +3,16 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 /**
  * Soup筛选规则类
  *
  * @author zhy
  */
-public class WeiBoRule {
+public class WeiBoRule extends BaseObject {
+
+    private static final long serialVersionUID = -6122050463382028275L;
     /**
      * 链接
      */

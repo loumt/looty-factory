@@ -3,6 +3,7 @@
  */
 package com.looty.pojo.system;
 
+import com.looty.base.BaseObject;
 import com.looty.enums.ResultMsgEnum;
 
 import java.io.Serializable;
@@ -17,7 +18,7 @@ import java.util.List;
  * @package com.looty.pojo
  * @date 2017/2/23/023
  */
-public class ResultMsg implements Serializable {
+public class ResultMsg extends BaseObject {
 
     private static final long serialVersionUID = 4282376782413938930L;
     /**

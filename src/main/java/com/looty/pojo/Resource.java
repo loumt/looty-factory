@@ -3,6 +3,8 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +17,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/3/30/030
  */
-public class Resource implements Serializable {
+public class Resource extends BaseObject {
 
     private static final long serialVersionUID = -4790459699745270246L;
 
@@ -94,15 +96,4 @@ public class Resource implements Serializable {
         this.createDate = createDate;
     }
 
-    @Override
-    public String toString() {
-        return "Resource{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", des='" + des + '\'' +
-                ", url='" + url + '\'' +
-                ", category=" + category +
-                ", createDate=" + createDate +
-                '}';
-    }
 }

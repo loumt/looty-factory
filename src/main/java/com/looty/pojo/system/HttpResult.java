@@ -3,6 +3,8 @@
  */
 package com.looty.pojo.system;
 
+import com.looty.base.BaseObject;
+
 /**
  * USED TO:HttpClient封装类
  * Log File:
@@ -12,8 +14,9 @@ package com.looty.pojo.system;
  * @package com.looty.pojo
  * @date 2017/2/22/022
  */
-public class HttpResult {
+public class HttpResult extends BaseObject {
 
+    private static final long serialVersionUID = 4411094035877488170L;
     /**
      * 状态码
      */

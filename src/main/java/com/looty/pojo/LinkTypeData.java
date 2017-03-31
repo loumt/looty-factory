@@ -3,9 +3,13 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.util.Date;
 
-public class LinkTypeData {
+public class LinkTypeData extends BaseObject {
+
+    private static final long serialVersionUID = 8461797888926378400L;
 
     private Long id;
     /**
@@ -115,18 +119,4 @@ public class LinkTypeData {
         this.createDate = createDate;
     }
 
-    @Override
-    public String toString() {
-        return "LinkTypeData{" +
-                "id=" + id +
-                ", type=" + type +
-                ", linkHref='" + linkHref + '\'' +
-                ", linkText='" + linkText + '\'' +
-                ", summary='" + summary + '\'' +
-                ", content='" + content + '\'' +
-                ", ranking=" + ranking +
-                ", exponent='" + exponent + '\'' +
-                ", createDate=" + createDate +
-                '}';
-    }
 }

@@ -3,6 +3,8 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +17,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/12/012
  */
-public class User implements Serializable {
+public class User extends BaseObject {
     private static final long serialVersionUID = -5780867915778092835L;
     /**
      * 编号
@@ -127,17 +129,4 @@ public class User implements Serializable {
         this.authTop = authTop;
     }
 
-    @Override
-    public String toString() {
-        return "Admin{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", createTime=" + createTime +
-                ", lastOperationTime=" + lastOperationTime +
-                ", roleCode='" + roleCode + '\'' +
-                ", realName='" + realName + '\'' +
-                ", authTop=" + authTop +
-                '}';
-    }
 }

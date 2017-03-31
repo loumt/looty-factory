@@ -3,6 +3,8 @@
  */
 package com.looty.pojo;
 
+import com.looty.base.BaseObject;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,7 +17,7 @@ import java.util.Date;
  * @package com.looty.pojo
  * @date 2017/2/17/017
  */
-public class ManageLog implements Serializable, Cloneable {
+public class ManageLog extends BaseObject implements Cloneable {
 
     private static final long serialVersionUID = 2403059193845920236L;
 
