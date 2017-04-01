@@ -52,7 +52,7 @@ public class LinkDataTypeServiceImpl extends BaseService implements ILinkDataTyp
 
     public ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException {
         List<LinkTypeData> datas = linkDataTypeDao.list(resourceEnum.getType());
-        long count = linkDataTypeDao.count();
+        Long count = linkDataTypeDao.count();
         return ResultMsg.isSuccess(datas, count);
     }
 

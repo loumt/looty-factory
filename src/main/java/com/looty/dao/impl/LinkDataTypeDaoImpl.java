@@ -10,6 +10,7 @@ import com.looty.dao.ILinkDataTypeDao;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * USED TO:
@@ -38,7 +39,7 @@ public class LinkDataTypeDaoImpl extends BaseDao implements ILinkDataTypeDao {
 
     private static final String COUNT = "select count(*) from link_data_type";
 
-    public long count() throws DaoException {
+    public Long count() throws DaoException {
         return this.totalCount(COUNT);
     }
 

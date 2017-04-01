@@ -116,9 +116,9 @@
             category: category
         }, function (data) {
             if (data.isSuccess) {
-                alert("OK!!!");
+                notifySuccess("添加资源成功");
             } else {
-                alert(data.msg);
+                notifyError("添加资源失败");
             }
         });
     }

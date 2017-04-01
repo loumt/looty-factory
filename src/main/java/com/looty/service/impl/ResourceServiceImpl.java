@@ -36,7 +36,7 @@ public class ResourceServiceImpl extends BaseService implements IResourceService
             resource.setCreateDate(new Date());
         }
         long id = resourceDao.save(resource);
-        return id == 0L ? ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, id) : ResultMsg.isFail(ResultMsgEnum.FAILUE);
+        return id == 0L ? ResultMsg.isFail(ResultMsgEnum.FAILUE) : ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, id);
     }
 
     @Override

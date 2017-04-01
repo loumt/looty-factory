@@ -11,4 +11,7 @@ package com.looty.annotation;
  */
 public @interface ManageLog {
 
+    // TODO: 2017/4/1/001  
+    
+    
 }

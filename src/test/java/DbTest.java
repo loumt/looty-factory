@@ -49,10 +49,6 @@ public class DbTest extends AbstractTest {
         }
     }
 
-    @Test
-    public void mapTest() {
-        Arrays.asList("a", "b", "d").forEach(e -> System.out.println(e));
-    }
 
 
 //    @Test

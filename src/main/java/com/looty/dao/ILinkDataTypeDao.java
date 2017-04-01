@@ -16,14 +16,39 @@ import java.util.List;
  */
 public interface ILinkDataTypeDao {
 
+    /**
+     * 保存一条资源,并返回生成的ID号
+     *
+     * @param linkTypeData
+     * @return
+     * @throws DaoException
+     */
     long saveResouData(LinkTypeData linkTypeData) throws DaoException;
 
 
+    /**
+     * 时间阶段内的资源数
+     * @param begin 开始时间yyyy-MM-dd HH:mm:ss
+     * @param end 结束时间yyyy-MM-dd HH:mm:ss
+     * @return
+     * @throws DaoException
+     */
     Long count(String begin, String end) throws DaoException;
 
-    long count() throws DaoException;
+    /**
+     * 总条数
+     *
+     * @return
+     * @throws DaoException
+     */
+    Long count() throws DaoException;
 
 
+    /**
+     * 返回分页内的资源列表
+     * @return
+     * @throws DaoException
+     */
     List<LinkTypeData> list() throws DaoException;
 
     List<LinkTypeData> list(int type) throws DaoException;
