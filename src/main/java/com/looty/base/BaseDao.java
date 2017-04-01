@@ -61,9 +61,30 @@ public class BaseDao {
             long id = keyHolder.getKey().longValue();
             return id;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new DaoException(e.getMessage(), e);
         }
     }
+
+    /**
+     * 执行单条insert 语句 返回主键id
+     *
+     * @param sql
+     * @param object
+     * @return
+     */
+    protected long saveList(String sql, Object object) {
+        try {
+            SqlParameterSource ps = new BeanPropertySqlParameterSource(object);
+            KeyHolder keyHolder = new GeneratedKeyHolder();
+            this.npjt.update(sql, ps, keyHolder);
+            long id = keyHolder.getKey().longValue();
+            return id;
+        } catch (Exception e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
+
 
     /******************************************Delete**************************************/
 

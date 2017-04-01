@@ -1,6 +1,7 @@
 package com.looty.service;
 
 import com.looty.enums.ResourceEnum;
+import com.looty.exception.DaoException;
 import com.looty.exception.ServiceException;
 import com.looty.pojo.LinkTypeData;
 import com.looty.pojo.system.ResultMsg;
@@ -20,11 +21,11 @@ import java.util.List;
  */
 public interface ILinkDataTypeService {
 
-    long save(LinkTypeData linkTypeData);
+    long save(LinkTypeData linkTypeData) throws DaoException;
 
-    void saveList(List<LinkTypeData> datas);
+    void saveList(List<LinkTypeData> datas) throws DaoException;
 
-    Long getCountByDate(Date now);
+    Long getCountByDate(Date now) throws DaoException;
 
     ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException;
 

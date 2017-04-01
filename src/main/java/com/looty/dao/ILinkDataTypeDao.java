@@ -16,10 +16,10 @@ import java.util.List;
  */
 public interface ILinkDataTypeDao {
 
-    long saveResouData(LinkTypeData linkTypeData);
+    long saveResouData(LinkTypeData linkTypeData) throws DaoException;
 
 
-    Long count(String begin, String end);
+    Long count(String begin, String end) throws DaoException;
 
     long count() throws DaoException;
 

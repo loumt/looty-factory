@@ -63,7 +63,6 @@ public class WeiBoResouSchedule {
     public void getResou() {
         Date now = new Date();
         Long count = linkDataTypeService.getCountByDate(now);
-        System.out.println("DB:" + count + "条");
         if (count.longValue() == 0L) {
             List<LinkTypeData> result = getDatas();
             if (!CollectionUtils.isEmpty(result)) {

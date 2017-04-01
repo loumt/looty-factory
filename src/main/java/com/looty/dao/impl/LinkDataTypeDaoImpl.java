@@ -25,20 +25,20 @@ public class LinkDataTypeDaoImpl extends BaseDao implements ILinkDataTypeDao {
 
     private static final String SAVE_RE_SOU_DATA = "insert into link_data_type(summary,content,exponent,ranking)values(:summary,:content,:exponent,:ranking)";
 
-    public long saveResouData(LinkTypeData linkTypeData) {
+    public long saveResouData(LinkTypeData linkTypeData) throws DaoException {
         return this.saveBean(SAVE_RE_SOU_DATA, linkTypeData);
     }
 
     private static final String COUNT_BY_DATA = "select count(*) from link_data_type where createDate between ? and ?";
 
-    public Long count(String begin, String end) {
+    public Long count(String begin, String end) throws DaoException {
         Object[] args = {begin, end};
         return super.totalCount(COUNT_BY_DATA, args);
     }
 
     private static final String COUNT = "select count(*) from link_data_type";
 
-    public long count() {
+    public long count() throws DaoException {
         return this.totalCount(COUNT);
     }
 

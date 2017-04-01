@@ -38,7 +38,10 @@ public class PermissionInterceptor extends HandlerInterceptorAdapter {
 
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        //AuthCode首页
         String indexPage = "/manage/login/toIndex";
+
+        System.out.println("SpringInterceptor preHandle");
 
         String code = CookieUtil.getValue(request, "code");
         if (StringUtil.isEmpty(code) || !authCodeService.checkAuthCode(code)) {

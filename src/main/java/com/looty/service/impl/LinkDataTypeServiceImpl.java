@@ -33,7 +33,7 @@ public class LinkDataTypeServiceImpl extends BaseService implements ILinkDataTyp
     private ILinkDataTypeDao linkDataTypeDao;
 
 
-    public long save(LinkTypeData linkTypeData) {
+    public long save(LinkTypeData linkTypeData) throws ServiceException {
         return linkDataTypeDao.saveResouData(linkTypeData);
     }
 
