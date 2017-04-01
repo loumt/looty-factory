@@ -7,3 +7,6 @@
 <script type="text/javascript" src="${resourceToolsUrl}/bootstrap/js/bootstrap-3.3.7.js"></script>
 <script type="text/javascript" src="${resourceToolsUrl}/bootstrap-table/bootstrap-table.js"></script>
 <script type="text/javascript" src="${resourceToolsUrl}/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+
+<script type="text/javascript" src="${resourceToolsUrl}/toastr/toastr.js"></script>
+<script type="text/javascript" src="${resourceToolsUrl}/beyond/js/beyond.js"></script>

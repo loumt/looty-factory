@@ -28,5 +28,5 @@ public interface IResourceDao {
 
     long count() throws DaoException;
 
-
+    int deleteById(Long id) throws DaoException;
 }

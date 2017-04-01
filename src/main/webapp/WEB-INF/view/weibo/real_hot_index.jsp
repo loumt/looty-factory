@@ -112,7 +112,10 @@
                     title: '创建时间',
                     field: 'createDate',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return format_date(filed);
+                    }
                 }, {
                     title: '操作',
                     field: 'id',

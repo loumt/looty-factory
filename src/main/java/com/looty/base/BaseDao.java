@@ -7,7 +7,6 @@ import com.looty.exception.DaoException;
 import com.looty.pojo.system.QueryPageModel;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.log4j.Logger;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -67,6 +66,13 @@ public class BaseDao {
     }
 
     /******************************************Delete**************************************/
+
+    /**
+     * 执行一条sql语句
+     *
+     * @param sql
+     * @throws DaoException
+     */
     protected void delete(String sql) throws DaoException {
         try {
             this.jdbcTemplate.execute(sql);
@@ -74,6 +80,21 @@ public class BaseDao {
             throw new DaoException(e.getMessage(), e);
         }
     }
+
+    /**
+     * 执行一条sql语句
+     *
+     * @param sql
+     * @throws DaoException
+     */
+    protected int delete(String sql, Object... args) throws DaoException {
+        try {
+            return this.jdbcTemplate.update(sql, args);
+        } catch (DataAccessException e) {
+            throw new DaoException(e.getMessage(), e);
+        }
+    }
+
     /******************************************Update**************************************/
 
     /**
@@ -139,6 +160,7 @@ public class BaseDao {
 
     /**
      * 获取数据总数
+     *
      * @param sql
      * @return
      * @throws DaoException
@@ -153,6 +175,7 @@ public class BaseDao {
 
     /**
      * 获取数据总数
+     *
      * @param sql
      * @param args
      * @return
@@ -251,6 +274,7 @@ public class BaseDao {
             throw new DaoException(e.getMessage(), e);
         }
     }
+
     /**
      * 执行select语句，获取列表数据,并指定列表中Bean的类型
      *
@@ -280,9 +304,9 @@ public class BaseDao {
     /**
      * 执行select语句，获取列表数据
      *
-     * @param sql 要执行的语句
+     * @param sql         要执行的语句
      * @param requireType 对象类型
-     * @param args 语句中的参数
+     * @param args        语句中的参数
      * @return 数据列表
      */
     @SuppressWarnings("unchecked")
@@ -393,7 +417,7 @@ public class BaseDao {
             }
             return list;
         } catch (Exception e) {
-            throw new DaoException(e.getMessage(),e);
+            throw new DaoException(e.getMessage(), e);
         }
     }
 

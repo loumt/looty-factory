@@ -58,4 +58,12 @@ public class ResourceDaoImpl extends BaseDao implements IResourceDao {
     public long count() throws DaoException {
         return this.queryForObject(COUNT, Long.class);
     }
+
+    private static final String DELETE_BY_ID = "delete from resource where id = ?";
+
+    @Override
+    public int deleteById(Long id) throws DaoException {
+        Object[] args = {id};
+        return this.delete(DELETE_BY_ID, args);
+    }
 }

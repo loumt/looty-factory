@@ -97,17 +97,26 @@
                     title: '超级管理',
                     field: 'authTop',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return filed == 1 ? "<span class='badge badge-blue'>是</span>" : "<span class='badge badge-green'>否</span>";
+                    }
                 }, {
                     title: '创建时间',
                     field: 'createTime',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return format_date(filed);
+                    }
                 }, {
                     title: '最后操作时间',
                     field: 'lastOperationTime',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return format_date(filed);
+                    }
                 }, {
                     title: '真实姓名',
                     field: 'realName',

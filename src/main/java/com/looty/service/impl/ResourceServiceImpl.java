@@ -60,4 +60,9 @@ public class ResourceServiceImpl extends BaseService implements IResourceService
     public List<Resource> getResourceList(Date start, Date end) throws ServiceException {
         return null;
     }
+
+    @Override
+    public int deleteResourceById(Long id) throws ServiceException {
+        return resourceDao.deleteById(id);
+    }
 }

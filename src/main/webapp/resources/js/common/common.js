@@ -53,3 +53,26 @@ var format_date = function (strTime) {
     var date = new Date(strTime);
     return date.getFullYear() + "-" + zeroize(date.getMonth() + 1) + "-" + zeroize(date.getDate()) + " " + zeroize(date.getHours()) + ":" + zeroize(date.getMinutes()) + ":" + zeroize(date.getSeconds());
 };
+
+
+/**
+ * 弹框
+ * @param msg
+ */
+var notifySuccess = function (msg) {
+    Notify(msg, 'top-right', 5000, 'success', '', true);
+};
+/**
+ * 弹框
+ * @param msg
+ */
+var notifyWarn = function (msg) {
+    Notify(msg, 'top-right', 5000, 'warning', '', true);
+};
+/**
+ * 弹框
+ * @param msg
+ */
+var notifyError = function (msg) {
+    Notify(msg, 'top-right', 5000, 'danger', '', true);
+};

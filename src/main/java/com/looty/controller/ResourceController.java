@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -104,6 +105,25 @@ public class ResourceController extends BaseController {
         ResultMsg resultMsg = resourceService.saveResource(resource);
         if (resultMsg.getSuccess()) {
             logger.info("创建资源 " + resultMsg.getData());
+        }
+        return super.backDataMap(resultMsg);
+    }
+
+    /**
+     * 删除资源
+     *
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/delete/resource", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> addResource(@RequestParam() Long id) {
+        ResultMsg resultMsg;
+        int count = resourceService.deleteResourceById(id);
+        if (count == 1) {
+            resultMsg = ResultMsg.isCommonSuccess();
+        } else {
+            resultMsg = ResultMsg.isFail(ResultMsgEnum.FAILUE);
         }
         return super.backDataMap(resultMsg);
     }

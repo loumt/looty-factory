@@ -33,7 +33,7 @@ public class AuthCodeSchdule {
     @Autowired
     private IUserAuthCodeService userAuthCodeService;
 
-    @Scheduled(cron = "0 0/2 * * * *")
+    @Scheduled(cron = "0 0 0/2 * * *")
     public void removeAuthCode() {
         ResultMsg resultMsg = userAuthCodeService.getCodeInValid(new Date());
 

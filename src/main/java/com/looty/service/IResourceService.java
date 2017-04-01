@@ -27,4 +27,6 @@ public interface IResourceService {
     List<Resource> getResourceList(Resource resource) throws ServiceException;
 
     List<Resource> getResourceList(Date start, Date end) throws ServiceException;
+
+    int deleteResourceById(Long id) throws ServiceException;
 }

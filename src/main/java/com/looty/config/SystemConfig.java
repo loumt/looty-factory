@@ -19,7 +19,7 @@ public class SystemConfig {
     /**
      * AuthCode有效分钟
      */
-    public static Integer MAX_AUTH_CODE_INVALID_DAYS = 30;
+    public static Integer MAX_AUTH_CODE_INVALID_DAYS = 120;
     /**
      * AuthCode有效位数
      */

@@ -24,6 +24,7 @@
             <h5 class="row-title">
                 <i class="icon-flag"> 资源列表</i>
             </h5>
+
             <h1>
                 <span class="label label-blueberry">
                     Remark:
@@ -101,7 +102,10 @@
                     title: '资源路径',
                     field: 'url',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return "<i class='fa icon-link'></i><a href=" + filed + " target='_blank'> Link To</a>";
+                    }
                 }, {
                     title: '所属类目',
                     field: 'category',
@@ -111,7 +115,10 @@
                     title: '操作时间',
                     field: 'createDate',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return format_date(filed);
+                    }
                 }, {
                     title: '操作',
                     field: 'id',
@@ -127,7 +134,17 @@
     }
 
     function toDelete(id) {
-
+        if (id == "" || id == undefined) {
+            notifyWarn("删除失败");
+            return;
+        }
+        ajaxPost("${basePath}/manage/note/resource/delete/resource", {id: id}, function (data) {
+            if (data.isSuccess) {
+                notifySuccess("删除成功");
+            } else {
+                notifyWarn("删除失败");
+            }
+        });
     }
 </script>
 </body>

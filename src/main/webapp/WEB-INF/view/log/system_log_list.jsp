@@ -101,7 +101,10 @@
                     title: '开启/关闭时间',
                     field: 'operationTime',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return format_date(filed);
+                    }
                 }, {
                     title: '操作',
                     field: 'id',
