@@ -24,6 +24,7 @@
             <h5 class="row-title">
                 <i class="icon-flag"> 用户列表</i>
             </h5>
+
             <h1>
                 <span class="label label-blueberry">
                     Remark:
@@ -91,12 +92,18 @@
                     title: 'JVM总内存',
                     field: 'totalMemory',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return parseInt(filed / 1024 / 1024) + "MB"
+                    }
                 }, {
                     title: 'JVM剩余内存',
                     field: 'freeMemory',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return parseInt(filed / 1024 / 1024) + "MB"
+                    }
                 }, {
                     title: '操作系统',
                     field: 'osName',
