@@ -3,9 +3,8 @@ package com.looty.service;
 import com.looty.enums.ResourceEnum;
 import com.looty.exception.DaoException;
 import com.looty.exception.ServiceException;
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 import com.looty.pojo.system.ResultMsg;
-import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -19,11 +18,11 @@ import java.util.List;
  * @package com.looty.service
  * @date 2017/3/27/027
  */
-public interface ILinkDataTypeService {
+public interface IWeiBoResourceService {
 
-    long save(LinkTypeData linkTypeData) throws DaoException;
+    long save(WeiBoResource weiBoResource) throws DaoException;
 
-    void saveList(List<LinkTypeData> datas) throws DaoException;
+    void saveList(List<WeiBoResource> datas) throws DaoException;
 
     Long getCountByDate(Date now) throws DaoException;
 

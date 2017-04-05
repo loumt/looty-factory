@@ -3,7 +3,7 @@
  */
 package com.looty.crawler.factory;
 
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 import org.jsoup.select.Elements;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public abstract class AbsFactory {
     /**
      * 将获取的文本转化为可用的文本
      */
-    abstract List<LinkTypeData> getContents(Elements results);
+    abstract List<WeiBoResource> getContents(Elements results);
 
     /**
      * Unicode - > String

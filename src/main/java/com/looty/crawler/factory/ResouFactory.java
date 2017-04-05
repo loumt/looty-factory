@@ -4,7 +4,7 @@
 package com.looty.crawler.factory;
 
 import com.looty.enums.ResourceEnum;
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -45,11 +45,11 @@ public class ResouFactory extends AbsFactory {
     }
 
 
-    public List<LinkTypeData> getContents(Elements results) {
+    public List<WeiBoResource> getContents(Elements results) {
         Long now = System.currentTimeMillis();
         Date nowDate = new Date(now);
-        List<LinkTypeData> datas = new ArrayList<LinkTypeData>();
-        LinkTypeData data = null;
+        List<WeiBoResource> datas = new ArrayList<WeiBoResource>();
+        WeiBoResource data = null;
 
         Element target = results.get(13);
         String convertContent = ResouFactory.convertUnicode(target.toString());
@@ -70,7 +70,7 @@ public class ResouFactory extends AbsFactory {
             String context = getListValue(tdArrs[1]);
             String exponent = getEleValue(tdArrs[2], "span");
 
-            data = new LinkTypeData();
+            data = new WeiBoResource();
             data.setContent(context);
             data.setRanking(Integer.valueOf(sort));
             data.setExponent(exponent);

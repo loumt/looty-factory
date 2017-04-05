@@ -6,7 +6,7 @@ package com.looty.controller;
 import com.looty.base.BaseController;
 import com.looty.enums.ResourceEnum;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.ILinkDataTypeService;
+import com.looty.service.IWeiBoResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,10 +27,10 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/manage/weibo")
-public class WeiBoController extends BaseController {
+public class WeiBoResourceController extends BaseController {
 
     @Autowired
-    private ILinkDataTypeService linkDataTypeService;
+    private IWeiBoResourceService weiBoResourceService;
 
     /**
      * 微博实时热搜首页
@@ -50,7 +50,7 @@ public class WeiBoController extends BaseController {
     @RequestMapping(value = "/hot/getRealHotList", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> getRealHotList() {
-        ResultMsg resultMsg = linkDataTypeService.getDataList(ResourceEnum.S_WEI_BO_HOT);
+        ResultMsg resultMsg = weiBoResourceService.getDataList(ResourceEnum.S_WEI_BO_HOT);
         return backDataMap(resultMsg);
     }
 }

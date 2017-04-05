@@ -1,7 +1,7 @@
 package com.looty.dao;
 
 import com.looty.exception.DaoException;
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 
 import java.util.List;
 
@@ -14,16 +14,16 @@ import java.util.List;
  * @package com.looty.dao
  * @date 2017/3/27/027
  */
-public interface ILinkDataTypeDao {
+public interface IWeiBoResourceDao {
 
     /**
      * 保存一条资源,并返回生成的ID号
      *
-     * @param linkTypeData
+     * @param weiBoResource
      * @return
      * @throws DaoException
      */
-    long saveResouData(LinkTypeData linkTypeData) throws DaoException;
+    long saveResouData(WeiBoResource weiBoResource) throws DaoException;
 
 
     /**
@@ -49,9 +49,9 @@ public interface ILinkDataTypeDao {
      * @return
      * @throws DaoException
      */
-    List<LinkTypeData> list() throws DaoException;
+    List<WeiBoResource> list() throws DaoException;
 
-    List<LinkTypeData> list(int type) throws DaoException;
+    List<WeiBoResource> list(int type) throws DaoException;
 
     int updateType(Long id, int type) throws DaoException;
 }

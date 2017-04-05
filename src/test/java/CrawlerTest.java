@@ -4,7 +4,7 @@
 
 import com.looty.crawler.ExtractService;
 import com.looty.crawler.factory.ResouFactory;
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 import com.looty.pojo.WeiBoRule;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -71,7 +71,7 @@ public class CrawlerTest {
             System.out.println("Elements Size == 0");
             System.out.println("==================");
         } else {
-            List<LinkTypeData> extracts = ResouFactory.getInstance().getContents(elements);
+            List<WeiBoResource> extracts = ResouFactory.getInstance().getContents(elements);
         }
     }
 }

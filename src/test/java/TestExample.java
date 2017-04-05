@@ -7,7 +7,10 @@ import org.apache.http.util.EncodingUtils;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
+import java.sql.Time;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * USED TO:
@@ -104,5 +107,29 @@ public class TestExample {
         } else {
             System.out.println("i3 != i4 ");
         }
+
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 15, 5000L, TimeUnit.SECONDS, new LinkedBlockingDeque<>(5));
+
     }
+
+    @Test
+    public void test6() {
+        try {
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    System.out.println("thread start");
+                }
+            };
+            TimeUnit.SECONDS.timedJoin(thread, 2L);
+
+            TimeUnit.SECONDS.sleep(4L);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

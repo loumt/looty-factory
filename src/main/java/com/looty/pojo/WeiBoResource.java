@@ -7,7 +7,7 @@ import com.looty.base.BaseObject;
 
 import java.util.Date;
 
-public class LinkTypeData extends BaseObject {
+public class WeiBoResource extends BaseObject {
 
     private static final long serialVersionUID = 8461797888926378400L;
 

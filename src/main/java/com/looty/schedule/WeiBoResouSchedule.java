@@ -4,10 +4,10 @@
 package com.looty.schedule;
 
 import com.looty.crawler.ExtractService;
-import com.looty.pojo.LinkTypeData;
+import com.looty.pojo.WeiBoResource;
 import com.looty.pojo.WeiBoRule;
 import com.looty.crawler.factory.ResouFactory;
-import com.looty.service.ILinkDataTypeService;
+import com.looty.service.IWeiBoResourceService;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
@@ -34,7 +34,7 @@ public class WeiBoResouSchedule {
     private Logger logger = Logger.getLogger(WeiBoResouSchedule.class);
 
     @Autowired
-    private ILinkDataTypeService linkDataTypeService;
+    private IWeiBoResourceService weiBoResourceService;
 
     private final String url = "http://s.weibo.com/top";
     private final String methodUrl = "/summary";
@@ -50,23 +50,23 @@ public class WeiBoResouSchedule {
      *
      * @return
      */
-    private List<LinkTypeData> getDatas() {
+    private List<WeiBoResource> getDatas() {
         WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
         ExtractService service = new ExtractService(weiBoRule);
         Document mavenDoc = service.getDocument();
         Elements elements = service.getElements(mavenDoc);
-        List<LinkTypeData> datas = ResouFactory.getInstance().getContents(elements);
+        List<WeiBoResource> datas = ResouFactory.getInstance().getContents(elements);
         return datas;
     }
 
     @Scheduled(cron = "0 0/30 * * * ?")
     public void getResou() {
         Date now = new Date();
-        Long count = linkDataTypeService.getCountByDate(now);
+        Long count = weiBoResourceService.getCountByDate(now);
         if (count.longValue() == 0L) {
-            List<LinkTypeData> result = getDatas();
+            List<WeiBoResource> result = getDatas();
             if (!CollectionUtils.isEmpty(result)) {
-                linkDataTypeService.saveList(result);
+                weiBoResourceService.saveList(result);
             } else {
                 logger.info("微博热搜今日搜索排行Error!!!!");
             }

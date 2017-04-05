@@ -2,17 +2,12 @@
  * Copyright (c) www.bugull.com
  */
 
-import com.looty.enums.ResourceEnum;
-import com.looty.pojo.LinkTypeData;
-import com.looty.service.ILinkDataTypeService;
+import com.looty.service.IWeiBoResourceService;
 import com.looty.service.IManageLogService;
-import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * USED TO:
@@ -28,7 +23,7 @@ public class DbTest extends AbstractTest {
     @Autowired
     private IManageLogService appLogService;
     @Autowired
-    private ILinkDataTypeService linkDataTypeService;
+    private IWeiBoResourceService linkDataTypeService;
 
     @Test
     public void mapList() {

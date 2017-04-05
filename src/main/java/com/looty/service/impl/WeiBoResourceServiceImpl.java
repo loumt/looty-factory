@@ -6,10 +6,10 @@ package com.looty.service.impl;
 import com.looty.base.BaseService;
 import com.looty.enums.ResourceEnum;
 import com.looty.exception.ServiceException;
-import com.looty.pojo.LinkTypeData;
-import com.looty.dao.ILinkDataTypeDao;
+import com.looty.pojo.WeiBoResource;
+import com.looty.dao.IWeiBoResourceDao;
 import com.looty.pojo.system.ResultMsg;
-import com.looty.service.ILinkDataTypeService;
+import com.looty.service.IWeiBoResourceService;
 import com.looty.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,18 +27,18 @@ import java.util.List;
  * @date 2017/3/27/027
  */
 @Service
-public class LinkDataTypeServiceImpl extends BaseService implements ILinkDataTypeService {
+public class WeiBoResourceServiceImpl extends BaseService implements IWeiBoResourceService {
 
     @Autowired
-    private ILinkDataTypeDao linkDataTypeDao;
+    private IWeiBoResourceDao weiBoResourceDao;
 
 
-    public long save(LinkTypeData linkTypeData) throws ServiceException {
-        return linkDataTypeDao.saveResouData(linkTypeData);
+    public long save(WeiBoResource weiBoResource) throws ServiceException {
+        return weiBoResourceDao.saveResouData(weiBoResource);
     }
 
-    public void saveList(List<LinkTypeData> datas) {
-        for (LinkTypeData data : datas) {
+    public void saveList(List<WeiBoResource> datas) {
+        for (WeiBoResource data : datas) {
             save(data);
         }
 
@@ -47,17 +47,17 @@ public class LinkDataTypeServiceImpl extends BaseService implements ILinkDataTyp
     public Long getCountByDate(Date now) {
         String start = DateUtil.getStart(now);
         String end = DateUtil.getEnd(now);
-        return linkDataTypeDao.count(start, end);
+        return weiBoResourceDao.count(start, end);
     }
 
     public ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException {
-        List<LinkTypeData> datas = linkDataTypeDao.list(resourceEnum.getType());
-        Long count = linkDataTypeDao.count();
+        List<WeiBoResource> datas = weiBoResourceDao.list(resourceEnum.getType());
+        Long count = weiBoResourceDao.count();
         return ResultMsg.isSuccess(datas, count);
     }
 
 
     public int updateType(Long dataId, ResourceEnum resourceEnum) throws ServiceException {
-        return linkDataTypeDao.updateType(dataId, resourceEnum.getType());
+        return weiBoResourceDao.updateType(dataId, resourceEnum.getType());
     }
 }
