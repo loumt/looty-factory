@@ -1,8 +1,9 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler.factory;
+package com.looty.crawler.resou;
 
+import com.looty.crawler.factory.AbsFactory;
 import com.looty.enums.ResourceEnum;
 import com.looty.pojo.WeiBoResource;
 

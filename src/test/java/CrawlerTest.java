@@ -2,8 +2,8 @@
  * Copyright (c) www.bugull.com
  */
 
-import com.looty.crawler.ExtractService;
-import com.looty.crawler.factory.ResouFactory;
+import com.looty.crawler.resou.ResouService;
+import com.looty.crawler.resou.ResouFactory;
 import com.looty.pojo.WeiBoResource;
 import com.looty.pojo.WeiBoRule;
 import org.jsoup.nodes.Document;
@@ -62,7 +62,7 @@ public class CrawlerTest {
     public void getResou() {
         WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
 
-        ExtractService service = new ExtractService(weiBoRule);
+        ResouService service = new ResouService(weiBoRule);
         Document mavenDoc = service.getDocument();
         Elements elements = service.getElements(mavenDoc);
 

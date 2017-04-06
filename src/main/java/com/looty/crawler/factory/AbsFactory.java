@@ -21,7 +21,7 @@ public abstract class AbsFactory {
     /**
      * 将获取的文本转化为可用的文本
      */
-    abstract List<WeiBoResource> getContents(Elements results);
+    protected abstract List<WeiBoResource> getContents(Elements results);
 
     /**
      * Unicode - > String

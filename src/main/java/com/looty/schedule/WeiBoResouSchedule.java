@@ -3,10 +3,10 @@
  */
 package com.looty.schedule;
 
-import com.looty.crawler.ExtractService;
+import com.looty.crawler.resou.ResouService;
 import com.looty.pojo.WeiBoResource;
 import com.looty.pojo.WeiBoRule;
-import com.looty.crawler.factory.ResouFactory;
+import com.looty.crawler.resou.ResouFactory;
 import com.looty.service.IWeiBoResourceService;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
@@ -52,7 +52,7 @@ public class WeiBoResouSchedule {
      */
     private List<WeiBoResource> getDatas() {
         WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
-        ExtractService service = new ExtractService(weiBoRule);
+        ResouService service = new ResouService(weiBoRule);
         Document mavenDoc = service.getDocument();
         Elements elements = service.getElements(mavenDoc);
         List<WeiBoResource> datas = ResouFactory.getInstance().getContents(elements);

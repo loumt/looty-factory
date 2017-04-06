@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler;
+package com.looty.crawler.resou;
 
 import com.looty.exception.WeiBoRuleException;
 import com.looty.pojo.WeiBoRule;
@@ -18,11 +18,11 @@ import java.io.IOException;
 /**
  * @author zhy
  */
-public class ExtractService {
+public class ResouService {
 
     private WeiBoRule weiBoRule;
 
-    public ExtractService(WeiBoRule weiBoRule) {
+    public ResouService(WeiBoRule weiBoRule) {
         // 进行对rule的必要校验
         validateRule(weiBoRule);
         this.weiBoRule = weiBoRule;
