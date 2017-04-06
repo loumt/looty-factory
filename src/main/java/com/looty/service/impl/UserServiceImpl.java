@@ -5,6 +5,7 @@ package com.looty.service.impl;
 
 import com.looty.dao.IUserDao;
 import com.looty.enums.ResultMsgEnum;
+import com.looty.exception.ServiceException;
 import com.looty.pojo.User;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.service.IUserService;
@@ -36,13 +37,19 @@ public class UserServiceImpl implements IUserService {
         return !(null == user || !user.getPassword().equals(password));
     }
 
-    public synchronized ResultMsg register(User user) {
-        ResultMsg resultMsg = null;
-        if (this.checkUserExist(user)) {
-            resultMsg = ResultMsg.isFail(ResultMsgEnum.ALREADY_EXIST);
-        } else {
-            //注册
-            resultMsg = ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, userDao.insertUser(user));
+    public ResultMsg register(User user) {
+        ResultMsg resultMsg;
+        if (user == null || StringUtil.isEmpty(user.getUsername()) || StringUtil.isEmpty(user.getPassword())) {
+            return ResultMsg.isFail(ResultMsgEnum.INVALIDATE_PARAMETER);
+        }
+        synchronized (this) {
+            User dbU = userDao.getUserByName(user.getUsername());
+            if (dbU != null) {
+                resultMsg = ResultMsg.isFail(ResultMsgEnum.ALREADY_EXIST);
+            } else {
+                long lid = userDao.insertUser(user);
+                resultMsg = ResultMsg.isSuccess(ResultMsgEnum.SUCCESS, lid);
+            }
         }
         return resultMsg;
     }
@@ -55,9 +62,5 @@ public class UserServiceImpl implements IUserService {
         List<User> users = userDao.getUserPageList();
         Long count = userDao.getCount();
         return ResultMsg.isSuccess(users, count);
-    }
-
-    private boolean checkUserExist(User user) {
-        return false;
     }
 }

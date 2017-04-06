@@ -3,6 +3,8 @@
  */
 package com.looty.exception;
 
+import com.looty.enums.ResultMsgEnum;
+import com.looty.pojo.system.ResultMsg;
 import org.apache.log4j.Logger;
 
 /**
@@ -32,6 +34,7 @@ public class ServiceException extends RuntimeException {
         super(message);
         log.error(message);
     }
+
 
     /**
      * @param message   异常信息

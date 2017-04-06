@@ -11,7 +11,7 @@
  * @package PACKAGE_NAME
  * @date 2017/3/23/023
  */
-public class AopTest extends AbstractTest {
+public class AopTest extends TransactAbstractTest {
 
 
 }

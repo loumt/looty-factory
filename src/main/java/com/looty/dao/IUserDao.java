@@ -30,4 +30,5 @@ public interface IUserDao {
     User getUserByUid(String userId) throws DaoException;
 
     User getUserByRoleCode(String roleCode) throws DaoException;
+
 }

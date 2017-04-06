@@ -141,6 +141,7 @@
         ajaxPost("${basePath}/manage/note/resource/delete/resource", {id: id}, function (data) {
             if (data.isSuccess) {
                 notifySuccess("删除成功");
+                $("#resourceList").bootstrapTable("refresh");
             } else {
                 notifyWarn("删除失败");
             }

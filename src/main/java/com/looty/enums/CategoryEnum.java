@@ -20,8 +20,13 @@ public enum CategoryEnum {
     ARTICLE_SPRING(14, "Spring文章"),
     ARTICLE_SPRING_MVC(15, "SpringMvc文章"),
     ARTICLE_SPRING_AOP(16, "SpringAop文章"),
-    ARTICLE_SPRING_SECURITY(17, "SpringSecurity文章");
+    ARTICLE_SPRING_SECURITY(17, "SpringSecurity文章"),
 
+    /**
+     * 功能性
+     */
+    FUNCTION_DECODE(50, "解码工具"),
+    FUNCTION_FORMAT(51, "格式化工具");
 
     private int category;
     private String des;

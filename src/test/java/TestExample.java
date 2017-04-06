@@ -2,7 +2,10 @@
  * Copyright (c) www.bugull.com
  */
 
+import com.looty.pojo.WeiBoResource;
+import com.looty.schedule.WeiBoResouSchedule;
 import com.looty.utils.EncryptUtils;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.http.util.EncodingUtils;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
@@ -129,6 +132,18 @@ public class TestExample {
             e.printStackTrace();
         }
 
+    }
+
+    @Test
+    public void test7() {
+        WeiBoResource resource = new WeiBoResource();
+        resource.setCreateDate(new Date());
+        resource.setId(1L);
+        resource.setContent("Hello");
+        resource.setExponent("Hello");
+        resource.setLinkHref("www.baidu.com");
+        resource.setLinkText("dwdadadad");
+        System.out.println(ToStringBuilder.reflectionToString(resource));
     }
 
 

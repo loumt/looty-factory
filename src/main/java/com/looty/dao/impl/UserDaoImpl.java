@@ -66,4 +66,5 @@ public class UserDaoImpl extends BaseDao implements IUserDao {
         Object[] args = {roleCode};
         return this.queryForBean(GET_USERS_BY_ROLE_CODE, User.class, args);
     }
+
 }

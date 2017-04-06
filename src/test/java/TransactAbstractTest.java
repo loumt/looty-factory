@@ -30,7 +30,7 @@ import org.springframework.transaction.annotation.Transactional;
 })
 @TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)
 @Transactional
-public abstract class AbstractTest {
+public abstract class TransactAbstractTest {
 
     @Autowired
     protected JdbcTemplate jdbcTemplate;
