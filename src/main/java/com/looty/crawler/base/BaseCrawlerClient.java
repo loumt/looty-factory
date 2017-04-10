@@ -1,12 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.crawler.factory;
-
-import com.looty.pojo.WeiBoResource;
-import org.jsoup.select.Elements;
-
-import java.util.List;
+package com.looty.crawler.base;
 
 /**
  * USED TO:
@@ -14,15 +9,10 @@ import java.util.List;
  *
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
- * @package com.looty.crawler.factory
- * @date 2017/3/24/024
+ * @package com.looty.crawler.base
+ * @date 2017/4/10/010
  */
-public abstract class AbsFactory {
-    /**
-     * 将获取的文本转化为可用的文本
-     */
-    protected abstract List<WeiBoResource> getContents(Elements results);
-
+public abstract class BaseCrawlerClient {
     /**
      * Unicode - > String
      *
@@ -94,4 +84,5 @@ public abstract class AbsFactory {
         }
         return outBuffer.toString();
     }
+
 }

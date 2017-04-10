@@ -3,8 +3,7 @@
  */
 package com.looty.crawler.resou;
 
-import com.looty.exception.WeiBoRuleException;
-import com.looty.pojo.WeiBoRule;
+import com.looty.exception.RuleException;
 import com.looty.utils.StringUtil;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -101,15 +100,15 @@ public class ResouService {
     private static void validateRule(WeiBoRule weiBoRule) {
         String url = weiBoRule.getUrl();
         if (StringUtil.isEmpty(url)) {
-            throw new WeiBoRuleException("url不能为空！");
+            throw new RuleException("url不能为空！");
         }
         if (!url.startsWith("http://")) {
-            throw new WeiBoRuleException("url的格式不正确！");
+            throw new RuleException("url的格式不正确！");
         }
 
         if (weiBoRule.getParams() != null && weiBoRule.getValues() != null) {
             if (weiBoRule.getParams().length != weiBoRule.getValues().length) {
-                throw new WeiBoRuleException("参数的键值对个数不匹配！");
+                throw new RuleException("参数的键值对个数不匹配！");
             }
         }
 

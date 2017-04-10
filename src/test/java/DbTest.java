@@ -5,9 +5,9 @@
 import com.looty.enums.ResourceEnum;
 import com.looty.pojo.User;
 import com.looty.pojo.WeiBoResource;
+import com.looty.service.IManageLogService;
 import com.looty.service.IUserService;
 import com.looty.service.IWeiBoResourceService;
-import com.looty.service.IManageLogService;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +30,7 @@ public class DbTest extends NoTransactAbstractTest {
     private IManageLogService manageLogService;
     @Autowired
     private IWeiBoResourceService weiBoResourceService;
+
 
     @Test
     public void mapList() {
@@ -87,4 +88,5 @@ public class DbTest extends NoTransactAbstractTest {
         user.setAuthTop(22);
         userService.register(user);
     }
+
 }

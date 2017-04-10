@@ -3,17 +3,15 @@
  */
 
 import com.looty.pojo.WeiBoResource;
-import com.looty.schedule.WeiBoResouSchedule;
+import com.looty.property.SystemPropertyConfig;
 import com.looty.utils.EncryptUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.http.util.EncodingUtils;
-import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
-import java.sql.Time;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * USED TO:
@@ -146,5 +144,9 @@ public class TestExample {
         System.out.println(ToStringBuilder.reflectionToString(resource));
     }
 
+    @Test
+    public void test8() {
+
+    }
 
 }

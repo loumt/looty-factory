@@ -1,22 +1,18 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.pojo;
+package com.looty.crawler.resou;
 
-import com.looty.base.BaseObject;
+import com.looty.crawler.base.BaseCrawlerRule;
 
 /**
  * Soup筛选规则类
  *
  * @author zhy
  */
-public class WeiBoRule extends BaseObject {
+public class WeiBoRule extends BaseCrawlerRule {
 
     private static final long serialVersionUID = -6122050463382028275L;
-    /**
-     * 链接
-     */
-    private String url;
 
     /**
      * 参数集合

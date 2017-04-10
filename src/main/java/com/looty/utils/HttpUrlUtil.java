@@ -24,7 +24,7 @@ public class HttpUrlUtil {
      * @param url
      * @return
      */
-    public boolean checkUrlExist(String url) {
+    public static boolean checkUrlExist(String url) {
         try {
             HttpURLConnection.setFollowRedirects(false);
             HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
@@ -34,5 +34,9 @@ public class HttpUrlUtil {
             return false;
         }
     }
+
+//    public static void main(String[] args) {
+//        System.out.println(checkUrlExist("http://s.weibo.com/top/summary"));
+//    }
 
 }

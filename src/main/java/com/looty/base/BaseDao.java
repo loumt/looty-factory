@@ -453,4 +453,16 @@ public class BaseDao {
         return " limit " + pageNo + "," + pageSize;
     }
 
+
+    /**
+     * 获取Limit语句
+     *
+     * @param start
+     * @param end
+     * @return
+     */
+    protected String getLimit(Integer start, Integer end) {
+        return " limit " + start + "," + end;
+    }
+
 }

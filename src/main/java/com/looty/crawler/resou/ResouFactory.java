@@ -3,10 +3,9 @@
  */
 package com.looty.crawler.resou;
 
-import com.looty.crawler.factory.AbsFactory;
+import com.looty.crawler.base.BaseCrawlerClient;
 import com.looty.enums.ResourceEnum;
 import com.looty.pojo.WeiBoResource;
-
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -27,7 +26,7 @@ import java.util.List;
  * @package com.looty.crawler.factory
  * @date 2017/3/24/024
  */
-public class ResouFactory extends AbsFactory {
+public class ResouFactory extends BaseCrawlerClient {
 
     private static ResouFactory resouFactory = null;
 

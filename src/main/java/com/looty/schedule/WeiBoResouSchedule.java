@@ -5,7 +5,7 @@ package com.looty.schedule;
 
 import com.looty.crawler.resou.ResouService;
 import com.looty.pojo.WeiBoResource;
-import com.looty.pojo.WeiBoRule;
+import com.looty.crawler.resou.WeiBoRule;
 import com.looty.crawler.resou.ResouFactory;
 import com.looty.service.IWeiBoResourceService;
 import org.apache.commons.collections.CollectionUtils;
