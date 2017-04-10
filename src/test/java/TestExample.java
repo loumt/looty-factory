@@ -2,12 +2,16 @@
  * Copyright (c) www.bugull.com
  */
 
+import com.looty.enums.HttpMethodEnum;
 import com.looty.pojo.WeiBoResource;
 import com.looty.property.SystemPropertyConfig;
 import com.looty.utils.EncryptUtils;
+import org.apache.commons.lang3.EnumUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.math.IEEE754rUtils;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -134,19 +138,7 @@ public class TestExample {
 
     @Test
     public void test7() {
-        WeiBoResource resource = new WeiBoResource();
-        resource.setCreateDate(new Date());
-        resource.setId(1L);
-        resource.setContent("Hello");
-        resource.setExponent("Hello");
-        resource.setLinkHref("www.baidu.com");
-        resource.setLinkText("dwdadadad");
-        System.out.println(ToStringBuilder.reflectionToString(resource));
-    }
-
-    @Test
-    public void test8() {
-
+        System.out.println(IEEE754rUtils.max(0.154d, 0.45783d, 5.183d, 0.0054d));
     }
 
 }

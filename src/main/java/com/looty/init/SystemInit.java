@@ -8,15 +8,14 @@ import com.looty.pojo.SystemStatusLog;
 import com.looty.service.ISystemStatusLogService;
 import com.looty.utils.ApplicationUtil;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import java.util.Date;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.*;
 
 /**
  * USED TO:
@@ -31,7 +30,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class SystemInit implements ServletContextListener {
 
 
-    public static ExecutorService executor;
+    public static ScheduledExecutorService sexecutor;
     /**
      * 容器启动
      *
@@ -50,7 +49,9 @@ public class SystemInit implements ServletContextListener {
         systemStatusLogService.insertOneSystemStatusLog(systemStatusLog);
 
         //初始化线程池,Size为Cpu核心数的两倍
-        executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+        sexecutor = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+
+        Executor configTimeTaskExecutor = SchedulerFactoryBean.getConfigTimeTaskExecutor();
 
     }
 

@@ -45,20 +45,6 @@ public class WeiBoResouSchedule {
     private final int requestMoethod = WeiBoRule.GET;
 
 
-    /**
-     * 获取数据
-     *
-     * @return
-     */
-    private List<WeiBoResource> getDatas() {
-        WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
-        ResouService service = new ResouService(weiBoRule);
-        Document mavenDoc = service.getDocument();
-        Elements elements = service.getElements(mavenDoc);
-        List<WeiBoResource> datas = ResouFactory.getInstance().getContents(elements);
-        return datas;
-    }
-
     @Scheduled(cron = "0 0/30 * * * ?")
     public void getResou() {
         Date now = new Date();
@@ -74,5 +60,21 @@ public class WeiBoResouSchedule {
             logger.info("微博热搜今日搜索排行 " + count + " 条");
         }
     }
+
+
+    /**
+     * 获取数据
+     *
+     * @return
+     */
+    private List<WeiBoResource> getDatas() {
+        WeiBoRule weiBoRule = new WeiBoRule(url + methodUrl, params, values, resultTagName, type, requestMoethod);
+        ResouService service = new ResouService(weiBoRule);
+        Document mavenDoc = service.getDocument();
+        Elements elements = service.getElements(mavenDoc);
+        List<WeiBoResource> datas = ResouFactory.getInstance().getContents(elements);
+        return datas;
+    }
+
 
 }
