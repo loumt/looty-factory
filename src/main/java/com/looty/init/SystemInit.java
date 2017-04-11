@@ -50,9 +50,6 @@ public class SystemInit implements ServletContextListener {
 
         //初始化线程池,Size为Cpu核心数的两倍
         sexecutor = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors() * 2);
-
-        Executor configTimeTaskExecutor = SchedulerFactoryBean.getConfigTimeTaskExecutor();
-
     }
 
     /**
