@@ -54,6 +54,14 @@ var format_date = function (strTime) {
     return date.getFullYear() + "-" + zeroize(date.getMonth() + 1) + "-" + zeroize(date.getDate()) + " " + zeroize(date.getHours()) + ":" + zeroize(date.getMinutes()) + ":" + zeroize(date.getSeconds());
 };
 
+/**
+ * Modal
+ */
+function bindModal(id, msg, callback) {
+    $("#" + id).on('click', function () {
+        bootbox.confirm(msg, callback);
+    });
+}
 
 /**
  * 弹框

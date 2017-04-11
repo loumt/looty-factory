@@ -10,3 +10,4 @@
 
 <script type="text/javascript" src="${resourceToolsUrl}/toastr/toastr.js"></script>
 <script type="text/javascript" src="${resourceToolsUrl}/beyond/js/beyond.js"></script>
+<script type="text/javascript" src="${resourceToolsUrl}/beyond/js/bootbox.js"></script>

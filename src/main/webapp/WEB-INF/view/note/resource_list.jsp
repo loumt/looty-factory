@@ -124,8 +124,8 @@
                     field: 'id',
                     align: 'center',
                     formatter: function (value, row, index) {
-                        var e = '<a onclick="alert(\'' + row.id + '\')">编辑</a> ';
-                        var d = '<a onclick="toDelete(\'' + row.id + '\')">删除</a> ';
+                        var e = '<button class="btn btn-blue" onclick="alert(\'' + row.id + '\')">编辑</button> ';
+                        var d = '<button class="btn btn-danger" onclick="toDelete(\'' + row.id + '\')">删除</button> ';
                         return e + d;
                     }
                 }
@@ -133,17 +133,23 @@
         });
     }
 
+
     function toDelete(id) {
         if (id == "" || id == undefined) {
             notifyWarn("删除失败");
             return;
         }
-        ajaxPost("${basePath}/manage/note/resource/delete/resource", {id: id}, function (data) {
-            if (data.isSuccess) {
-                notifySuccess("删除成功");
-                $("#resourceList").bootstrapTable("refresh");
-            } else {
-                notifyWarn("删除失败");
+
+        bootbox.confirm("确认删除该资源?", function (result) {
+            if (result) {
+                ajaxPost("${basePath}/manage/note/resource/delete/resource", {id: id}, function (data) {
+                    if (data.isSuccess) {
+                        notifySuccess("删除成功");
+                        $("#resourceList").bootstrapTable("refresh");
+                    } else {
+                        notifyWarn("删除失败");
+                    }
+                });
             }
         });
     }
