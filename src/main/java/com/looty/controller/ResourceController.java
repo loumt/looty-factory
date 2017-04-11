@@ -99,8 +99,13 @@ public class ResourceController extends BaseController {
     @RequestMapping(value = "/add/resource", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> addResource(Resource resource) {
-        if (StringUtil.isEmpty(resource.getUrl())) {
+        String url = resource.getUrl();
+        if (StringUtil.isEmpty(url)) {
             return backDataMap(ResultMsg.isFail(ResultMsgEnum.INVALIDATE_PARAMETER));
+        }
+        Resource dbResource = resourceService.getResourceByUrl(url);
+        if (dbResource != null) {
+            return backDataMap(ResultMsg.isFail(ResultMsgEnum.ALREADY_EXIST));
         }
         ResultMsg resultMsg = resourceService.saveResource(resource);
         if (resultMsg.getSuccess()) {
@@ -119,7 +124,7 @@ public class ResourceController extends BaseController {
     @ResponseBody
     public Map<String, Object> addResource(@RequestParam() Long id) {
         ResultMsg resultMsg;
-        int count = resourceService.deleteResourceById(id);
+        int count = resourceService.destoryResource(id);
         if (count == 1) {
             resultMsg = ResultMsg.isCommonSuccess();
         } else {

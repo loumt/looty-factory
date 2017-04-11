@@ -1,26 +1,77 @@
-2017-04-10 09:32:52 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-12] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:32:58 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-10 09:33:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-10 09:33:08 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-2] (LoginController.java:71) ->>>2017-04-10 09:33:08--127.0.0.1:Ready to Login..... 
-2017-04-10 09:33:37 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
-2017-04-10 09:33:37 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-10 09:33:54 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:33:57 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-10 09:33:59 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-10 09:33:59 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:71) ->>>2017-04-10 09:33:59--127.0.0.1:Ready to Login..... 
-2017-04-10 09:35:25 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:35:28 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-10 09:35:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-10 09:35:30 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:71) ->>>2017-04-10 09:35:30--127.0.0.1:Ready to Login..... 
-2017-04-10 09:37:16 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-0] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:37:17 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-4] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-10 09:37:57 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-0] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:37:58 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-4] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-10 09:41:13 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-0] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-10 09:41:14 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-4] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-10 09:54:59 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toLogin} 
-2017-04-10 09:54:59 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toHomePage} 
-2017-04-10 09:55:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/weibo/hot/toIndex} 
-2017-04-10 09:55:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/weibo/hot/getRealHotList} 
-2017-04-10 10:04:17 [com.looty.property.PropertyConfig]-[DEBUG] [main] (PropertyConfig.java:72) ->max_auth_code_invalid_days->3 
-2017-04-10 10:05:10 [com.looty.property.PropertyConfig]-[DEBUG] [main] (PropertyConfig.java:72) ->max_auth_code_invalid_days->3 
+2017-04-11 08:50:16 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-13] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-11 08:50:20 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [RMI TCP Connection(4)-127.0.0.1] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-11 08:51:44 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-11 08:51:47 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-11 08:51:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-11 08:51:56 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-8] (LoginController.java:71) ->>>2017-04-11 08:51:56--127.0.0.1:Ready to Login..... 
+2017-04-11 08:52:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toLogin} 
+2017-04-11 08:52:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toHomePage} 
+2017-04-11 09:10:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:10:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:11:24 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:11:24 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-5] (ResourceController.java:107) ->创建资源 15 
+2017-04-11 09:11:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:11:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:11:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:11:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:20:05 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-11 09:20:26 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-11 09:20:30 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-11 09:20:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-11 09:20:32 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-11 09:20:32--127.0.0.1:Access Login..... 
+2017-04-11 09:25:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:25:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:25:58 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-6] (ResourceController.java:112) ->创建资源 16 
+2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:26:00 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:26:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
+2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:27:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:27:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:28:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:28:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:28:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:28:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:30:00 [com.looty.schedule.WeiBoResouSchedule]-[INFO] [pool-1-thread-1] (WeiBoResouSchedule.java:60) ->微博热搜今日搜索排行 50 条 
+2017-04-11 09:37:33 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-11 09:37:48 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-9] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-11 09:37:50 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-11 09:37:52 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-11 09:37:52 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-11 09:37:52--127.0.0.1:Access Login..... 
+2017-04-11 09:37:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:37:57 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:38:16 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-5] (ResourceController.java:112) ->创建资源 17 
+2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:38:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:38:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
+2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:39:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:39:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
+2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
+2017-04-11 09:39:11 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-9] (ResourceController.java:112) ->创建资源 18 
+2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
+2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:39:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:39:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
+2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
+2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
+2017-04-11 09:39:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
+2017-04-11 09:39:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 

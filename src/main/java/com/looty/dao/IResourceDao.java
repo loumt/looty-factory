@@ -29,4 +29,8 @@ public interface IResourceDao {
     long count() throws DaoException;
 
     int deleteById(Long id) throws DaoException;
+
+    Resource getByUrl(String url) throws DaoException;
+
+    int destory(Long id) throws DaoException;
 }

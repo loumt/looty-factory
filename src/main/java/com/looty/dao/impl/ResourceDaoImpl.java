@@ -10,6 +10,7 @@ import com.looty.pojo.Resource;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * USED TO:
@@ -23,7 +24,7 @@ import java.util.List;
 @Repository
 public class ResourceDaoImpl extends BaseDao implements IResourceDao {
 
-    private static final String SAVE = "insert into resource(title,des,url,category,createDate)values(:title,:des,:url,:category,:createDate)";
+    private static final String SAVE = "insert into resource(title,des,url,category,destory,createDate)values(:title,:des,:url,:category,:destory,:createDate)";
 
     @Override
     public long save(Resource resource) throws DaoException {
@@ -35,7 +36,7 @@ public class ResourceDaoImpl extends BaseDao implements IResourceDao {
         return 0;
     }
 
-    private static final String LIST = "select * from resource order by createDate desc";
+    private static final String LIST = "select * from resource where destory = 0 order by createDate desc";
 
     @Override
     public List<Resource> list() throws DaoException {
@@ -52,7 +53,7 @@ public class ResourceDaoImpl extends BaseDao implements IResourceDao {
         return null;
     }
 
-    private static final String COUNT = "select count(*) from resource";
+    private static final String COUNT = "select count(*) from resource where destory = 0";
 
     @Override
     public long count() throws DaoException {
@@ -65,5 +66,21 @@ public class ResourceDaoImpl extends BaseDao implements IResourceDao {
     public int deleteById(Long id) throws DaoException {
         Object[] args = {id};
         return this.delete(DELETE_BY_ID, args);
+    }
+
+    private static final String GET_BY_ID = "select * from resource where url = ? limit 0,1";
+
+    @Override
+    public Resource getByUrl(String url) throws DaoException {
+        Object[] arg = {url};
+        return this.queryForBean(GET_BY_ID, Resource.class, arg);
+    }
+
+    private static final String DESTORY = "update resource set destory = 1 where id = ?";
+
+    @Override
+    public int destory(Long id) throws DaoException {
+        Object[] args = {id};
+        return this.update(DESTORY, args);
     }
 }

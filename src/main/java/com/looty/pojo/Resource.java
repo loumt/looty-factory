@@ -44,9 +44,21 @@ public class Resource extends BaseObject {
     private int category;
 
     /**
+     * 是否已删除 0未删除1已删除
+     */
+    private int destory = 0;
+    /**
      * 创建时间
      */
     private Date createDate;
+
+    public int getDestory() {
+        return destory;
+    }
+
+    public void setDestory(int destory) {
+        this.destory = destory;
+    }
 
     public Long getId() {
         return id;

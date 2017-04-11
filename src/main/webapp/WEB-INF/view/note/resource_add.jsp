@@ -118,7 +118,7 @@
             if (data.isSuccess) {
                 notifySuccess("添加资源成功");
             } else {
-                notifyError("添加资源失败");
+                notifyError(data.msg);
             }
         });
     }

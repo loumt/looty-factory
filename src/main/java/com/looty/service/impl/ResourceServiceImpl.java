@@ -65,4 +65,14 @@ public class ResourceServiceImpl extends BaseService implements IResourceService
     public int deleteResourceById(Long id) throws ServiceException {
         return resourceDao.deleteById(id);
     }
+
+    @Override
+    public Resource getResourceByUrl(String url) throws ServiceException {
+        return resourceDao.getByUrl(url);
+    }
+
+    @Override
+    public int destoryResource(Long id) throws ServiceException {
+        return resourceDao.destory(id);
+    }
 }

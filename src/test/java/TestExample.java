@@ -141,4 +141,31 @@ public class TestExample {
         System.out.println(IEEE754rUtils.max(0.154d, 0.45783d, 5.183d, 0.0054d));
     }
 
+
+    private static void createStatic() {
+
+    }
+
+    private void createNormal() {
+
+    }
+
+    @Test
+    public void test8() {
+        TestExample example = new TestExample();
+        long e1 = System.currentTimeMillis();
+        for (int i = 0; i < 10000000; i++) {
+            TestExample.createStatic();
+        }
+        long e2 = System.currentTimeMillis();
+        System.out.println(e2 - e1);
+
+        long e3 = System.currentTimeMillis();
+        for (int i = 0; i < 10000000; i++) {
+            example.createStatic();
+        }
+        long e4 = System.currentTimeMillis();
+        System.out.println(e4 - e3);
+    }
+
 }
