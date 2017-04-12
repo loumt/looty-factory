@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.queue;
+package com.looty.queueExample;
 
 //线程池中工作的线程
 public class AccessDBThread implements Runnable {

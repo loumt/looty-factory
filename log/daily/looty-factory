@@ -1,232 +1,615 @@
-2017-04-11 08:50:16 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-13] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 08:50:20 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [RMI TCP Connection(4)-127.0.0.1] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-11 08:51:44 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 08:51:47 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-11 08:51:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-11 08:51:56 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-8] (LoginController.java:71) ->>>2017-04-11 08:51:56--127.0.0.1:Ready to Login..... 
-2017-04-11 08:52:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toLogin} 
-2017-04-11 08:52:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toHomePage} 
-2017-04-11 09:10:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:10:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:11:24 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:11:24 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-5] (ResourceController.java:107) ->创建资源 15 
-2017-04-11 09:11:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:11:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:11:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:11:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:20:05 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
-2017-04-11 09:20:26 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 09:20:30 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-11 09:20:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-11 09:20:32 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-11 09:20:32--127.0.0.1:Access Login..... 
-2017-04-11 09:25:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:25:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:25:58 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-6] (ResourceController.java:112) ->创建资源 16 
-2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:25:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:26:00 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:26:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
-2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:26:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:27:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:27:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:27:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:28:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:28:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:28:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:28:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:28:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:30:00 [com.looty.schedule.WeiBoResouSchedule]-[INFO] [pool-1-thread-1] (WeiBoResouSchedule.java:60) ->微博热搜今日搜索排行 50 条 
-2017-04-11 09:37:33 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
-2017-04-11 09:37:48 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-9] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 09:37:50 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-11 09:37:52 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-11 09:37:52 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-11 09:37:52--127.0.0.1:Access Login..... 
-2017-04-11 09:37:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:37:57 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:38:16 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-5] (ResourceController.java:112) ->创建资源 17 
-2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:38:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:38:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:38:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
-2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:38:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:39:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:39:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 09:39:11 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-9] (ResourceController.java:112) ->创建资源 18 
-2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:39:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:39:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:39:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
-2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:39:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 09:39:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:39:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:46:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:48 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:48 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:50 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:50 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:51 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:46:51 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:46:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:46:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:46:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:48:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:48:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:48:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:48:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:48:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:48:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:03 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
-2017-04-11 09:58:04 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-11 09:58:18 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 09:58:20 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-11 09:58:21 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-11 09:58:22 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-10] (LoginController.java:68) ->>>2017-04-11 09:58:22--127.0.0.1:Access Login..... 
-2017-04-11 09:58:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 09:58:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 09:58:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:31 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:58:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:58:57 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 09:59:20 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 09:59:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:00:00 [com.looty.schedule.WeiBoResouSchedule]-[INFO] [pool-1-thread-1] (WeiBoResouSchedule.java:60) ->微博热搜今日搜索排行 50 条 
-2017-04-11 10:03:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:03:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:03:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:03:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:03:30 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
-2017-04-11 10:03:31 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
-2017-04-11 10:03:44 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
-2017-04-11 10:03:46 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
-2017-04-11 10:03:48 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
-2017-04-11 10:03:48 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-11 10:03:48--127.0.0.1:Access Login..... 
-2017-04-11 10:03:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:03:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:04:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:04:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:04:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:04:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:04:53 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:04:54 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:04:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:04:57 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:07 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:09 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:06:58 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:06:59 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:08:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:08:16 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:08:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:08:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:11:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:11:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:11:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:11:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:11:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:11:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:14:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:14:14 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:20:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:20:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:20:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:20:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:21:48 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:21:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:22:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:22:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:23:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:23:05 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:23:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:23:13 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:23:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/add/resource} 
-2017-04-11 10:23:26 [com.looty.controller.ResourceController]-[INFO] [http-apr-8090-exec-8] (ResourceController.java:112) ->创建资源 19 
-2017-04-11 10:23:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:23:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 10:23:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:23:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:23:36 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
-2017-04-11 10:23:36 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:23:36 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:23:36 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 10:23:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:23:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:24:48 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:24:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:25:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:25:02 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:25:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/delete/resource} 
-2017-04-11 10:25:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:25:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:25:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/assets/sound/alert.mp3} 
-2017-04-11 10:25:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toAdd} 
-2017-04-11 10:25:24 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/category/list} 
-2017-04-11 10:25:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/toIndex} 
-2017-04-11 10:25:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/note/resource/getResourceList} 
-2017-04-11 10:26:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/weibo/hot/toIndex} 
-2017-04-11 10:26:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/weibo/hot/getRealHotList} 
+2017-04-12 13:04:25 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-12] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:04:25 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [RMI TCP Connection(2)-127.0.0.1] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 13:06:52 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:06:54 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:07:01 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:07:01 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-2] (LoginController.java:71) ->>>2017-04-12 13:07:01--127.0.0.1:Ready to Login..... 
+2017-04-12 13:07:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toLogin} 
+2017-04-12 13:07:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toHomePage} 
+2017-04-12 13:07:06 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:07:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:07:11 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [http-apr-8090-exec-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197363170063471 
+2017-04-12 13:07:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:07:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:07:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:07:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:07:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:42:17 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:42:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:42:18 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:42:18 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:42:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-2] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-6] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-4] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-13] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-9] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-15] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-10] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-14] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-20] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-25] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-16] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-17] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-22] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-18] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-24] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-34] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-23] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-21] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:42:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:42:19 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-31] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:20 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-37] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:21 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-36] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-35] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-38] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:24 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-39] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-40] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:26 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-41] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:27 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-42] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:28 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-43] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:29 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-44] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:30 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-45] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:31 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-46] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:32 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-47] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:33 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-48] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:34 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-49] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:35 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-50] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:36 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-51] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-52] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-54] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-53] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:42:41 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-57] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:43:26 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:43:28 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:43:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:43:30 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 13:43:30--127.0.0.1:Access Login..... 
+2017-04-12 13:43:38 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:43:39 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:43:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:43:39 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:43:39 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:43:44 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:43:44 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:47) ->Trade Thread run !!! 
+2017-04-12 13:44:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:44:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:44:12 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 13:44:12 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 13:44:28 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:44:31 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:44:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:44:33 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 13:44:33--127.0.0.1:Access Login..... 
+2017-04-12 13:44:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:44:39 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:44:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:49) ->Trade Thread run !!! 
+2017-04-12 13:45:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:45:04 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:45:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:45:08 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:48) ->Trade Thread run !!! 
+2017-04-12 13:45:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:45:11 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:45:12 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 13:45:12 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 13:45:26 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:45:28 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:45:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:45:30 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 13:45:30--127.0.0.1:Access Login..... 
+2017-04-12 13:45:32 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:45:34 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:45:34 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:48) ->Trade Thread run !!! 
+2017-04-12 13:45:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:45:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:48:27 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 13:48:27 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 13:48:44 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:48:47 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(3)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:48:49 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:48:49 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-2] (LoginController.java:68) ->>>2017-04-12 13:48:49--127.0.0.1:Access Login..... 
+2017-04-12 13:49:10 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:12 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:12 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197615225750773 
+2017-04-12 13:49:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:12 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256180796 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256197692 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256189590 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256131562 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256169232 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-10] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256172704 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256120361 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-9] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256178234 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256142887 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-6] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256198821 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-2] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256189875 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-4] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256124712 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256196835 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256150045 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256128989 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-3] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256114878 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256107263 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-1] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256194071 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-10] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256128745 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256107091 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-4] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616256111254 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-6] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282963084 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282938522 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-9] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282914684 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-2] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282977582 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282949144 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282965404 
+2017-04-12 13:49:22 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:22 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616282978486 
+2017-04-12 13:49:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299690639 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299645656 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299645967 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299603264 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-19] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299645305 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-18] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-18] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299658682 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-17] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-17] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299664806 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-16] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-16] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299625678 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-15] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-15] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299649562 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299694671 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299699700 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299677300 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-13] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-13] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299604943 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-18] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-18] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299682747 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-14] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-14] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299662478 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-19] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299606116 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616299628074 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324425003 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324450709 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324496484 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-17] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-17] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324477028 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-16] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-16] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324459688 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-15] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-15] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324436410 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-12] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324459486 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-18] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-18] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324462747 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-19] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616324488997 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616334411734 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-19] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616334454000 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-17] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-17] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616334463977 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616334471212 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197616334473042 
+2017-04-12 13:49:23 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-7] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:24 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-19] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-5] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:26 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-17] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:27 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-11] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:28 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-8] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:29 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-21] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:30 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-22] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:31 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-23] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:32 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-24] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:33 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-25] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:34 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-26] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:35 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-27] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:36 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-28] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-29] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-30] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-30] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745221562 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-31] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-33] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-33] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745225018 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-34] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-34] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745259126 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-31] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745207440 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-32] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-32] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745253224 
+2017-04-12 13:49:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:49:37 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-35] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-35] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745237194 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-36] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-36] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745218967 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-37] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-37] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745213020 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-38] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-38] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745268738 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-39] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-39] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745260503 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-40] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-40] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745261122 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-41] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-41] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745264860 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-30] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-30] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745248982 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-34] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-34] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745295296 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-39] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-39] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745274840 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-37] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-37] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745216472 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-36] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-36] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745219938 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-35] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-35] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745252249 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-33] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-33] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745296121 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-31] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-31] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745265768 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-32] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-32] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745207714 
+2017-04-12 13:49:37 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-38] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-38] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197617745247754 
+2017-04-12 13:49:38 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-36] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:39 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-30] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:40 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-34] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:41 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-31] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:42 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-38] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:43 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-42] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:44 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-43] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:45 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-44] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:46 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-45] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:47 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-46] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:48 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-47] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:49 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-48] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:50 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-49] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:51 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-50] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:52 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-51] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:53 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-52] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:54 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-53] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:49:55 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-54] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:00 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-55] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:00 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-56] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:00 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-57] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:00 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-59] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:01 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-58] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:02 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-60] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:02 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-61] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:03 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-63] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:04 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-62] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:05 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-65] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-67] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-66] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-64] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-68] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-70] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-72] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-69] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-73] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-71] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-75] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-76] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-77] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-78] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-79] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-80] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-74] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-83] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-84] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-85] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:25 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-92] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:26 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-81] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:27 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-89] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:28 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-91] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:50:29 [com.looty.thread.TradeMsgThread]-[DEBUG] [pool-3-thread-93] (TradeMsgThread.java:52) ->Trade Thread run !!! 
+2017-04-12 13:53:00 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:53:03 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:53:05 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:53:05 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 13:53:05--127.0.0.1:Access Login..... 
+2017-04-12 13:53:14 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:53:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:53:19 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:54:29 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 13:54:29 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 13:54:46 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 13:54:49 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 13:54:52 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 13:54:52 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-2] (LoginController.java:68) ->>>2017-04-12 13:54:52--127.0.0.1:Access Login..... 
+2017-04-12 13:54:55 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:54:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:54:56 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197649626461036 
+2017-04-12 13:54:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:54:56 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:55:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:55:23 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197651590495059 
+2017-04-12 13:55:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:55:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:55:33 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 13:55:38 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301329299 
+2017-04-12 13:55:38 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 13:55:38 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 13:55:38 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301335309 
+2017-04-12 13:55:47 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301372772 
+2017-04-12 13:55:48 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301312310 
+2017-04-12 13:55:49 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301306888 
+2017-04-12 13:55:50 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-13] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301374589 
+2017-04-12 13:55:50 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-14] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301327423 
+2017-04-12 13:55:51 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301319661 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301335078 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-22] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301329646 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301390766 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-15] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301307091 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-20] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301372856 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-21] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301334210 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301222842 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-24] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301374935 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-26] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301319594 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-23] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301369569 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-27] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301333342 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-28] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301344693 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-29] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301342195 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-30] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301394131 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-33] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301381301 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301314258 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-16] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301332334 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-18] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301391475 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-19] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301372943 
+2017-04-12 13:55:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-17] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301397960 
+2017-04-12 13:55:54 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-38] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301301362 
+2017-04-12 13:55:55 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-39] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301313354 
+2017-04-12 13:55:56 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-40] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301348790 
+2017-04-12 13:55:57 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-42] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301343051 
+2017-04-12 13:55:58 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-41] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301382803 
+2017-04-12 13:55:59 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-43] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301376530 
+2017-04-12 13:56:00 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-44] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301304305 
+2017-04-12 13:56:01 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-45] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301323447 
+2017-04-12 13:56:02 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-46] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301353968 
+2017-04-12 13:56:03 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-47] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301302026 
+2017-04-12 13:56:04 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-48] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301388825 
+2017-04-12 13:56:05 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-49] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301345809 
+2017-04-12 13:56:06 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-50] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301374935 
+2017-04-12 13:56:07 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-51] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197653301349127 
+2017-04-12 14:06:58 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-11] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 14:07:01 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 14:07:03 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 14:07:03 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 14:07:03--127.0.0.1:Access Login..... 
+2017-04-12 14:07:06 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:07:08 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:07:23 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:07:36 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:19:02 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 14:19:18 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 14:19:20 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 14:19:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 14:19:22 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 14:19:22--127.0.0.1:Access Login..... 
+2017-04-12 14:19:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:19:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:19:28 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796863646535 
+2017-04-12 14:19:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:19:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:19:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989040424 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989016957 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989009699 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989048144 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989007032 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989047589 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989057778 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989094061 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989092120 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989078969 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989010857 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989050302 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989058223 
+2017-04-12 14:19:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989008684 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989031719 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989021355 
+2017-04-12 14:19:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989041597 
+2017-04-12 14:19:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989010351 
+2017-04-12 14:19:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989010104 
+2017-04-12 14:19:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989094242 
+2017-04-12 14:19:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989055364 
+2017-04-12 14:19:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197796989000802 
+2017-04-12 14:19:30 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:28:03 [com.looty.filter.AuthFilter]-[INFO] [localhost-startStop-2] (AuthFilter.java:43) ->AuthFilter destroy() 
+2017-04-12 14:28:03 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [localhost-startStop-2] (IdleConnectionEvictor.java:46) ->HttpClient Close Thread End...... 
+2017-04-12 14:28:18 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 14:28:21 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 14:28:22 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 14:28:23 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 14:28:23--127.0.0.1:Access Login..... 
+2017-04-12 14:28:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:28:27 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:28:28 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850802948818 
+2017-04-12 14:28:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:28:28 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:28:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954316979 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954347483 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954354050 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954307488 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954372321 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954383110 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954346763 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954306998 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954336001 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954313729 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954329402 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954322299 
+2017-04-12 14:28:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:28:29 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954346269 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954380414 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954370115 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954322808 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954301108 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954312695 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954311278 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954324200 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954305199 
+2017-04-12 14:28:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197850954389532 
+2017-04-12 14:44:11 [com.looty.http.evictor.IdleConnectionEvictor]-[INFO] [Thread-10] (IdleConnectionEvictor.java:32) ->HttpClient Close Thread Start...... 
+2017-04-12 14:44:13 [com.looty.filter.AuthFilter]-[INFO] [RMI TCP Connection(5)-127.0.0.1] (AuthFilter.java:32) ->AuthFilter Init() 
+2017-04-12 14:44:15 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/login/toIndex} 
+2017-04-12 14:44:15 [com.looty.controller.LoginController]-[DEBUG] [http-apr-8090-exec-3] (LoginController.java:68) ->>>2017-04-12 14:44:15--127.0.0.1:Access Login..... 
+2017-04-12 14:44:24 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:44:25 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946594532106 
+2017-04-12 14:44:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:44:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:44:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691019013 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691007095 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691040688 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691052642 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691044504 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691034815 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691069118 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691068612 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691032852 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691087387 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-2] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691037558 
+2017-04-12 14:44:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:44:26 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-6] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691049348 
+2017-04-12 14:44:26 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-10] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691095795 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691071266 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-4] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691081385 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691004545 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-5] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691043880 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-7] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691030374 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691041908 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691092215 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-1] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691019674 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691081141 
+2017-04-12 14:44:27 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691002793 
+2017-04-12 14:44:28 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691084539 
+2017-04-12 14:44:29 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691096081 
+2017-04-12 14:44:30 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691004571 
+2017-04-12 14:44:31 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691088796 
+2017-04-12 14:44:32 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691052555 
+2017-04-12 14:44:33 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691059048 
+2017-04-12 14:44:34 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691045659 
+2017-04-12 14:44:35 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691004634 
+2017-04-12 14:44:36 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691063861 
+2017-04-12 14:44:37 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691079177 
+2017-04-12 14:44:38 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691004386 
+2017-04-12 14:44:39 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691059862 
+2017-04-12 14:44:40 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691026504 
+2017-04-12 14:44:41 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691091538 
+2017-04-12 14:44:42 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691097937 
+2017-04-12 14:44:43 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691043980 
+2017-04-12 14:44:44 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691094880 
+2017-04-12 14:44:45 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691002249 
+2017-04-12 14:44:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691054955 
+2017-04-12 14:44:47 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691009367 
+2017-04-12 14:44:48 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691020300 
+2017-04-12 14:44:49 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691075505 
+2017-04-12 14:44:50 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691033222 
+2017-04-12 14:44:51 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691043746 
+2017-04-12 14:44:52 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691056410 
+2017-04-12 14:44:53 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691022496 
+2017-04-12 14:44:54 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691008098 
+2017-04-12 14:44:55 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691049152 
+2017-04-12 14:44:56 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691099633 
+2017-04-12 14:44:57 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691027222 
+2017-04-12 14:44:58 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691018480 
+2017-04-12 14:44:59 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691066166 
+2017-04-12 14:45:00 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691008259 
+2017-04-12 14:45:01 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691006969 
+2017-04-12 14:45:02 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691029502 
+2017-04-12 14:45:03 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691079688 
+2017-04-12 14:45:04 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197946691167516 
+2017-04-12 14:47:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:45 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966591969837 
+2017-04-12 14:47:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:45 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966607583869 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-11] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966622151790 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-3] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966638076697 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-5] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-2] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-8] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966654392616 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-7] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-8] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-9] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-12] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966668681062 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-1] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-3] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 
+2017-04-12 14:47:46 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-10] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toSave} 
+2017-04-12 14:47:46 [com.looty.service.impl.TradeMsgServiceImpl]-[DEBUG] [pool-3-thread-9] (TradeMsgServiceImpl.java:37) ->Insert into TradeMsg,TradeId = 149197966699150963 
+2017-04-12 14:47:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-4] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/toIndex} 
+2017-04-12 14:47:47 [com.looty.filter.AuthFilter]-[INFO] [http-apr-8090-exec-6] (AuthFilter.java:38) ->AuthFilter doFilter():{Uri:/manage/trade/assets/sound/alert.mp3} 

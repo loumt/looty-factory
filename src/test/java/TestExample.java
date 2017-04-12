@@ -13,9 +13,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.*;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * USED TO:
@@ -142,30 +140,18 @@ public class TestExample {
     }
 
 
-    private static void createStatic() {
-
-    }
-
-    private void createNormal() {
-
-    }
+    final Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            System.out.println("11");
+        }
+    };
+    final ScheduledExecutorService schedule = Executors.newScheduledThreadPool(100);
+    final ScheduledFuture future = schedule.scheduleAtFixedRate(runnable, 0, 1, TimeUnit.SECONDS);
 
     @Test
     public void test8() {
-        TestExample example = new TestExample();
-        long e1 = System.currentTimeMillis();
-        for (int i = 0; i < 10000000; i++) {
-            TestExample.createStatic();
-        }
-        long e2 = System.currentTimeMillis();
-        System.out.println(e2 - e1);
-
-        long e3 = System.currentTimeMillis();
-        for (int i = 0; i < 10000000; i++) {
-            example.createStatic();
-        }
-        long e4 = System.currentTimeMillis();
-        System.out.println(e4 - e3);
+        new TestExample();
     }
 
 }

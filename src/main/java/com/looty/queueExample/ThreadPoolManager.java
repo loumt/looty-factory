@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.queue;
+package com.looty.queueExample;
 
 import java.time.LocalTime;
 import java.util.LinkedList;

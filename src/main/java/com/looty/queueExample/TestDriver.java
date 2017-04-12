@@ -1,7 +1,7 @@
 /**
  * Copyright (c) www.bugull.com
  */
-package com.looty.queue;
+package com.looty.queueExample;
 
 //TestDriver.java是一个驱动测试，sendMsg方法不间断的向ThreadPoolManager发送数据
 public class TestDriver {

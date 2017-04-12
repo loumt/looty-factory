@@ -86,6 +86,13 @@
                     <li><a href="${basePath}/manage/note/noteResource/toWrite">写笔记</a></li>
                 </ul>
             </li>
+            <%--测试队列--%>
+            <li>
+                <a href="${basePath}/manage/trade/toIndex">
+                    <i class="icon-user-md"></i>
+                    <span>测试队列</span>
+                </a>
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>
