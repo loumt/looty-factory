@@ -17,7 +17,5 @@ public class TestDriver {
         for (int i = 0; i < 100; i++) {
             new TestDriver().sendMsg(Integer.toString(i));
         }
-
-        //new TestDriver().sendMsg("发起一条对象" );
     }
 }

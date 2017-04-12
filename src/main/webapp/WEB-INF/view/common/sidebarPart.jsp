@@ -82,6 +82,8 @@
                 <ul class="treeview-menu">
                     <li><a href="${basePath}/manage/note/resource/toAdd">添加资源</a></li>
                     <li><a href="${basePath}/manage/note/resource/toIndex">资源列表</a></li>
+                    <li><a href="${basePath}/manage/note/noteResource/toIndex">笔记列表</a></li>
+                    <li><a href="${basePath}/manage/note/noteResource/toWrite">写笔记</a></li>
                 </ul>
             </li>
         </ul>
