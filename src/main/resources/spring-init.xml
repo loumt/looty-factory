@@ -20,6 +20,7 @@
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
+    <description>Spring相关配置,包括property,IOC,定时器</description>
     <!--包扫描-->
     <context:component-scan base-package="
         com.looty.dao

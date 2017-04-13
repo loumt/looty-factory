@@ -26,7 +26,16 @@ public enum CategoryEnum {
      * 功能性
      */
     FUNCTION_DECODE(50, "解码工具"),
-    FUNCTION_FORMAT(51, "格式化工具");
+    FUNCTION_FORMAT(51, "格式化工具"),
+
+    /**
+     * 专题类
+     */
+    SPECIAL_SPRING(80, "Spring专题"),
+    SPECIAL_HIBERNATE(81, "Hibernate专题"),
+    SPECIAL_STRUT2(82, "STRUT2专题"),
+    SPECIAL_MYBATIS(83, "MyBatis专题");
+
 
     private int category;
     private String des;

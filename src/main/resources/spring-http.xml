@@ -20,6 +20,7 @@
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
+    <description>Spring配置HttpClient</description>
     <!--<context:property-placeholder location="classpath:httpclient.properties"/>-->
 
     <!--HttpClient:定义Httpclient对象 -->

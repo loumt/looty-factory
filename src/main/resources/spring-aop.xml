@@ -7,6 +7,8 @@
     	http://www.springframework.org/schema/aop
     	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
+    <description>SpringAOP相关配置</description>
+
     <!-- 流程实例结束后的操作aop配置 -->
     <aop:aspectj-autoproxy/>
 

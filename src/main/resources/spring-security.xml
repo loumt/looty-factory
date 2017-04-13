@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/security
+            http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <description>Spring-Security配置</description>
+
+    <!-- 配置不过滤的资源（静态资源及登录相关） -->
+    <sec:http pattern="/**/*.css" security="none"></sec:http>
+    <sec:http pattern="/**/*.jpg" security="none"></sec:http>
+    <sec:http pattern="/**/*.jpeg" security="none"></sec:http>
+    <sec:http pattern="/**/*.gif" security="none"></sec:http>
+    <sec:http pattern="/**/*.png" security="none"></sec:http>
+    <sec:http pattern="/js/*.js" security="none"></sec:http>
+
+</beans>

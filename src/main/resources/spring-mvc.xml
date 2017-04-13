@@ -20,6 +20,7 @@
 	http://www.springframework.org/schema/task
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
+    <description>SpringMvc相关</description>
 
     <!--启动MVC注解-->
     <mvc:annotation-driven/>
