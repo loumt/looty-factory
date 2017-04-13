@@ -149,9 +149,43 @@ public class TestExample {
     final ScheduledExecutorService schedule = Executors.newScheduledThreadPool(100);
     final ScheduledFuture future = schedule.scheduleAtFixedRate(runnable, 0, 1, TimeUnit.SECONDS);
 
+
+    enum Color {
+        RED, GREEN, BLUE;
+
+        private int count;
+
+        public void increment() {
+            count++;
+        }
+
+        public void print() {
+            System.out.println("The count of " + name() + " is " + count);
+        }
+    }
+
     @Test
     public void test8() {
-        new TestExample();
+
+        Color.RED.print();
+        Color.GREEN.print();
+        Color.BLUE.print();
+        System.out.println("=================");
+        Color.RED.increment();
+        Color.RED.print();
+        Color.GREEN.print();
+        Color.BLUE.print();
+        System.out.println("=================");
+        Color.BLUE.increment();
+        Color.RED.print();
+        Color.GREEN.print();
+        Color.BLUE.print();
+        System.out.println("=================");
+        Color.GREEN.increment();
+        Color.RED.print();
+        Color.GREEN.print();
+        Color.BLUE.print();
+
     }
 
 }

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="main page"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WebSiteName</title>
+    <title>${websiteName}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <%@include file="/WEB-INF/view/common/commonCss.jsp" %>
