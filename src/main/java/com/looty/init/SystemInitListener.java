@@ -14,6 +14,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+import java.net.URLEncoder;
 import java.util.Date;
 import java.util.concurrent.*;
 
@@ -27,7 +28,7 @@ import java.util.concurrent.*;
  * @date 2017/3/3/003
  */
 @WebListener
-public class SystemInit implements ServletContextListener {
+public class SystemInitListener implements ServletContextListener {
 
 
     public static ScheduledExecutorService sexecutor;
@@ -37,6 +38,7 @@ public class SystemInit implements ServletContextListener {
      * @param sc
      */
     public void contextInitialized(ServletContextEvent sc) {
+        System.out.println("System Init!!");
         ServletContext servletContext = sc.getServletContext();
         String serverInfo = servletContext.getServerInfo();
         String servletContextName = servletContext.getServletContextName();
