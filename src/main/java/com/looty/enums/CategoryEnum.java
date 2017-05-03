@@ -34,8 +34,13 @@ public enum CategoryEnum {
     SPECIAL_SPRING(80, "Spring专题"),
     SPECIAL_HIBERNATE(81, "Hibernate专题"),
     SPECIAL_STRUT2(82, "STRUT2专题"),
-    SPECIAL_MYBATIS(83, "MyBatis专题");
+    SPECIAL_MYBATIS(83, "MyBatis专题"),
 
+    /**
+     * 中间件
+     */
+    MIDDLE_WARE_REDIS(100, "Redis"),
+    MIDDLE_WARE_RABBIT_MQ(101, "RabbitMQ");
 
     private int category;
     private String des;
