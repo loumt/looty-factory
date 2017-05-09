@@ -40,8 +40,8 @@
         <section class="content">
 
             <!-- Your Page Content Here -->
-            <button class="btn btn-blue" onclick="toSave(1)">一条记录</button>
-            <button class="btn btn-blue" onclick="toSave(2)">60条记录</button>
+            <input type="text" id="count"/>
+            <button class="btn btn-blue" onclick="toSave()">60条记录</button>
         </section>
         <!-- content -->
     </div>
@@ -53,8 +53,12 @@
     $(function () {
 
     });
-    function toSave(type) {
-        ajaxPost("${basePath}/manage/trade/toSave", {type: type}, function (data) {
+    function toSave() {
+        if (isNaN($("#count").val())) {
+            notifyWarn("请输入数字");
+            return;
+        }
+        ajaxPost("${basePath}/manage/trade/toSave", {count: $("#count").val()}, function (data) {
             if (data.isSuccess) {
                 notifySuccess("Yes");
             } else {

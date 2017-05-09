@@ -5,7 +5,6 @@ package com.looty.controller;
 
 import com.looty.base.BaseController;
 import com.looty.client.TradeMsgClient;
-import com.looty.enums.ResultMsgEnum;
 import com.looty.factory.TradeMsgFactory;
 import com.looty.pojo.TradeMsg;
 import com.looty.pojo.system.ResultMsg;
@@ -22,7 +21,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * USED TO:
+ * USED TO: 测试消息缓冲队列
+ * 相关类：TradeMsgClient
  * Log File:
  *
  * @author loumt(loumt@sanlogic.com)
@@ -49,16 +49,10 @@ public class TradeController extends BaseController {
 
     @RequestMapping(value = "/toSave", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> toSave(@RequestParam() int type) {
-        if (type == 1) {
-            TradeMsg tradeMsg = TradeMsgFactory.getTradeMsg();
+    public Map<String, Object> toSave(@RequestParam() int count) {
+        List<TradeMsg> tradeList = TradeMsgFactory.getTradeList(count);
+        for (TradeMsg tradeMsg : tradeList) {
             TradeMsgClient.getInstance().addTrade(tradeMsgService, tradeMsg);
-        }
-        if (type == 2) {
-            List<TradeMsg> tradeList = TradeMsgFactory.getTradeList(60);
-            for (TradeMsg tradeMsg : tradeList) {
-                TradeMsgClient.getInstance().addTrade(tradeMsgService, tradeMsg);
-            }
         }
         return backDataMap(ResultMsg.isCommonSuccess());
     }

@@ -38,7 +38,6 @@ public class SystemInitListener implements ServletContextListener {
      * @param sc
      */
     public void contextInitialized(ServletContextEvent sc) {
-        System.out.println("System Init!!");
         ServletContext servletContext = sc.getServletContext();
         String serverInfo = servletContext.getServerInfo();
         String servletContextName = servletContext.getServletContextName();

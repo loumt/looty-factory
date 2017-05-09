@@ -21,11 +21,11 @@
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd ">
 
     <description>Spring相关配置,包括property,IOC,定时器</description>
-    <!--包扫描-->
-    <context:component-scan base-package="
-        com.looty.dao
-        com.looty.service
-        com.looty.schedule"/>
+
+    <!--包扫描-Controller组件由Mvc去扫描-->
+    <context:component-scan base-package="com.looty">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <!--properties-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -39,6 +39,7 @@
         </property>
     </bean>
 
+    <bean id="springContextHolder" class="com.looty.utils.SpringContextUtils"></bean>
     <!--定时器配置注解-->
     <task:annotation-driven/>
 

@@ -53,7 +53,7 @@ public class TradeMsgThread implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Trade Thread run !!!");
+        System.out.println(tradeMsg.getUserId() + " Trade Thread run !!!");
         tradeMsgService.insertMsg(tradeMsg);
     }
 }

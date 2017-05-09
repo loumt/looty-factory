@@ -37,7 +37,7 @@ public class TradeMsgClient {
     private static final int WORK_QUEUE_SIZE = 10;
 
     //消息队列
-    Queue<TradeMsgThread> msgThreadQueue = new ConcurrentLinkedQueue<>();
+    final Queue<TradeMsgThread> msgThreadQueue = new ConcurrentLinkedQueue<>();
 
     private boolean hasQueueAcquire() {
         return !msgThreadQueue.isEmpty();
@@ -46,13 +46,12 @@ public class TradeMsgClient {
     final RejectedExecutionHandler handler = new RejectedExecutionHandler() {
         @Override
         public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-            TradeMsgThread thread = (TradeMsgThread) r;
-            msgThreadQueue.offer(thread);
+            msgThreadQueue.offer((TradeMsgThread) r);
         }
     };
 
-    final ThreadPoolExecutor pool = new ThreadPoolExecutor(CORE_POOL_SIZE, MAX_POOL_SIZE, KEEP_ACTIVE_TIME, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(WORK_QUEUE_SIZE), this.handler);
 
+    final ThreadPoolExecutor pool = new ThreadPoolExecutor(CORE_POOL_SIZE, MAX_POOL_SIZE, KEEP_ACTIVE_TIME, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(WORK_QUEUE_SIZE), this.handler);
 
     /**
      * 定时调度的线程
@@ -62,7 +61,13 @@ public class TradeMsgClient {
         public void run() {
             if (hasQueueAcquire()) {
                 TradeMsgThread thread = msgThreadQueue.poll();
+
+                TradeMsg tradeMsg = thread.getTradeMsg();
+                System.out.println(tradeMsg.getUserId() + "被ScheduledThreadPool执行了");
+
                 pool.execute(thread);
+            } else {
+                System.out.println("ScheduledThreadPool没任务执行了");
             }
         }
     };
@@ -78,6 +83,11 @@ public class TradeMsgClient {
     public void addTrade(TradeMsgService tradeMsgService, TradeMsg tradeMsg) {
         TradeMsgThread msgThread = new TradeMsgThread(tradeMsgService, tradeMsg);
         pool.execute(msgThread);
+    }
+
+
+    public void saveUnCompileTask() {
+
     }
 
 }

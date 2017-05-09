@@ -31,7 +31,7 @@ public class TradeMsgFactory {
             bean.setId(Long.parseLong(System.currentTimeMillis() + RandomUtil.number(5)));
             bean.setItemId(System.currentTimeMillis());
             bean.setTradeId(System.currentTimeMillis());
-            bean.setUserId(System.currentTimeMillis());
+            bean.setUserId(i);
             list.add(bean);
         }
         return list;
