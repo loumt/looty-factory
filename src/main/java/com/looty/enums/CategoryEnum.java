@@ -21,6 +21,7 @@ public enum CategoryEnum {
     ARTICLE_SPRING_MVC(15, "SpringMvc文章"),
     ARTICLE_SPRING_AOP(16, "SpringAop文章"),
     ARTICLE_SPRING_SECURITY(17, "SpringSecurity文章"),
+    ARTICLE_SPRING_BOOT(17, "SpringBoot文章"),
 
     /**
      * 功能性
@@ -35,12 +36,18 @@ public enum CategoryEnum {
     SPECIAL_HIBERNATE(81, "Hibernate专题"),
     SPECIAL_STRUT2(82, "STRUT2专题"),
     SPECIAL_MYBATIS(83, "MyBatis专题"),
-
     /**
      * 中间件
      */
     MIDDLE_WARE_REDIS(100, "Redis"),
-    MIDDLE_WARE_RABBIT_MQ(101, "RabbitMQ");
+    MIDDLE_WARE_RABBIT_MQ(101, "RabbitMQ"),
+
+    /**
+     * JS插件
+     */
+    JS_ECHARTS(150, "eCharts.js"),
+    JS_HIGHCHARTS(151, "HighCharts.js"),
+    JS_JQUERY(151, "Jquery.js");
 
     private int category;
     private String des;
