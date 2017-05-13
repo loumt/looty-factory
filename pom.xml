@@ -24,6 +24,7 @@
         <httpclient-version>4.5.2</httpclient-version>
         <fastjson-version>1.2.7</fastjson-version>
         <servlet-version>3.0-alpha-1</servlet-version>
+        <commons-lang3.version>3.4</commons-lang3.version>
     </properties>
 
     <dependencies>
@@ -210,6 +211,11 @@
             <version>1.2.24</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
 
     </dependencies>
 

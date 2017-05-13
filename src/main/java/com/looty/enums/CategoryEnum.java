@@ -21,7 +21,8 @@ public enum CategoryEnum {
     ARTICLE_SPRING_MVC(15, "SpringMvc文章"),
     ARTICLE_SPRING_AOP(16, "SpringAop文章"),
     ARTICLE_SPRING_SECURITY(17, "SpringSecurity文章"),
-    ARTICLE_SPRING_BOOT(17, "SpringBoot文章"),
+    ARTICLE_SPRING_BOOT(18, "SpringBoot文章"),
+    ARTICLE_SHIRO(19, "Shiro文章"),
 
     /**
      * 功能性
@@ -36,6 +37,7 @@ public enum CategoryEnum {
     SPECIAL_HIBERNATE(81, "Hibernate专题"),
     SPECIAL_STRUT2(82, "STRUT2专题"),
     SPECIAL_MYBATIS(83, "MyBatis专题"),
+    SPECIAL_CAS(84, "Cas-Server"),
     /**
      * 中间件
      */

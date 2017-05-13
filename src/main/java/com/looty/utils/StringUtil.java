@@ -1,5 +1,6 @@
 package com.looty.utils;
 
+import java.nio.charset.Charset;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,6 +12,8 @@ import java.util.regex.Pattern;
  * 提供些常用的字符串相关的工具方法
  */
 public final class StringUtil {
+
+    private static final String CHARSET_UTF8 = "utf-8";
 
     /**
      * 判断是否是空字符串 null和"" 都返回 true
@@ -31,6 +34,24 @@ public final class StringUtil {
     public static boolean isNotEmpty(String str) {
         return str != null && !str.equals("");
     }
+
+
+    /**
+     * 字符串转成utf8 byte 数组
+     *
+     * @param str 字符串
+     * @return
+     */
+    public static byte[] toUTF8Bytes(String str) {
+        if (isEmpty(str)) {
+            return null;
+        }
+
+        byte[] bytes = str
+                .getBytes(Charset.forName(CHARSET_UTF8));
+        return bytes;
+    }
+
 
     /**
      * 把string array or list用给定的符号symbol连接成一个字符串
