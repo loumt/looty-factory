@@ -37,7 +37,7 @@ public enum CategoryEnum {
     SPECIAL_HIBERNATE(81, "Hibernate专题"),
     SPECIAL_STRUT2(82, "STRUT2专题"),
     SPECIAL_MYBATIS(83, "MyBatis专题"),
-    SPECIAL_CAS(84, "Cas-Server"),
+    SPECIAL_CAS(84, "Cas-Server专题"),
     /**
      * 中间件
      */

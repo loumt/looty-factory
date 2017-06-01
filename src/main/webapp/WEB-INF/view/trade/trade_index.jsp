@@ -41,7 +41,7 @@
 
             <!-- Your Page Content Here -->
             <input type="text" id="count"/>
-            <button class="btn btn-blue" onclick="toSave()">60条记录</button>
+            <button class="btn btn-blue" onclick="toSave()">队列执行</button>
         </section>
         <!-- content -->
     </div>
