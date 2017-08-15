@@ -1,0 +1,14 @@
+Git命令手记
+
+关于版本回退:
+    分支名 test-git
+    1. git reset --<hard|mixed|soft> commit_id
+
+        hard:回退后之前更新的内容全部清除,慎用.任何改变都将被丢弃.
+        soft:回退后之前更新的内容在,被标记成 Changes to be committed
+        mixed:默认模式,回退后保留之前更新的内容,但是不被标记成Changes to be committed
+
+    2. git -f push origin test-git
+        -f:强push
+
+    结果:将test-git回退到commit_id上,保留或者去除了后更新的代码
