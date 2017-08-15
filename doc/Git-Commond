@@ -1,5 +1,40 @@
 Git命令手记
 
+git clone <address>
+    克隆项目
+
+git pull origin master
+    pull项目(已关联)
+
+git log
+    查看该项目版本记录,version,date,remark
+
+git reflog
+    查看该项目详细变更记录,push记录,branch记录,merge记录等
+
+git branch
+    查看项目分支
+
+git branch <branch name>
+    基于当前分支再创建一个分支
+
+git checkout <name>
+    切换分支
+
+git checkout -b <name>
+    创建+切换分支
+
+git merge <name>
+    合并某分支到当前分支
+
+git branch -d <name>
+    删除分支
+git branch -D <name>
+    强行删除
+
+git log --graph --pretty=oneline --abbrev-commit
+    查看分支合并状况
+
 关于版本回退:
     分支名 test-git
     1. git reset --<hard|mixed|soft> commit_id
