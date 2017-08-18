@@ -10,6 +10,8 @@ create TABLE monitor_info (
     javaVersion varchar(255),
     javaHome varchar(255),
     javaVmName varchar(255),
-    createDate timestamp not null default 'CURRENT_TIMESTAMP',
+    createDate timestamp not null default CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
-);
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;

@@ -9,4 +9,4 @@ create TABLE "user" (
     lastOperationTime datetime,
     authTop int(8),
     PRIMARY KEY (id)
-);
+)ENGINE =InnoDB DEFAULT CHARSET=utf8;
