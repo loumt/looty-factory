@@ -4,5 +4,5 @@ CREATE TABLE user_auth_code(
   lastOperationIp VARCHAR(255) NOT NULL ,
   authCode VARCHAR(255) NOT NULL ,
   createDate DATETIME DEFAULT NULL ,
-  inValidData DATETIME
+  inValidDate DATETIME
 )ENGINE=InnoDB DEFAULT CHARSET =utf8;

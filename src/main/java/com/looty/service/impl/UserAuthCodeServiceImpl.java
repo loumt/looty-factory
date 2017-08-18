@@ -41,7 +41,7 @@ public class UserAuthCodeServiceImpl implements IUserAuthCodeService {
     private IUserAuthCodeDao userAuthCodeDao;
 
 
-    public ResultMsg getAuthCode(String ip, String username) {
+    public ResultMsg getAuthCode(String ip, String username) throws ServiceException {
         User user = userDao.getUserByName(username);
         String userId = user.getUserId();
 
