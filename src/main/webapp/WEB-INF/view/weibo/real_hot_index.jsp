@@ -56,7 +56,7 @@
             method: "get", //请求参数
             striped: true,  //表格显示条纹
             pagination: true, //启动分页
-            pageSize: 10,  //每页显示的记录数
+            pageSize: 50,  //每页显示的记录数
             pageNumber: 1, //当前第几页
             pageList: [10, 20, 50],  //记录数可选列表
             search: false,  //是否启用查询
@@ -106,7 +106,7 @@
                     title: '排名',
                     field: 'ranking',
                     align: 'center',
-                    valign: 'middle'
+                    valign: 'middle',
                 },
                 {
                     title: '创建时间',

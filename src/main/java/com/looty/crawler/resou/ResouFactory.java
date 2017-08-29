@@ -28,7 +28,11 @@ import java.util.List;
  */
 public class ResouFactory extends BaseCrawlerClient {
 
+    private static String WEIBO_URL = "http://s.weibo.com";
+
     private static ResouFactory resouFactory = null;
+
+    private static int REAL_TIME_HOT = 14;
 
     private ResouFactory() {
     }
@@ -51,13 +55,17 @@ public class ResouFactory extends BaseCrawlerClient {
         List<WeiBoResource> datas = new ArrayList<WeiBoResource>();
         WeiBoResource data = null;
 
-        Element target = results.get(13);
+        Element target = results.get(REAL_TIME_HOT);
         String convertContent = ResouFactory.convertUnicode(target.toString());
 
         String startCode = "<table";
         int start = convertContent.indexOf(startCode);
         int endCodeLength = "</table>".length();
         int end = convertContent.indexOf("</table>");
+
+        int l1 = convertContent.length();
+        int l2 = end;
+        int l3 =  end + endCodeLength;
 
         String tableHtml = convertContent.substring(start, end + endCodeLength);
 
@@ -68,12 +76,14 @@ public class ResouFactory extends BaseCrawlerClient {
             String[] tdArrs = getTdList(trText);
             String sort = getEleValue(tdArrs[0], "em");
             String context = getListValue(tdArrs[1]);
+            String hrefLink = getHrefLink(tdArrs[1]);
             String exponent = getEleValue(tdArrs[2], "span");
 
             data = new WeiBoResource();
             data.setContent(context);
             data.setRanking(Integer.valueOf(sort));
             data.setExponent(exponent);
+            data.setLinkHref(hrefLink);
             data.setCreateDate(nowDate);
             data.setType(ResourceEnum.S_WEI_BO_HOT.getType());
             datas.add(data);
@@ -82,6 +92,13 @@ public class ResouFactory extends BaseCrawlerClient {
         return datas;
     }
 
+    private String getHrefLink(String regionTest){
+        String[] arr = {"/weibo","Refer=top"};
+        StringBuffer sb = new StringBuffer(regionTest);
+        String result = sb.substring(sb.indexOf(arr[0]),sb.indexOf(arr[1])+arr[1].length());
+        System.out.println(result);
+        return result;
+    }
 
     private String getListValue(String regionText) {
         String[] pArr = {"<p class=\"star_name\">", "</p>"};
