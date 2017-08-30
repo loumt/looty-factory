@@ -63,10 +63,6 @@ public class ResouFactory extends BaseCrawlerClient {
         int endCodeLength = "</table>".length();
         int end = convertContent.indexOf("</table>");
 
-        int l1 = convertContent.length();
-        int l2 = end;
-        int l3 =  end + endCodeLength;
-
         String tableHtml = convertContent.substring(start, end + endCodeLength);
 
         String[] contextArr = tableHtml.split("<tr action-type=\"hover\">");
@@ -83,7 +79,7 @@ public class ResouFactory extends BaseCrawlerClient {
             data.setContent(context);
             data.setRanking(Integer.valueOf(sort));
             data.setExponent(exponent);
-            data.setLinkHref(hrefLink);
+            data.setLinkHref(WEIBO_URL + hrefLink);
             data.setCreateDate(nowDate);
             data.setType(ResourceEnum.S_WEI_BO_HOT.getType());
             datas.add(data);
@@ -92,11 +88,10 @@ public class ResouFactory extends BaseCrawlerClient {
         return datas;
     }
 
-    private String getHrefLink(String regionTest){
-        String[] arr = {"/weibo","Refer=top"};
+    private String getHrefLink(String regionTest) {
+        String[] arr = {"/weibo", "Refer=top"};
         StringBuffer sb = new StringBuffer(regionTest);
-        String result = sb.substring(sb.indexOf(arr[0]),sb.indexOf(arr[1])+arr[1].length());
-        System.out.println(result);
+        String result = sb.substring(sb.indexOf(arr[0]), sb.indexOf(arr[1]) + arr[1].length());
         return result;
     }
 

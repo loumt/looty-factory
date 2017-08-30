@@ -60,4 +60,9 @@ public class WeiBoResourceServiceImpl extends BaseService implements IWeiBoResou
     public int updateType(Long dataId, ResourceEnum resourceEnum) throws ServiceException {
         return weiBoResourceDao.updateType(dataId, resourceEnum.getType());
     }
+
+    @Override
+    public void deleteItemById(ResourceEnum sWeiBoHot, Long id) throws ServiceException {
+        weiBoResourceDao.deleteById(sWeiBoHot.getType(),id);
+    }
 }

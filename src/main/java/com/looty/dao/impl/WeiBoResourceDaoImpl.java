@@ -23,7 +23,7 @@ import java.util.List;
 @Repository
 public class WeiBoResourceDaoImpl extends BaseDao implements IWeiBoResourceDao {
 
-    private static final String SAVE_RE_SOU_DATA = "insert into wei_bo_resource(type,summary,content,exponent,ranking)values(:type,:summary,:content,:exponent,:ranking)";
+    private static final String SAVE_RE_SOU_DATA = "insert into wei_bo_resource(type,summary,linkHref,content,exponent,ranking)values(:type,:summary,:linkHref,:content,:exponent,:ranking)";
 
     public long saveResouData(WeiBoResource weiBoResource) throws DaoException {
         return this.saveBean(SAVE_RE_SOU_DATA, weiBoResource);
@@ -60,6 +60,13 @@ public class WeiBoResourceDaoImpl extends BaseDao implements IWeiBoResourceDao {
     public int updateType(Long id, int type) throws DaoException {
         Object[] args = {type, id};
         return this.update(UPDATE_TYPE, args);
+    }
+
+    private static final String DELETE_BY_ID = "delete wei_bo_resource where type = ? and id = ?";
+    @Override
+    public void deleteById(int type, Long id) throws DaoException {
+        Object[] args = {type,id};
+        this.delete(DELETE_BY_ID,args);
     }
 
 }

@@ -45,7 +45,7 @@ public class WeiBoResouSchedule {
     private final int requestMoethod = WeiBoRule.GET;
 
 
-    @Scheduled(cron = "0 0/30 * * * ?")
+    @Scheduled(cron = "0 0/1 * * * ?")
     public void getResou() {
         try {
             Date now = new Date();

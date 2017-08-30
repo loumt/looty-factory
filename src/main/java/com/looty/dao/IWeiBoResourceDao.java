@@ -54,4 +54,6 @@ public interface IWeiBoResourceDao {
     List<WeiBoResource> list(int type) throws DaoException;
 
     int updateType(Long id, int type) throws DaoException;
+
+    void deleteById(int type, Long id)throws DaoException;
 }

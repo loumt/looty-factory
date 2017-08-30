@@ -97,6 +97,15 @@
                     field: 'content',
                     align: 'center',
                     valign: 'middle'
+                },
+                {
+                    title: '链接',
+                    field: 'linkHref',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (filed) {
+                        return '<a target="_blank" href="'+filed+'">链接</a>';
+                    }
                 }, {
                     title: '搜索指数',
                     field: 'exponent',
@@ -121,12 +130,23 @@
                     field: 'id',
                     align: 'center',
                     formatter: function (value, row, index) {
-                        var e = '<a onclick="alert(\'' + row.id + '\')">编辑</a> ';
-                        var d = '<a onclick="alert(\'' + row.id + '\')">删除</a> ';
-                        return e + d;
+                        var d = '<a onclick="deleteItem(\'' + row.id + '\')">删除</a> ';
+                        return  d;
                     }
                 }
             ]
+        });
+    }
+
+    function deleteItem(rowId){
+        confirm('确认要删除?',function(result){
+           if(result){
+               ajaxPost('${basePath}/hot/delete',{id:rowId},function(data){
+                   if(data.success){
+                       notifySuccess(data.msg);
+                   }
+               });
+           }
         });
     }
 </script>

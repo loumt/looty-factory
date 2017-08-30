@@ -29,4 +29,6 @@ public interface IWeiBoResourceService {
     ResultMsg getDataList(ResourceEnum resourceEnum) throws ServiceException;
 
     int updateType(Long id, ResourceEnum resourceEnum) throws ServiceException;
+
+    void deleteItemById(ResourceEnum sWeiBoHot, Long id)throws ServiceException;
 }
