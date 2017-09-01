@@ -11,6 +11,7 @@ import com.looty.dao.IWeiBoResourceDao;
 import com.looty.pojo.system.ResultMsg;
 import com.looty.service.IWeiBoResourceService;
 import com.looty.utils.DateUtil;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,8 @@ import java.util.List;
  */
 @Service
 public class WeiBoResourceServiceImpl extends BaseService implements IWeiBoResourceService {
+
+    private static final Logger logger = Logger.getLogger(WeiBoResourceServiceImpl.class);
 
     @Autowired
     private IWeiBoResourceDao weiBoResourceDao;

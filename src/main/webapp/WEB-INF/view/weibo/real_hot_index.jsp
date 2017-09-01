@@ -86,10 +86,9 @@
                     field: 'id',
                     align: 'center',
                     valign: 'middle'
-                },
-                {
-                    title: '资源类型',
-                    field: 'type',
+                }, {
+                    title: '排名',
+                    field: 'ranking',
                     align: 'center',
                     valign: 'middle'
                 }, {
@@ -111,11 +110,6 @@
                     field: 'exponent',
                     align: 'center',
                     valign: 'middle'
-                }, {
-                    title: '排名',
-                    field: 'ranking',
-                    align: 'center',
-                    valign: 'middle',
                 },
                 {
                     title: '创建时间',

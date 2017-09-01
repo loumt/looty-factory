@@ -23,7 +23,7 @@ import java.util.List;
 @Repository
 public class WeiBoResourceDaoImpl extends BaseDao implements IWeiBoResourceDao {
 
-    private static final String SAVE_RE_SOU_DATA = "insert into wei_bo_resource(type,summary,linkHref,content,exponent,ranking)values(:type,:summary,:linkHref,:content,:exponent,:ranking)";
+    private static final String SAVE_RE_SOU_DATA = "insert into wei_bo_resource(type,summary,linkHref,content,exponent,ranking,createDate)values(:type,:summary,:linkHref,:content,:exponent,:ranking,:createDate)";
 
     public long saveResouData(WeiBoResource weiBoResource) throws DaoException {
         return this.saveBean(SAVE_RE_SOU_DATA, weiBoResource);

@@ -45,10 +45,11 @@ public class WeiBoResouSchedule {
     private final int requestMoethod = WeiBoRule.GET;
 
 
-    @Scheduled(cron = "0 0/1 * * * ?")
-    public void getResou() {
+    @Scheduled(cron = "0 0/30 * * * ?")
+    public void getResource() {
         try {
             Date now = new Date();
+            logger.info("现在的时间是:"+now);
             Long count = weiBoResourceService.getCountByDate(now);
             if (count.longValue() == 0L) {
                 List<WeiBoResource> result = getDatas();

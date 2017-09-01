@@ -24,6 +24,7 @@ import java.util.List;
  * @author loumt(loumt@sanlogic.com)
  * @project looty-factory
  * @package com.looty.crawler.factory
+ * @package com.looty.crawler.factory
  * @date 2017/3/24/024
  */
 public class ResouFactory extends BaseCrawlerClient {
@@ -79,6 +80,7 @@ public class ResouFactory extends BaseCrawlerClient {
             data.setContent(context);
             data.setRanking(Integer.valueOf(sort));
             data.setExponent(exponent);
+            data.setCreateDate(new Date());
             data.setLinkHref(WEIBO_URL + hrefLink);
             data.setCreateDate(nowDate);
             data.setType(ResourceEnum.S_WEI_BO_HOT.getType());
