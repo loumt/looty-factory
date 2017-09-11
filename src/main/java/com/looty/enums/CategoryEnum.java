@@ -23,6 +23,7 @@ public enum CategoryEnum {
     ARTICLE_SPRING_SECURITY(17, "SpringSecurity文章"),
     ARTICLE_SPRING_BOOT(18, "SpringBoot文章"),
     ARTICLE_SHIRO(19, "Shiro文章"),
+    ARTICLE_NODE(20, "NodeJs"),
 
     /**
      * 功能性
