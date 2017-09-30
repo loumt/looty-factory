@@ -39,6 +39,9 @@ public enum CategoryEnum {
     SPECIAL_STRUT2(82, "STRUT2专题"),
     SPECIAL_MYBATIS(83, "MyBatis专题"),
     SPECIAL_CAS(84, "Cas-Server专题"),
+
+
+
     /**
      * 中间件
      */
@@ -50,7 +53,26 @@ public enum CategoryEnum {
      */
     JS_ECHARTS(150, "eCharts.js"),
     JS_HIGHCHARTS(151, "HighCharts.js"),
-    JS_JQUERY(151, "Jquery.js");
+    JS_JQUERY(151, "Jquery.js"),
+
+    /**
+     * 服务器方面
+     */
+    LINUX(200,"Linux"),
+
+
+    /**
+     * 开源项目
+     */
+    OPER_SOURCE(250,"开源项目"),
+
+
+    /**
+     * 设计模式
+     */
+    DESIGN_PATTERN(300,"设计模式")
+
+    ;
 
     private int category;
     private String des;
